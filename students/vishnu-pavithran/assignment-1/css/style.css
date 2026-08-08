@@ -348,12 +348,13 @@ footer {
 }
 .contact-form li {
   list-style: none;
-  width: calc(50% - 10px);
+  flex: 0 0 calc(50% - 10px);
   margin-bottom: 20px;
 }
 
-.contact-form li.message {
-  width: 100%;
+.contact-form li.message,
+.contact-form .btns-contact {
+  flex: 0 0 100%;
 }
 
 .contact-form label {
@@ -406,7 +407,7 @@ footer {
 
 .contact-form button {
   padding: 12px 25px;
-  font-size: 16px;
+  font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -468,5 +469,11 @@ footer {
   }
   .menu-item-card img {
     max-width: 70px;
+  }
+  .contact-form li {
+    flex: 0 0 100%;
+  }
+  header p {
+    font-size: 1.1rem;
   }
 }
