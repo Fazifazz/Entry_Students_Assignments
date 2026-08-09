@@ -51,7 +51,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.16em;
 }
-.nav-links a,
+.nav-links a:hover,
 .text-link:hover {
   color: #e5bc76;
 }
@@ -114,7 +114,7 @@ h2 {
   font-size: 48px;
   font-weight: 400;
 }
-.section-intro p {
+.section-intro p:not(.eyebrow) {
   color: #69736d;
   font-size: 14px;
   margin-top: 12px;
