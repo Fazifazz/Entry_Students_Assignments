@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNest - Online Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bag-heart-fill"></i>
+                ShopNest
+            </a>
+
+            <!-- Hamburger -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <!-- Navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">
+                            Products
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">
+                            Categories
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#deals">
+                            Deals
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- Search -->
+                <form class="search-form ms-lg-4 mt-3 mt-lg-0">
+
+                    <input
+                        type="search"
+                        placeholder="Search products">
+
+                    <button type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+
+                </form>
+
+                <!-- Cart -->
+                <a href="#" class="cart ms-lg-4">
+
+                    <i class="bi bi-cart3"></i>
+
+                    <span>0</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    WELCOME TO SHOPNEST
+                </p>
+
+                <h1>
+                    Shop Smart.<br>
+                    Live Better.
+                </h1>
+
+                <p class="hero-text">
+                    Discover quality products, amazing deals and
+                    everything you need — all in one place.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#products" class="primary-btn">
+                        Shop Now
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                    <a href="#categories" class="secondary-btn">
+                        Explore Categories
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Feature 1 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+
+                        <div>
+                            <h4>Free Delivery</h4>
+                            <p>On orders above ₹999</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 2 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <div>
+                            <h4>Secure Payment</h4>
+                            <p>100% secure transactions</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Feature 3 -->
+
+                <div class="col-12 col-md-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+                            <i class="bi bi-arrow-repeat"></i>
+                        </div>
+
+                        <div>
+                            <h4>Easy Returns</h4>
+                            <p>7-day return policy</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>OUR COLLECTION</p>
+
+                <h2>Featured Products</h2>
+
+                <span>
+                    Discover products selected specially for you.
+                </span>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Wireless-headphones.png"
+                                alt="Wireless Headphones">
+
+                            <span class="sale-badge">
+                                SALE
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Electronics</small>
+
+                            <h3>Wireless Headphones</h3>
+
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹3,999
+                                </span>
+
+                                <strong>
+                                    ₹2,499
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Smart-watch.png"
+                                alt="Smart Watch">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Electronics</small>
+
+                            <h3>Smart Watch</h3>
+
+                            <div class="rating">
+                                ★★★★☆
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹4,999
+                                </span>
+
+                                <strong>
+                                    ₹3,299
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Running-shoes.png"
+                                alt="Running Shoes">
+
+                            <span class="sale-badge">
+                                SALE
+                            </span>
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Footwear</small>
+
+                            <h3>Running Shoes</h3>
+
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹3,499
+                                </span>
+
+                                <strong>
+                                    ₹2,199
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Cotton-TShirt.png"
+                                alt="Cotton T Shirt">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Clothing</small>
+
+                            <h3>Cotton T-Shirt</h3>
+
+                            <div class="rating">
+                                ★★★★☆
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹1,299
+                                </span>
+
+                                <strong>
+                                    ₹799
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 5 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Travel-backpack.png"
+                                alt="Travel Backpack">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Accessories</small>
+
+                            <h3>Travel Backpack</h3>
+
+                            <div class="rating">
+                                ★★★★★
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹2,499
+                                </span>
+
+                                <strong>
+                                    ₹1,599
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 6 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <img
+                                src="./images/Best-seller-book.png"
+                                alt="Book">
+
+                        </div>
+
+                        <div class="product-info">
+
+                            <small>Books</small>
+
+                            <h3>Best Seller Book</h3>
+
+                            <div class="rating">
+                                ★★★★☆
+                            </div>
+
+                            <div class="price">
+
+                                <span class="old-price">
+                                    ₹799
+                                </span>
+
+                                <strong>
+                                    ₹499
+                                </strong>
+
+                            </div>
+
+                            <button
+                                class="add-cart"
+                                data-bs-toggle="modal"
+                                data-bs-target="#cartModal">
+
+                                <i class="bi bi-cart-plus"></i>
+                                Add to Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+
+              <!-- Explore More Button -->
+               <div class="explore-more">
+                  <a href="#categories" class="explore-btn">
+                    Explore More
+                    <i class="bi bi-arrow-right"></i>
+                  </a>
+                </div> 
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories-section" id="categories">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p>SHOP BY CATEGORY</p>
+
+                <h2>Explore Categories</h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <a href="#products" class="category-card">
+
+                        <i class="bi bi-phone"></i>
+
+                        <h3>Electronics</h3>
+
+                        <p>Latest gadgets and devices</p>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <a href="#products" class="category-card">
+
+                        <i class="bi bi-person-standing"></i>
+
+                        <h3>Fashion</h3>
+
+                        <p>Trendy styles for everyone</p>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <a href="#products" class="category-card">
+
+                        <i class="bi bi-bootstrap"></i>
+
+                        <h3>Footwear</h3>
+
+                        <p>Comfort for every step</p>
+
+                    </a>
+
+                </div>
+
+
+                <div class="col-12 col-sm-6 col-lg-3">
+
+                    <a href="#products" class="category-card">
+
+                        <i class="bi bi-book"></i>
+
+                        <h3>Books</h3>
+
+                        <p>Books for every interest</p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DEAL ================= -->
+
+    <section class="deal-section" id="deals">
+
+        <div class="container">
+
+            <div class="deal-content">
+
+                <div>
+
+                    <p>LIMITED TIME OFFER</p>
+
+                    <h2>Up to 40% Off</h2>
+
+                    <span>
+                        Grab your favourite products before the offer ends.
+                    </span>
+
+                </div>
+
+                <a href="#products" class="deal-button">
+                    Shop Deals
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div class="container">
+
+            <div class="newsletter-box">
+
+                <div>
+
+                    <p>STAY UPDATED</p>
+
+                    <h2>Join Our Newsletter</h2>
+
+                    <span>
+                        Get updates about new products and special offers.
+                    </span>
+
+                </div>
+
+                <form class="newsletter-form">
+
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required>
+
+                    <button type="submit">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h3>
+                        <i class="bi bi-bag-heart-fill"></i>
+                        ShopNest
+                    </h3>
+
+                    <p>
+                        Your trusted online shopping destination
+                        for quality products at great prices.
+                    </p>
+
+                </div>
+
+
+                <div class="col-6 col-md-6 col-lg-3">
+
+                    <h4>Quick Links</h4>
+
+                    <ul>
+
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#deals">Deals</a></li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="col-6 col-md-6 col-lg-3">
+
+                    <h4>Contact</h4>
+
+                    <p>
+                        <i class="bi bi-envelope"></i>
+                        support@shopnest.com
+                    </p>
+
+                    <p>
+                        <i class="bi bi-telephone"></i>
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        <i class="bi bi-geo-alt"></i>
+                        India
+                    </p>
+
+                </div>
+
+
+                <div class="col-12 col-md-6 col-lg-3">
+
+                    <h4>Follow Us</h4>
+
+                    <div class="social-icons">
+
+                        <a href="#">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <p class="copyright">
+                © 2026 ShopNest. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="modal fade" id="cartModal">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Added to Cart!
+                    </h5>
+
+                    <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body text-center">
+
+                    <i class="bi bi-check-circle-fill success-icon"></i>
+
+                    <h4 class="mt-3">
+                        Product Added Successfully
+                    </h4>
+
+                    <p>
+                        Your product has been added to the cart.
+                    </p>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button
+                        type="button"
+                        class="btn continue-btn"
+                        data-bs-dismiss="modal">
+
+                        Continue Shopping
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
