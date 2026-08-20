@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopNest - Find the best deals on Electronics, Clothing, Footwear, and Books.">
+    <title>ShopNest | Premium E-Commerce</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="fixed-top pt-3 z-3 custom-style-1" >
+        <div class="container custom-style-2" >
+            <nav class="navbar navbar-expand-lg navbar-dark apple-navbar rounded-pill px-4 py-2 shadow-lg">
+                <div class="container-fluid p-0 d-flex justify-content-between align-items-center">
+                <!-- Logo -->
+                <a class="navbar-brand m-0" href="#">
+                    <img src="images/logo.png" alt="ShopNest Logo" height="36" class="custom-style-3" >
+                </a>
+
+                <!-- Links (Centered) -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+                    <ul class="navbar-nav gap-lg-4 text-center mt-3 mt-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white nav-hover" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link text-white nav-hover" href="#categories">Categories</a></li>
+                        <li class="nav-item"><a class="nav-link text-white nav-hover" href="#featured">Featured</a></li>
+                    </ul>
+                </div>
+
+                <!-- Right Section -->
+                <div class="d-flex align-items-center gap-3 gap-lg-4 ms-auto ms-lg-0">
+                    <!-- Search Bar (Desktop) -->
+                    <form class="d-none d-lg-flex position-relative align-items-center" role="search">
+                        <i class="bi bi-search position-absolute text-white-50 ms-3 custom-style-4" ></i>
+                        <input class="form-control rounded-pill bg-white bg-opacity-10 border-0 text-white shadow-none placeholder-white-50 transition custom-style-5" type="search" placeholder="Search" aria-label="Search" >
+                    </form>
+                    <!-- Search Icon (Mobile) -->
+                    <a href="#" class="text-white nav-hover fs-6 d-lg-none"><i class="bi bi-search"></i></a>
+                    
+                    <!-- Location Icon -->
+                    <a href="#location" class="text-white nav-hover fs-6" title="Location">
+                        <i class="bi bi-geo-alt"></i>
+                    </a>
+                    
+                    <!-- Wishlist Icon -->
+                    <a href="#wishlist" class="text-white nav-hover fs-6" title="Wishlist">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    
+                    <!-- Profile Icon -->
+                    <a href="#" class="text-white nav-hover fs-6" title="Login / Profile">
+                        <i class="bi bi-person"></i>
+                    </a>
+                    <a href="#" class="text-white nav-hover fs-6 position-relative" title="Cart">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                    
+                    <!-- Mobile Toggle -->
+                    <button class="navbar-toggler border-0 px-0 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon custom-style-6" ></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+        <!-- Apple-Style Bento Grid Hero -->
+        <section class="hero-section pb-5">
+            <div class="container">
+                
+                <!-- Onam Special Promo Bar -->
+                <div class="rounded-pill text-center shadow-sm mb-4 py-2 px-3 fw-medium d-flex flex-column flex-md-row align-items-center justify-content-center gap-2 custom-style-7" >
+                    <div><i class="bi bi-stars text-danger me-2"></i><strong>Onam Special!</strong> Celebrate with us — Use code</div>
+                    <span class="badge bg-danger rounded-pill px-3 py-2 fs-6 shadow-sm tracking-wide">ONAM50</span>
+                    <div>for 50% Off!</div>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    
+                    <!-- Left: Main Rectangle Slider (70%) -->
+                    <div class="col-lg-8">
+                        <div id="heroBgCarousel" class="carousel slide carousel-fade shadow-sm rounded-4 overflow-hidden h-100 custom-style-8"  data-bs-ride="carousel" data-bs-interval="4000">
+                            <div class="carousel-inner h-100">
+                                <div class="carousel-item active h-100">
+                                    <img src="images/hero.png" class="d-block w-100 h-100 object-fit-cover custom-style-25" alt="Offer 1">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="images/hero1.png" class="d-block w-100 h-100 object-fit-cover custom-style-25" alt="Offer 2">
+                                </div>
+                                <div class="carousel-item h-100">
+                                    <img src="images/hero2.png" class="d-block w-100 h-100 object-fit-cover custom-style-25" alt="Offer 3">
+                                </div>
+                            </div>
+                            
+                            <!-- Custom Carousel Indicators -->
+                            <div class="carousel-indicators mb-3">
+                                <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#heroBgCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            
+                            <!-- Carousel Controls -->
+                            <button class="carousel-control-prev" type="button" data-bs-target="#heroBgCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#heroBgCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Secondary Square Block (30%) -->
+                    <div class="col-lg-4">
+                        <div class="rounded-5 shadow-sm overflow-hidden position-relative h-100 d-flex flex-column custom-style-9" >
+                            <!-- Static 4th Image -->
+                            <img src="images/icon2.png" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover opacity-50 transition custom-style-10" alt="Offer 4" >
+                            
+                            <!-- Dynamic Content Overlay -->
+                            <div class="position-relative z-1 d-flex flex-column justify-content-end h-100 p-4 p-xl-5 text-white mt-auto">
+                                <div class="d-flex align-items-center gap-2 mb-2">
+                                    <h5 id="offer-brand-1" class="fw-bold mb-0 text-info tracking-wide">FOSSIL</h5>
+                                    <span class="opacity-50">|</span>
+                                    <h5 id="offer-brand-2" class="fw-bold mb-0 text-info tracking-wide">APPLE</h5>
+                                </div>
+                                <h2 id="offer-title" class="fw-bolder mb-2 display-6">Tech & Accessories</h2>
+                                <p id="offer-subtitle" class="text-light opacity-75 mb-4 fs-5">Up to 50% Off</p>
+                                <a href="#featured" class="btn btn-info fw-bold text-dark rounded-pill py-3 hover-lift shadow w-100 mt-2">
+                                    Shop Now <i class="bi bi-arrow-right ms-2"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Store Features Bar -->
+        <section class="py-4 border-bottom bg-white z-2 position-relative">
+            <div class="container">
+                <div class="row g-4 text-center justify-content-center">
+                    <div class="col-6 col-md-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-truck fs-3 text-primary mb-2"></i>
+                            <h6 class="fw-bold mb-1">Free Shipping</h6>
+                            <span class="text-muted small">On orders over ₹999</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-shield-check fs-3 text-primary mb-2"></i>
+                            <h6 class="fw-bold mb-1">Secure Payments</h6>
+                            <span class="text-muted small">100% protected</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-arrow-return-left fs-3 text-primary mb-2"></i>
+                            <h6 class="fw-bold mb-1">Easy Returns</h6>
+                            <span class="text-muted small">30-day return policy</span>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="d-flex flex-column align-items-center">
+                            <i class="bi bi-headset fs-3 text-primary mb-2"></i>
+                            <h6 class="fw-bold mb-1">24/7 Support</h6>
+                            <span class="text-muted small">Always here to help</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Showcase -->
+        <section id="categories" class="py-5 bg-light">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">Shop by Category</h2>
+                    <p class="text-muted">Explore our wide range of collections</p>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Left Column: Large Tile -->
+                    <div class="col-lg-6">
+                        <a href="#" class="text-decoration-none d-block h-100">
+                            <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1000&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-11" alt="Electronics" >
+                                <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-5 bg-gradient-dark">
+                                    <h3 class="display-6 text-white mb-2 fw-bold">Electronics</h3>
+                                    <p class="text-light opacity-75 mb-0 fs-5">Discover the latest tech innovations</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Right Column: Nested Grid -->
+                    <div class="col-lg-6">
+                        <div class="row g-4 h-100">
+                            <!-- Top Wide Tile -->
+                            <div class="col-12">
+                                <a href="#" class="text-decoration-none d-block h-100">
+                                    <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                        <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1000&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-12" alt="Clothing" >
+                                        <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-4 bg-gradient-dark">
+                                            <h3 class="h4 text-white mb-1 fw-bold">Clothing</h3>
+                                            <p class="text-light opacity-75 mb-0">Trending fashion for all</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- Bottom Left Tile -->
+                            <div class="col-md-6">
+                                <a href="#" class="text-decoration-none d-block h-100">
+                                    <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1000&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-12" alt="Footwear" >
+                                        <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-4 bg-gradient-dark">
+                                            <h3 class="h5 text-white mb-0 fw-bold">Footwear</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                            <!-- Bottom Right Tile -->
+                            <div class="col-md-6">
+                                <a href="#" class="text-decoration-none d-block h-100">
+                                    <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                        <img src="https://images.unsplash.com/photo-1524578271613-d550eacf6090?q=80&w=1000&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-12" alt="Books" >
+                                        <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-4 bg-gradient-dark">
+                                            <h3 class="h5 text-white mb-0 fw-bold">Books</h3>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row of Categories -->
+                <div class="row g-4 mt-2">
+                    <!-- Category 5 -->
+                    <div class="col-md-3 col-6">
+                        <a href="#" class="text-decoration-none d-block h-100">
+                            <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-13" alt="Beauty" >
+                                <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                    <h3 class="h5 text-white mb-0 fw-bold">Beauty</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Category 6 -->
+                    <div class="col-md-3 col-6">
+                        <a href="#" class="text-decoration-none d-block h-100">
+                            <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=800&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-13" alt="Sports" >
+                                <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                    <h3 class="h5 text-white mb-0 fw-bold">Sports</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Category 7 -->
+                    <div class="col-md-3 col-6">
+                        <a href="#" class="text-decoration-none d-block h-100">
+                            <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=800&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-13" alt="Home & Living" >
+                                <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                    <h3 class="h5 text-white mb-0 fw-bold">Home & Living</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Category 8 -->
+                    <div class="col-md-3 col-6">
+                        <a href="#" class="text-decoration-none d-block h-100">
+                            <div class="category-card position-relative overflow-hidden rounded-4 shadow-sm h-100">
+                                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop" class="w-100 object-fit-cover transition-transform custom-style-13" alt="Accessories" >
+                                <div class="category-overlay position-absolute bottom-0 start-0 w-100 p-3 bg-gradient-dark">
+                                    <h3 class="h5 text-white mb-0 fw-bold">Accessories</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Logos Marquee -->
+        <section class="py-5 bg-white overflow-hidden border-top">
+            <div class="container text-center mb-4">
+                <p class="text-muted text-uppercase fw-semibold tracking-wide small">Trusted by the World's Best Brands</p>
+            </div>
+            <div class="marquee-container position-relative">
+                <div class="marquee-content d-flex align-items-center gap-5">
+                    <!-- Original set -->
+                    <img src="https://cdn.simpleicons.org/sony" alt="Sony" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/apple" alt="Apple" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/nike" alt="Nike" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/garmin" alt="Garmin" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/adidas" alt="Adidas" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/zara" alt="Zara" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/samsung" alt="Samsung" class="marquee-logo">
+                    <!-- Duplicated set for seamless scrolling -->
+                    <img src="https://cdn.simpleicons.org/sony" alt="Sony" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/apple" alt="Apple" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/nike" alt="Nike" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/garmin" alt="Garmin" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/adidas" alt="Adidas" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/zara" alt="Zara" class="marquee-logo">
+                    <img src="https://cdn.simpleicons.org/samsung" alt="Samsung" class="marquee-logo">
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area with Aside -->
+        <div class="container py-5" id="featured">
+            <div class="row g-5">
+                
+                <!-- Featured Products -->
+                <div class="col-lg-9">
+                    <div class="d-flex justify-content-between align-items-end mb-4">
+                        <div>
+                            <h2 class="fw-bold display-6 mb-0">Featured Products</h2>
+                            <p class="text-muted mt-2 mb-0">Handpicked favorites just for you</p>
+                        </div>
+                        <a href="#" class="text-primary text-decoration-none fw-medium d-none d-sm-block">View All <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <!-- Product 1 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-3 z-1">-20%</span>
+                                    <img src="https://www.sony.co.in/image/6145c1d32e6ac8e63a46c912dc33c5bb?fmt=png-alpha" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Premium Wireless Headphones">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                        <span class="text-muted small ms-1">(128)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Sony WH-1000XM5 Headphones</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹15,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹19,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <img src="https://cmsprod.garmin-india.com/media/Forerunner%C3%82%C2%AE%20965%201.webp" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Smart Fitness Watch">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                        <span class="text-muted small ms-1">(85)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Garmin Forerunner 965</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹11,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹14,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <span class="badge bg-success position-absolute top-0 start-0 m-3 z-1">New</span>
+                                    <img src="https://gameloot.in/wp-content/uploads/sites/2/2025/10/Apple-Watch-Ultra-2-49mm-Black-Titanium-Case-GPS-Cellular.jpg" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Apple Watch Series">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                        <span class="text-muted small ms-1">(42)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Apple Watch Ultra 3</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹64,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹69,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <img src="https://images-cdn.ubuy.co.in/6580e6c2ded81a4036285549-fossil-mens-haskell-double-zip-workbag.jpg" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Minimalist Leather Bag">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                        <span class="text-muted small ms-1">(215)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Fossil Haskell Briefcase</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹6,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹9,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <span class="badge bg-danger position-absolute top-0 start-0 m-3 z-1">-15%</span>
+                                    <img src="https://freesociety.in/cdn/shop/files/air-force-1-university-gold-fd7039-100-release-date.avif?v=1754245418&width=1280" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Nike Running Shoes">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                        <span class="text-muted small ms-1">(340)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Nike Air Force 1 '07</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹8,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹10,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="col-sm-6 col-md-4">
+                            <article class="card h-100 border-0 shadow-sm product-card rounded-4">
+                                <div class="position-relative overflow-hidden rounded-top-4 p-3 bg-light">
+                                    <img src="https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=800&auto=format&fit=crop" class="card-img-top mix-blend-multiply product-img transition-transform" alt="Signature Perfume">
+                                </div>
+                                <div class="card-body d-flex flex-column p-4">
+                                    <div class="text-warning mb-2 fs-6">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                                        <span class="text-muted small ms-1">(56)</span>
+                                    </div>
+                                    <h3 class="h6 card-title fw-semibold mb-2">Bleu de Chanel Parfum</h3>
+                                    <div class="mt-auto mb-3">
+                                        <span class="fs-5 fw-bold text-primary">₹11,999</span>
+                                        <span class="text-muted text-decoration-line-through ms-2 small">₹13,999</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary w-100 rounded-pill hover-lift-sm fw-medium">
+                                        <i class="bi bi-cart-plus me-1"></i> Add to Cart
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Aside Section -->
+                <div class="col-lg-3">
+                    <aside class="sticky-lg-top custom-style-14" >
+                        <div class="card border-0 shadow-sm rounded-4 bg-primary text-white text-center p-4 overflow-hidden position-relative aside-banner">
+                            <div class="position-absolute top-0 start-0 w-100 h-100 custom-style-15" ></div>
+                            <div class="position-relative z-1 py-3">
+                                <h4 class="fw-bold mb-3">Summer Sale!</h4>
+                                <p class="mb-4">Get up to 50% off on all summer collections. Limited time offer.</p>
+                                <div class="fs-1 fw-bold mb-4">50% OFF</div>
+                                <a href="#" class="btn btn-light rounded-pill w-100 fw-bold text-primary">Claim Now</a>
+                            </div>
+                        </div>
+
+                        <div class="card border-0 shadow-sm rounded-4 mt-4 p-4">
+                            <h5 class="fw-bold mb-3">Popular Tags</h5>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#" class="badge bg-light text-dark border text-decoration-none p-2 px-3 rounded-pill hover-bg-primary fw-normal">#Fashion</a>
+                                <a href="#" class="badge bg-light text-dark border text-decoration-none p-2 px-3 rounded-pill hover-bg-primary fw-normal">#Tech</a>
+                                <a href="#" class="badge bg-light text-dark border text-decoration-none p-2 px-3 rounded-pill hover-bg-primary fw-normal">#Summer</a>
+                                <a href="#" class="badge bg-light text-dark border text-decoration-none p-2 px-3 rounded-pill hover-bg-primary fw-normal">#Shoes</a>
+                                <a href="#" class="badge bg-light text-dark border text-decoration-none p-2 px-3 rounded-pill hover-bg-primary fw-normal">#Gifts</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Product GIFs Section -->
+        <section id="gifs" class="py-5 bg-light border-top">
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-end mb-4">
+                    <div>
+                        <h2 class="fw-bold display-6 mb-0">Products in Action</h2>
+                        <p class="text-muted mt-2 mb-0">See our top picks come to life</p>
+                    </div>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- GIF 1 -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 product-card">
+                            <div class="position-relative">
+                                <span class="badge bg-dark position-absolute top-0 end-0 m-3 z-1"><i class="bi bi-play-circle-fill me-1"></i>GIF</span>
+                                <img src="images/apple-watch-apple-watch6.gif" class="w-100 object-fit-cover custom-style-12" alt="Smart Watch in Action" >
+                            </div>
+                            <div class="card-body p-4">
+                                <h4 class="h5 fw-bold mb-2">Apple Watch Series 6</h4>
+                                <p class="text-muted small mb-0">Experience the ultimate health and fitness companion on your wrist.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GIF 2 -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 product-card">
+                            <div class="position-relative">
+                                <span class="badge bg-dark position-absolute top-0 end-0 m-3 z-1"><i class="bi bi-play-circle-fill me-1"></i>GIF</span>
+                                <img src="images/marshall-major-iv.gif" class="w-100 object-fit-cover custom-style-12" alt="Headphones in Action" >
+                            </div>
+                            <div class="card-body p-4">
+                                <h4 class="h5 fw-bold mb-2">Marshall Major IV</h4>
+                                <p class="text-muted small mb-0">Iconic design meets 80+ hours of wireless playtime.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- GIF 3 -->
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100 product-card">
+                            <div class="position-relative">
+                                <span class="badge bg-dark position-absolute top-0 end-0 m-3 z-1"><i class="bi bi-play-circle-fill me-1"></i>GIF</span>
+                                <img src="images/travis-scott-jordans.gif" class="w-100 object-fit-cover custom-style-12" alt="Shoes in Action" >
+                            </div>
+                            <div class="card-body p-4">
+                                <h4 class="h5 fw-bold mb-2">Travis Scott x Air Jordan</h4>
+                                <p class="text-muted small mb-0">Signature reverse swoosh and premium materials in motion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Promo Banner Section -->
+        <section class="py-5 bg-white">
+            <div class="container text-center">
+                <div id="promoBannerCarousel" class="carousel slide hover-lift transition rounded-4 shadow-sm overflow-hidden" data-bs-ride="carousel" data-bs-interval="4000">
+                    <!-- Indicators -->
+                    <div class="carousel-indicators mb-2">
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#promoBannerCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="#featured" class="d-block">
+                                <img src="images/offer.png" class="img-fluid w-100 custom-style-24" alt="Promotional Offer 1">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#featured" class="d-block">
+                                <img src="images/offer2.png" class="img-fluid w-100 custom-style-24" alt="Promotional Offer 2">
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="#featured" class="d-block">
+                                <img src="images/offer3.png" class="img-fluid w-100 custom-style-24" alt="Promotional Offer 3">
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev hero-carousel-control" type="button" data-bs-target="#promoBannerCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next hero-carousel-control" type="button" data-bs-target="#promoBannerCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section class="py-5 bg-light border-top">
+            <div class="container py-4">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bold display-6">What Our Customers Say</h2>
+                    <p class="text-muted">Real reviews from verified buyers</p>
+                </div>
+                
+                <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Review 1 -->
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <div class="text-warning mb-3 fs-5">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <p class="lead fs-4 fst-italic text-dark mb-4">"Absolutely love the quality and the fast shipping. The premium wireless headphones are a game changer! Highly recommend ShopNest."</p>
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center fw-bold fs-5 custom-style-16" >AD</div>
+                                        <div class="text-start">
+                                            <h6 class="fw-bold mb-0">Arun Das</h6>
+                                            <span class="text-muted small">Verified Buyer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Review 2 -->
+                        <div class="carousel-item">
+                            <div class="row justify-content-center">
+                                <div class="col-md-8 text-center">
+                                    <div class="text-warning mb-3 fs-5">
+                                        <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                                    </div>
+                                    <p class="lead fs-4 fst-italic text-dark mb-4">"The customer service team was incredibly helpful when I needed to exchange my shoes for a different size. Seamless experience!"</p>
+                                    <div class="d-flex align-items-center justify-content-center gap-3">
+                                        <div class="rounded-circle bg-dark text-white d-flex align-items-center justify-content-center fw-bold fs-5 custom-style-16" >SM</div>
+                                        <div class="text-start">
+                                            <h6 class="fw-bold mb-0">Sarah Menon</h6>
+                                            <span class="text-muted small">Verified Buyer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev text-dark custom-style-17" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next text-dark custom-style-17" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Articles / Blog Section -->
+        <section class="py-5 bg-white">
+            <div class="container py-4">
+                <div class="d-flex justify-content-between align-items-end mb-5">
+                    <div>
+                        <h2 class="fw-bold display-6 mb-2">Latest from the Journal</h2>
+                        <p class="text-muted mb-0">Style guides, tech reviews, and lifestyle tips.</p>
+                    </div>
+                    <a href="#" class="btn btn-outline-dark rounded-pill px-4 d-none d-md-inline-block">View All Posts</a>
+                </div>
+                
+                <div class="row g-4">
+                    <!-- Article 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 blog-card rounded-4 bg-light overflow-hidden">
+                            <div class="blog-img-wrapper position-relative custom-style-18" >
+                                <img src="https://images.unsplash.com/photo-1498049794561-7780e7231661?q=80&w=1000&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Tech Gadgets">
+                                <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 fw-bold px-3 py-2 shadow-sm">Technology</span>
+                            </div>
+                            <div class="card-body p-4">
+                                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-2"></i>Aug 15, 2026</p>
+                                <h5 class="card-title fw-bold mb-3">Top 10 Tech Essentials for the Modern Professional</h5>
+                                <p class="card-text text-muted mb-4">Discover the must-have gadgets that will transform your productivity and everyday life this year.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2">Read Article <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 blog-card rounded-4 bg-light overflow-hidden">
+                            <div class="blog-img-wrapper position-relative custom-style-18" >
+                                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=1000&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Fashion Trends">
+                                <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 fw-bold px-3 py-2 shadow-sm">Fashion</span>
+                            </div>
+                            <div class="card-body p-4">
+                                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-2"></i>Aug 12, 2026</p>
+                                <h5 class="card-title fw-bold mb-3">The Ultimate Wardrobe Refresh for Summer</h5>
+                                <p class="card-text text-muted mb-4">Elevate your style game with these lightweight, breathable, and timeless pieces perfect for the heat.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2">Read Article <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Article 3 -->
+                    <div class="col-lg-4 col-md-6 d-md-none d-lg-block">
+                        <div class="card h-100 border-0 blog-card rounded-4 bg-light overflow-hidden">
+                            <div class="blog-img-wrapper position-relative custom-style-18" >
+                                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Lifestyle Tips">
+                                <span class="badge bg-white text-dark position-absolute top-0 start-0 m-3 fw-bold px-3 py-2 shadow-sm">Lifestyle</span>
+                            </div>
+                            <div class="card-body p-4">
+                                <p class="text-muted small mb-2"><i class="bi bi-calendar3 me-2"></i>Aug 08, 2026</p>
+                                <h5 class="card-title fw-bold mb-3">Building a Minimalist Workspace at Home</h5>
+                                <p class="card-text text-muted mb-4">Learn how to declutter your desk and create an environment that fosters focus and creativity.</p>
+                                <a href="#" class="text-primary fw-bold text-decoration-none d-flex align-items-center gap-2">Read Article <i class="bi bi-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4 d-md-none">
+                    <a href="#" class="btn btn-outline-dark rounded-pill px-4">View All Posts</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section id="newsletter" class="newsletter-section py-5 bg-dark text-white position-relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="position-absolute top-0 end-0 translate-middle rounded-circle bg-primary opacity-25 custom-style-19" ></div>
+            <div class="position-absolute bottom-0 start-0 translate-middle rounded-circle bg-primary opacity-25 custom-style-20" ></div>
+            
+            <div class="container py-5 position-relative z-1 text-center">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <i class="bi bi-envelope-paper fs-1 text-primary mb-3 d-inline-block"></i>
+                        <h2 class="display-6 fw-bold mb-3">Subscribe to our Newsletter</h2>
+                        <p class="text-light opacity-75 mb-4">Get the latest updates on new products, exclusive deals, and upcoming sales directly to your inbox.</p>
+                        
+                        <form class="mx-auto custom-style-21" >
+                            <div class="input-group input-group-lg p-1 bg-white rounded-pill">
+                                <input type="email" class="form-control border-0 bg-transparent ps-4" placeholder="Enter your email address" required aria-label="Email Address">
+                                <button class="btn btn-primary rounded-pill px-4 fw-semibold" type="submit">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light pt-5 pb-3 border-top border-secondary">
+        <div class="container pt-4">
+            <div class="row g-4 mb-5">
+                <!-- About Column -->
+                <div class="col-lg-4 col-md-6 pe-lg-5">
+                    <a class="navbar-brand d-flex align-items-center mb-3" href="#">
+                        <img src="images/logo.png" alt="ShopNest Logo" height="52" class="custom-style-3" >
+                    </a>
+                    <p class="text-light opacity-75">ShopNest is your one-stop destination for everything you need. Premium quality products with unbeatable prices, delivered straight to your door.</p>
+                </div>
+                
+                <!-- Quick Links Column -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                        <li><a href="#categories" class="text-light opacity-75 text-decoration-none footer-link">Categories</a></li>
+                        <li><a href="#featured" class="text-light opacity-75 text-decoration-none footer-link">Featured Products</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none footer-link">Special Offers</a></li>
+                        <li><a href="#" class="text-light opacity-75 text-decoration-none footer-link">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Contact Us</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 text-light opacity-75">
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-geo-alt-fill text-primary"></i>
+                            <span>ShopNest Tower, MG Road, Kochi, Kerala 682016</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-envelope-fill text-primary"></i>
+                            <span>support@shopnest.in</span>
+                        </li>
+                        <li class="d-flex align-items-center gap-3">
+                            <i class="bi bi-telephone-fill text-primary"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Social Media Column -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="fw-bold mb-3 text-white">Follow Us</h5>
+                    <p class="text-light opacity-75 mb-3">Stay connected for the latest updates.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="social-icon rounded-circle bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center text-white text-decoration-none transition custom-style-22" >
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon rounded-circle bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center text-white text-decoration-none transition custom-style-22" >
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <a href="#" class="social-icon rounded-circle bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center text-white text-decoration-none transition custom-style-22" >
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon rounded-circle bg-secondary bg-opacity-25 d-flex align-items-center justify-content-center text-white text-decoration-none transition custom-style-22" >
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row pt-4 border-top border-secondary border-opacity-50 text-center">
+                <div class="col-12">
+                    <p class="text-light opacity-75 small mb-0">&copy; 2026 ShopNest. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" class="btn btn-primary rounded-circle shadow-lg position-fixed d-flex align-items-center justify-content-center scroll-to-top z-3 custom-style-23" >
+        <i class="bi bi-arrow-up fs-4"></i>
+    </a>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Dynamic Hero Offer Sync -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const offerData = [
+                { brand1: "IPHONE 17 PRO", brand2: "PRO MAX", title: "Your Next Upgrade!", subtitle: "Up to 10% Off" },
+                { brand1: "NIKE", brand2: "PUMA", title: "Sports & Activewear", subtitle: "Flat 40% Off" },
+                { brand1: "FOSSIL", brand2: "CASIO", title: "Premium Watches", subtitle: "Starting at ₹2,999" },
+                { brand1: "BOSE", brand2: "BEATS", title: "Premium Audio", subtitle: "Hear the Difference" }
+            ];
+
+            const carouselElement = document.getElementById('heroBgCarousel');
+            if(carouselElement) {
+                const b1 = document.getElementById('offer-brand-1');
+                const b2 = document.getElementById('offer-brand-2');
+                const title = document.getElementById('offer-title');
+                const subtitle = document.getElementById('offer-subtitle');
+
+                carouselElement.addEventListener('slide.bs.carousel', event => {
+                    const index = event.to;
+                    const data = offerData[index] || offerData[0];
+                    
+                    if(b1) b1.textContent = data.brand1;
+                    if(b2) b2.textContent = data.brand2;
+                    if(title) title.textContent = data.title;
+                    if(subtitle) subtitle.textContent = data.subtitle;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
