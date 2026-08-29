@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Royal Hotel</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner container">
+        <div class="logo" aria-hidden="true">
+          <!-- simple crown logo (inline SVG) -->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 13l3-5 4 6 4-8 3 5 2-4v9H3v-3z" fill="#8e5f3d"/>
+            <circle cx="6" cy="7" r="1" fill="#b58a57"/>
+            <circle cx="12" cy="5" r="1" fill="#b58a57"/>
+            <circle cx="18" cy="7" r="1" fill="#b58a57"/>
+          </svg>
+        </div>
+        <div class="branding">
+          <h1>Royal Hotel</h1>
+          <span class="tagline">comfort Luxury Relax </span>
+        </div>
+      </div>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark site-nav fixed-top" aria-label="Main Navigation">
+      <div class="container">
+        <a class="navbar-brand d-md-none" href="#" aria-label="Open menu">
+          <!-- small SVG logo (no text) -->
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M3 13l3-5 4 6 4-8 3 5 2-4v9H3v-3z" fill="#c9a24a"/>
+          </svg>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#home" data-target="home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#rooms" data-target="rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about" data-target="about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact" data-target="contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-overlay" aria-hidden="true"></div>
+        <div class="hero-content container">
+          <h2>Welcome to Royal Hotel</h2>
+          <p class="hero-subtitle">A place for comfort and refined experiences</p>
+          <a href="#rooms" id="explore-rooms" class="btn">Explore Rooms</a>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <h2>About</h2>
+        <p>Royal hotel offers comfortble stays,beautiful rooms,friendly hospitlity</p>
+      </section>
+
+      <section id="rooms" class="rooms container">
+        <h2>Our Rooms</h2>
+        <div class="rooms-grid">
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80" alt="Deluxe room">
+            <h3>Deluxe</h3>
+            <div class="room-price">₹4,500</div>
+            <p>a spacious and elegant room</p>
+          </article>
+
+          <article class="room-card">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80" alt="Suite room">
+            <h3>Suite</h3>
+            <div class="room-price">₹6,500</div>
+            <p>a spacious and elegant suite</p>
+          </article>
+
+          <article class="room-card">
+            <img src="assets/family-room.png" alt="Family room with two separate beds">
+            <h3>Family</h3>
+            <div class="room-price">₹5,500</div>
+            <p>a spacious room perfect for family</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start">
+          <div class="contact-info">
+            <h2>Contact</h2>
+            <p><strong>Kochi</strong></p>
+            <p>Phone: 9200000000</p>
+            <p>Email: royal@gmail.com</p>
+          </div>
+
+          <div class="contact-form">
+            <h2>Queries</h2>
+            <form id="query-form">
+              <div style="margin-bottom:10px">
+                <label for="name">Name</label><br />
+                <input type="text" id="name" name="name" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc" />
+              </div>
+              <div style="margin-bottom:10px">
+                <label for="email">Email</label><br />
+                <input type="email" id="email" name="email" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc" />
+              </div>
+              <div style="margin-bottom:10px">
+                <label for="message">Message</label><br />
+                <textarea id="message" name="message" rows="4" style="width:100%;padding:8px;border-radius:6px;border:1px solid #ccc"></textarea>
+              </div>
+              <button type="submit" class="btn">Send</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="container" style="display:flex;justify-content:center;align-items:center">
+          <div>Grand Hotel © 2026 Royal Hotel</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Smooth scroll behavior for nav and buttons
+      document.querySelectorAll('a[data-target], #explore-rooms').forEach(el=>{
+        el.addEventListener('click', (e)=>{
+          const href = el.getAttribute('href');
+          if(href && href.startsWith('#')){
+            e.preventDefault();
+            const id = href.slice(1);
+            const target = document.getElementById(id);
+                  if(target){
+                    // account for fixed navbar height so headings are not covered
+                    const nav = document.querySelector('.site-nav');
+                    const navHeight = nav ? nav.offsetHeight : 0;
+                    const rect = target.getBoundingClientRect();
+                    const scrollTop = window.pageYOffset + rect.top - navHeight - 8; // small extra gap
+                    window.scrollTo({top:scrollTop,behavior:'smooth'});
+                    // if navbar collapse (mobile) is open, close it after click
+                    const openCollapse = document.querySelector('.navbar-collapse.show');
+                    if(openCollapse){
+                      openCollapse.classList.remove('show');
+                      const toggler = document.querySelector('.navbar-toggler');
+                      if(toggler){
+                        toggler.classList.add('collapsed');
+                        toggler.setAttribute('aria-expanded','false');
+                      }
+                    }
+                    });
+
+                    // clicking the small brand/logo should open the collapsed menu on tablets/mobile
+                    const smallBrand = document.querySelector('.navbar-brand.d-md-none');
+                    if(smallBrand){
+                      smallBrand.addEventListener('click', function(e){
+                        e.preventDefault();
+                        const collapseEl = document.getElementById('mainNav');
+                        if(collapseEl){
+                          const bsCollapse = bootstrap.Collapse.getOrCreateInstance(collapseEl);
+                          if(!collapseEl.classList.contains('show')) bsCollapse.show();
+                        }
+                      });
+                    }
+                  }
+          }
+        })
+      });
+
+      // Prevent form submission and show a simple confirmation
+      const form = document.getElementById('query-form');
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          alert('Thank you! Your query has been sent.');
+          form.reset();
+        });
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
