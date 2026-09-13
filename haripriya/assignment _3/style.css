@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.quiz-container {
+    width: 90%;
+    max-width: 600px;
+    background-color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.question {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option-btn:hover {
+    background-color: #f0f0f0;
+}
+
+/* Correct answer */
+.correct {
+    background-color: rgb(3, 135, 3) !important;
+    color: white;
+}
+
+/* Wrong answer */
+.wrong {
+    background-color: rgba(255, 0, 0, 0.893) !important;
+    color: white;
+}
+
+/* Correct answer text */
+.correct-answer {
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    color: green;
+}
+
+#next-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff5722;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#next-btn:hover {
+    background-color: #555;
+}
+
+#next-btn:disabled {
+    background-color: #5e5757;
+    cursor: not-allowed;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.feedback {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.restart-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.restart-btn:hover {
+    background-color: #555;
+}
