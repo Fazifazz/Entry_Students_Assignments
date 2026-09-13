@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thali & Leaf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="Style.css">
+    
+
+<style>
+    .text-gold {
+    background: linear-gradient(to bottom, #d4af37 0%, #fff3a8 35%, #aa771c 65%, #6b4d08 100%) !important;
+    -webkit-background-clip: text !important;
+     background-clip: text !important;
+     -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5)) !important;
+    font-weight: bold;
+}
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60%;
+    /* adjust this */
+}
+
+/* Explore Menu Button */
+.custom-btn1{
+  border:2px solid #b68b3c;/* Change to a darker shade of Grey */
+  color:#b68b3c; /* Change to a darker shade of Grey */
+ background-color: transparent;
+  transition: all 0.3s ease;
+}
+.custom-btn1:hover {
+    background-color: #b68b3c; /* Change to a darker shade of Grey */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    color: white; /* Change text color to white */
+}
+/* Book Catering Button */
+.custom-btn2 {
+    border:2px solid #b68b3c;
+    color: #b68b3c; /* Change to a darker shade of Grey */
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+.custom-btn2:hover {
+   background-color: #b68b3c; /* Change to a darker shade of Grey */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    color: white; /* Change text color to white */
+    
+}
+.btn {box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+}
+.btn:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.hero-tagline {
+    font-size: 1.25rem;
+    color: #b68b3c; /* Bootstrap's secondary text color */
+    margin-top: 1rem;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between buttons */
+    margin-top: 2rem;
+}
+
+/* Main Container Structure */
+.bg-section {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    padding: 40px;
+    z-index: 1;
+}
+
+/* Text Container Box*/
+.content-box {
+    background-color: rgba(255, 255, 255, 0.85); 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.custom-text {
+    color: #2b1a03 !important;
+    font-weight: 600;
+}
+.form-control:focus {
+    outline: none !important; /* Remove default outline */
+    border-color: black !important; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 86, 179, 0.5) !important; /* Add a subtle shadow effect */
+    transition: border-color 0.3s ease, 
+    box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+
+</style>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+  <div class="container-sm">
+    <a class="navbar-brand d-flex align-items-center" href="#" style="font-family: 'Brush Script MT', cursive; font-size: 50px;">
+      <img src="https://media.istockphoto.com/id/1317726432/vector/t-and-l-vintage-initials-symbol-the-letters-are-surrounded-by-ornamental-elements-wedding-or.jpg?s=170667a&w=0&k=20&c=i479ro8_8VJB2PA9ywXDbDiQ7x-nD7LwMeulzBDN7uI=" alt="logo Thali & Leaf" width="50" height="50" class="me-2">
+      <span class="text-gold">Thali & Leaf</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#discover-us">About</a> 
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#made-with-love">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#Discover-gallery">Gallery</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#Visit-Us">Contact</a>
+        </li>
+      </ul>
+      <!--Right side whatsapp button-->
+      <a href="https://api.whatsapp.com/send?phone=+919999999999" target="_blank" class="btn btn-success d-flex align-items-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" width="20" height="20" class="me-2">
+        Chat with us
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+    <div id="home" class="text-center" style="padding-top:10rem;padding-bottom:10rem;">
+      
+        <!--logo-->
+      <img src="https://media.istockphoto.com/id/1317726432/vector/t-and-l-vintage-initials-symbol-the-letters-are-surrounded-by-ornamental-elements-wedding-or.jpg?s=170667a&w=0&k=20&c=i479ro8_8VJB2PA9ywXDbDiQ7x-nD7LwMeulzBDN7uI=" alt="logo Thali & Leaf"  class="img-fluid mb-4" style="max-width: 120px;display: block; margin: 0 auto;">
+      <!--restaurant name-->
+      <span class="text-gold" style="font-family: 'Times New Roman', cursive; font-size: 50px; display:flex; justify-content: center:">THALI&LEAF</span>
+        <p class="hero-tagline mb-4" style="display:flex;justify-content: center;"><b>Experience the finest dining with our exquisite menu and elegant ambiance.</p>
+        <div class="btn-container"> 
+          <a href="#made-with-love" class="btn custom-btn1 rounded-pill px-4 py-2">Explore Menu</a>
+          <a href="#book-catering" class="btn custom-btn2 rounded-pill px-4 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/>
+</svg> <a href="book-catering.html" class="btn custom-btn2 rounded-pill px-4 py-2">
+   Book Catering
+</a>
+
+        </div>
+    </div>
+</a> 
+        </div>
+
+<!--Discover Us-->
+
+
+
+<div id="discover-us" class="container-md w-100 mt-5 pt-5 background-image" style="background-image: url('https://img.freepik.com/premium-photo/uncluttered-light-bright-contemporary-dining-room-table-with-glass-doors-background_1182900-21936.jpg'); background-size: cover; background-position: center; padding: 30px 0; background-opacity: 0.8; filter: brightness(0.9);">
+  <h1 class ="custom-text" style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 56px;text-decoration-color: #aa771c;text-emphasis-color: #aa771c ; text-align: center;">Discover Us</h1>
+  
+  <!-- left Description and right images -->
+   <div class="row align-items-center mt-4">
+  <!-- Left Description -->
+  <div class="col-lg-6 mb-4 mb-lg-0">
+  <p class="custom-text" style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 25px;line-height: 1.6;max-width: 800px;">Welcome to Thali & Leaf,a pure vegetarian sanctuary where the authentic taste of Kerala comes alive.Rooted in rich culinary traditions.we bring you timeless recipes crafted with love, fresh locally source ingrediants, and fragrant spices. Every dish tells a story of our commitment to excellence and authenticity.</p>
+        </div>
+  
+        <!-- Right Images -->
+        <div class="col-lg-6">
+          <div class="d-flex gap-2 justify-content-end">
+         
+          <img src="https://img.freepik.com/premium-photo/artfully-arranged-vegetable-platter-with-vibrant-colors-textures_1077535-733.jpg" alt="Image 2" class="img-fluid rounded" style="max-width: 100%;">
+        
+ </div>
+</div>
+</div> <!--end of discover us-->
+
+
+
+<!--made with love ; menu-->
+
+  <div id="made-with-love" style="position: absolute; left: 0; right:0; transform: translateY(100px); text-align: center; padding-top: 4rem; padding-bottom: 10rem;background-image: url('https://img.freepik.com/premium-photo/nice-food-background-with-spices-herbs-utensil-white-background-generative-ai_21085-55563.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat">
+  
+    <h1 class ="custom-text mt-3 text-center" style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 50px;text-decoration-color: #aa771c;text-emphasis-color: #aa771c ; text-align: center;">Made with Love, Served with Grace</h1>
+  <p class ="custom-text mt-3 text-center" style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 20px;text-decoration-color: #aa771c;text-emphasis-color: #aa771c ; text-align: center;">Premium Kerala vegetarian dishes crafted with devotion, hygiene, and unforgettable flavor. </p>
+   <div class="btn-container"> 
+          <a href="#Spinachsoup" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">Starter</a>
+          <a href="#Gheeroast" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">Dosa</a>
+          <a href="#PaneerButterMasala" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">Specials</a>
+          <a href="#RasmalaiRoyale" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">Deserts</a> 
+        </div>
+   <div class="row justify-content-center align-items-center mt-4">
+   <!-- Spinach Soup -->     
+   <div id="Spinachsoup" class="col-md-4 text-center">
+         <img src="https://tse3.mm.bing.net/th/id/OIP.Rs7wzoxS6o_fh0B_mVkI6gHaEJ?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"alt="Image 1 of spinach soup" style="width:80%"; height:80%; border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Spinach Soup</h3>
+          <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹120 </p>
+  </div>
+  <!-- Veg Momos -->
+  <div id="Veg-Momos" class="col-md-4 text-center">
+         <img src="https://img.freepik.com/premium-photo/crispy-veg-shapale-momos-top-view-fried-vegetable-dumplings_841543-55925.jpg?w=996"alt="Image 1 of Veg Momos" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Veg Momos</h3>
+         <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹140 </p>
+  </div>
+  <!-- Veg Pakora -->
+  <div id="VegPakora" class="col-md-4 text-center">
+         <img src="https://www.harighotra.co.uk/images/recipes/hero/vegetable-pakora-hero.jpg"alt="Image 1 of Veg Pakora" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Veg Pakora</h3>
+         <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹100 </p>
+  </div>
+  <div class="row justify-content-center align-items-center mt-4">
+   <!-- Ghee Roast -->     
+   <div id="Gheeroast" class="col-md-4 text-center">
+         <img src="https://sukhis.com/app/uploads/2022/09/image3-5-900x601-1.jpg"alt="Image 1 of Ghee Roast" style="width:80%"; height:80%; border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Ghee Roast</h3>
+         <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹95 </p>
+        </div>
+  <!-- Chocolate Dosa -->
+  <div id="ChocolateDosa" class="col-md-4 text-center">
+         <img src="https://dosaandchaat.com/images/kids/chocolate-dosa.jpg"alt="Image 1 of chocolate Dosa" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Chocolate Dosa</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹150 </p>
+        </div>
+  <!-- Mysore Masala Dosa -->
+  <div id="MysoreMasalaDosa" class="col-md-4 text-center">
+         <img src="https://hindi.dheivegam.com/wp-content/uploads/2023/05/Mysore-masala-dosa-recipe-in-Hindi.jpg"alt="Image 1 of Mysore Masala Dosa" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Mysore Masala Dosa</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹85 </p>
+        </div>
+   <div class="row justify-content-center align-items-center mt-4">
+   <!-- Paneer Butter Masala -->     
+   <div id="PaneerButterMasala" class="col-md-4 text-center">
+         <img src="https://as1.ftcdn.net/v2/jpg/06/51/02/14/1000_F_651021421_Vgbfh3e4Kz4b81i6BGExguVZQrMjadfR.jpg"alt="Image 1 of Paneer Butter Masala" style="width:80%"; height:80%; border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Paneer Butter Masala</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹210 </p>
+        </div>
+  <!-- Veg Fried Rice -->
+  <div id="VegFriedRice" class="col-md-4 text-center">
+         <img src="https://static.vecteezy.com/system/resources/thumbnails/036/492/540/small_2x/ai-generated-balanced-feast-enjoy-a-nutritious-dinner-with-asian-fried-rice-photo.jpg"alt="Image 1 of Veg Fried Rice" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Veg Fried Rice</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹250 </p>
+        </div>
+  <!-- Vegetarian Fajitas -->
+  <div id="VegetarianFajitas" class="col-md-4 text-center">
+         <img src="https://flufflessrecipes.com/wp-content/uploads/2025/01/Vegetarian-Fajitas.jpeg"alt="Image 1 of Mysore Masala Dosa" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Vegetarian Fajitas</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹270 </p>
+        </div>
+  <div class="row justify-content-center align-items-center mt-4">
+   <!-- Rasmalai Royale -->     
+   <div id="RasmalaiRoyale" class="col-md-4 text-center">
+         <img src="https://images.slurrp.com/prod/recipe_images/whiskaffair/badam-kheer-recipe-1617379829_VYHOIVJIKJBZ6AYP8MOR.webp"alt="Image 1 of Rasmalai Royale" style="width:80%"; height:80%; border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Rasmalai Royale</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹250 </p>
+        </div>
+  <!-- Gulab Jamun -->
+  <div id="Gulab-Jamun" class="col-md-4 text-center">
+         <img src="https://img.freepik.com/premium-photo/vibrant-festive-background-with-gulab-jamun-as_1169880-187751.jpg"alt="Image 1 of Gulab Jamun" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Gulab Jamun</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹190 </p>
+        </div>
+  <!-- Kesar Pista Kulfi -->
+  <div id="kesar-pista-kulfi" class="col-md-4 text-center">
+         <img src="https://dymatize.imgix.net/production/blog/Kesar-Pista-Protein-Kulfi.jpg?ar=928:618&auto=format%2Ccompress&fit=crop&ixlib=php-3.1.0" style="width:80%"; height:80%;border-radius: 50%;">
+         <h3 class="fw-bold mt-2"style="color: #422d06; font-family: 'Times New Roman', cursive; font-size: 40px;">Kesar Pista Kulfi</h3>
+        <p class="fw-bold" style="color: #422d06; font-size: 20px;">
+    ₹75 </p>
+        </div>
+   </div> <!--end of made with love-->
+  </div> <!--end of container-->
+
+  <!--Gallery-->
+    <div id="Discover-gallery" style="position:relative; left: 0; right:0; transform: translateY(120px); text-align: center; padding-top: 4rem; padding-bottom: 10rem;background-image: url('https://img.freepik.com/premium-photo/pastel-minimalistic-landscape-background-featuring-serene-natural-elements-soft-colors_271410-8411.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat">
+    <h1 class ="custom-text mt-3 text-center" style="color: #edecea; font-family: 'Times New Roman', cursive; font-size: 50px;text-decoration-color: #edecea;text-emphasis-color: #edecea ; text-align: center;">Discover The heart of Thali&Leaf</h1>
+    <p class ="custom-text mt-3 text-center" style="color: #edecea; font-family: 'Times New Roman', cursive; font-size: 20px;text-decoration-color: #edecea;text-emphasis-color: #edecea ; text-align: center;">Step into the spirit of tradition, culture, and taste. </p>
+    
+       <iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/GBbcYtkqVKQ?si=Rflo-lZ-RAkiphoB" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+   <div id="Visit-Us"style="position: absolute; left: 0; right:0; transform: translateY(150px); text-align: center; padding-top: 4rem; padding-bottom: 10rem; background-image: url('https://img.freepik.com/premium-photo/cozy-evening-ambience-modern-cafe-interior-with-warm-hanging-lights_97843-48001.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat">
+    <h2 class="text-white" Style="font-family: 'Times New Roman', Times, serif; font-size: 50px;">Visit Us Today</h2>
+    <h3 class="text-white" Style="font-family: 'Times New Roman', Times, serif; font-size: 30px;">Contact Thali&Leaf for premium Kerala vegetarian catering and hospitality.</h3>
+   <div class="container d-flex justify-content-center flex-column p-3">
+        <h2 class="text-white">Quick Contact</h2>
+ <form>
+          <div class="mb-3" >
+            <label for="name" class="text-warning" style="font-weight: bold;" font-family: 'Times New Roman', cursive; font-size: 20px;">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+          </div>
+           
+          <div class="mb-3" font-size:20px>
+            <label for="phone" class="text-warning" style="font-weight: bold;" font-family: '', cursive; font-size: 20px;">Phone</label>
+            <input type="number" class="form-control" id="phone" placeholder="Enter your phone number">
+          </div>
+         
+          <div class="mb-3" font-size:20px>
+            <label for="message" class="text-warning" style="font-weight: bold;" font-family: 'Times New Roman', cursive; font-size: 20px;">Message</label>
+            <textarea class="form-control" id="message" rows="4" placeholder="Tell us what you are looking for"></textarea>
+          </div>
+           <a href="https://api.whatsapp.com/send?phone=+919999999999" target="_blank" class="btn btn-success">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo" width="20" height="20" class="me-2">
+        Send via WhatsApp
+      </a>
+        </form>
+      </div>
+
+      <footer class="text-white py-4" style=" bottom: 10px;top: 50px; width: 100%; align-items: left; flex-direction: column;justify-content-sm-evenly:">
+       <p class="mb-0" style="font-family: 'Calibri', cursive; font-size: 24px;
+        d-flex flex-column mb-3">&copy; 2026 Thali & Leaf. All rights reserved.  </p>
+        <p class="mb-0" style="font-family: 'Calibri', cursive; font-size: 24px;
+        d-flex flex-column mb-3">Contact: +91 9999999999 | Email:info@thaliandleaf.com </p>
+        <p class="mb-0" style="font-family: 'Calibri', cursive; font-size: 24px;
+        d-flex flex-column mb-3">Address: 123, Main Street City, State, Country</p>
+        <p class="mb-0" style="font-family: 'Calibri', cursive; font-size: 24px;
+        d-flex flex-column mb-3">Follow us on: </p>
+          <a href="https://www.facebook.com/thaliandleaf" target="_blank" class="text-white mx-2">Facebook</a> |
+          <a href="https://www.instagram.com/thaliandleaf" target="_blank" class="text-white mx-2">Instagram</a> |
+          <a href="https://www.twitter.com/thaliandleaf" target="_blank" class="text-white mx-2">Twitter</a>
+          <p class="mb-0" style="font-family: 'Calibri', cursive; font-size: 24px;
+        d-flex flex-column mb-3">Contact us for reservations. Taste the best of Kerala!</p>
+        <!--logo at centre-->
+        <div class="mt-3">
+      <img src="https://media.istockphoto.com/id/1317726432/vector/t-and-l-vintage-initials-symbol-the-letters-are-surrounded-by-ornamental-elements-wedding-or.jpg?s=170667a&w=0&k=20&c=i479ro8_8VJB2PA9ywXDbDiQ7x-nD7LwMeulzBDN7uI=" alt="logo Thali & Leaf"class="img-fluid" style="max-width:100px">
+       </a> 
+       </footer>
+       </html>
+
