@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNest — Find Your Perfect Look</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mooli&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--  HEADER / NAVIGATION -->
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark">
+
+            <div class="container-fluid px-4">
+
+                <!-- Website Logo -->
+                <a class="navbar-brand" href="#">
+                    ShopNest
+                </a>
+
+                
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navMenu">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navigation Menu -->
+                <div class="collapse navbar-collapse" id="navMenu">
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-4 text-center">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero-section">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#featured-products">
+                                Deals
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#shop-categories">
+                                Categories
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#footer">
+                                Contact
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Search and Cart -->
+                    <div class="nav-actions">
+
+                        <div class="search-box">
+                            <i class="bi bi-search"></i>
+
+                            <input type="text"
+                                placeholder="Search products...">
+                        </div>
+
+                        <a href="#" class="icon-circle">
+                            <i class="bi bi-cart3"></i>
+
+                            <span class="cart-badge">2</span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!--  MAIN CONTENT  -->
+    <main>
+
+
+        <!--  HERO SECTION  -->
+        <section id="hero-section">
+
+            <div class="hero-shape" aria-hidden="true"></div>
+
+            <div class="container col-xxl-10 px-4 py-5">
+
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+
+                    
+                    <div class="col-md-6">
+
+                        <div class="hero-media">
+
+                            <div class="hero-media__backdrop"
+                                aria-hidden="true">
+                            </div>
+
+                            <img src="./images/hero2.png"
+                                class="hero-media__img"
+                                alt="Model in a mustard blazer holding a blue velvet clutch"
+                                loading="lazy">
+
+                            <div class="hero-tag" aria-hidden="true">
+                                <span class="hero-tag__line1">
+                                    New
+                                </span>
+
+                                <span class="hero-tag__line2">
+                                    Drop
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-md-6">
+
+                        
+                        <aside class="hero-aside">
+                            <span>NEW ARRIVAL</span>
+                            <p>Fresh styles just landed</p>
+                        </aside>
+
+                        <h1 class="hero-title">
+                            Find Your<br>
+                            Perfect Look
+                        </h1>
+
+                        <p class="hero-lead">
+                            Trendy styles, everyday essentials,
+                            and everything in between.
+                        </p>
+
+                       
+                        <div class="hero-actions">
+
+                            <a href="#shop-categories"
+                                class="btn-hero btn-hero--primary">
+                                Shop Now
+                            </a>
+
+                            <a href="#featured-products"
+                                class="btn-hero btn-hero--ghost">
+                                View Deals
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  FEATURED PRODUCTS -->
+        <section id="featured-products">
+
+            <h2 class="text-center mb-5">
+                Popular
+                <span class="head-span">
+                    Collections
+                </span>
+            </h2>
+
+            <div class="container">
+
+                <div class="row">
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP1.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Casual Hoodie</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $80
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $60
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐⭐
+                                <span class="text-muted">(4.8)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP2.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Cotton T-Shirt</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $200
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $140
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐
+                                <span class="text-muted">(4)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP3.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Classic Wrist Watch</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $1800
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $1000
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐
+                                <span class="text-muted">(4.7)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP4.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Sunglasses</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $370
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $290
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐⭐
+                                <span class="text-muted">(4.3)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP5.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Minimalist Handbag</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $850
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $600
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐
+                                <span class="text-muted">(4.3)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-2 g-4 text-center card-lift">
+
+                        <div class="featured-image">
+                            <img src="./images/FP6.avif"
+                                alt=""
+                                class="img-fluid card-img-top">
+                        </div>
+
+                        <div class="featured-details">
+
+                            <h3>Slim Fit Jeans</h3>
+
+                            <p class="mb-2">
+                                <span class="text-decoration-line-through text-muted">
+                                    $1300
+                                </span>
+
+                                <span class="fw-bold text-danger ms-2">
+                                    $980
+                                </span>
+                            </p>
+
+                            <p class="mb-3">
+                                ⭐⭐⭐⭐
+                                <span class="text-muted">(4.7)</span>
+                            </p>
+
+                            <button type="button" class="btn w-100">
+                                Add to Cart
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  FEATURES -->
+        <section id="features">
+
+            <div class="container">
+
+                <div class="row g-2 py-0.5 row-cols-1 row-cols-lg-3">
+
+                   
+                    <div class="feature col text-center">
+
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-2 mb-6">
+                            <i class="bi bi-truck"></i>
+                        </div>
+
+                        <h3 class="fs-4">Free Shipping</h3>
+                        <p>On orders above ₹500</p>
+
+                    </div>
+
+
+                    
+                    <div class="feature col text-center">
+
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-4 mb-6">
+                            <i class="bi bi-arrow-return-left"></i>
+                        </div>
+
+                        <h3 class="fs-4">Easy Return</h3>
+                        <p>Easy return policy</p>
+
+                    </div>
+
+
+                    <div class="feature col text-center">
+
+                        <div class="feature-icon d-inline-flex align-items-center justify-content-center fs-4 mb-6">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+
+                        <h3 class="fs-4">Secure Payment</h3>
+                        <p>100% secure payment</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  SHOP BY CATEGORY -->
+        <section id="shop-categories" class="py-5">
+
+            <h2 class="text-center mb-5">
+                Shop by
+                <span class="head-span">
+                    Category
+                </span>
+            </h2>
+
+            <div class="container">
+
+                <div class="row g-4">
+
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 card-lift">
+
+                        <a href="clothing.html" class="text-decoration-none">
+
+                            <div class="category-card category-clothing">
+
+                                <div class="category-content">
+                                    <h3>Clothing</h3>
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 card-lift">
+
+                        <a href="electronics.html" class="text-decoration-none">
+
+                            <div class="category-card category-electronics">
+
+                                <div class="category-content">
+                                    <h3>Electronics</h3>
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 card-lift">
+
+                        <a href="footwear.html" class="text-decoration-none">
+
+                            <div class="category-card category-footwear">
+
+                                <div class="category-content">
+                                    <h3>Footwear</h3>
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+
+                    
+                    <div class="col-12 col-sm-6 col-lg-3 card-lift">
+
+                        <a href="books.html" class="text-decoration-none">
+
+                            <div class="category-card category-accessories">
+
+                                <div class="category-content">
+                                    <h3>Books</h3>
+                                </div>
+
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  NEWSLETTER  -->
+        <section class="newsletter">
+
+            <div class="container newsletter-container mb-4">
+
+                <div class="row py-3">
+
+                    <div class="col-12">
+
+                        <h2 class="text-center mb-5">
+                            Join Our Newsletter
+                            <span class="head-span">
+                                To Stay Up
+                            </span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                
+                <div class="row justify-content-center mb-3">
+
+                    <div class="col-md-8">
+
+                        <div class="newsletter-input-box">
+
+                            <input type="email"
+                                placeholder="Enter Your Email">
+
+                            <button type="submit" class="btn">
+                                Subscribe
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="row text-center">
+
+                    <div class="col-12">
+
+                        <p>
+                            Your privacy matters. We safeguard your information
+                            for a secure and confidential experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--  FOOTER  -->
+        <footer class="site-footer" id="footer">
+
+            <div class="container">
+
+                <div class="row py-5">
+
+
+                    
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                        <h4>ShopNest</h4>
+
+                        <p>
+                            Discover your favorite products and enjoy a simple,
+                            convenient shopping experience.
+                        </p>
+
+                    </div>
+
+
+                   
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                        <h5>Quick Links</h5>
+
+                        <ul class="list-unstyled">
+
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+
+                            <li>
+                                <a href="#featured-products">Products</a>
+                            </li>
+
+                            <li>
+                                <a href="#categories">Categories</a>
+                            </li>
+
+                            <li>
+                                <a href="#about">About Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                   
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                        <h5>Contact</h5>
+
+                        <p>
+                            <i class="bi bi-envelope"></i>
+                            support@shopnest.com
+                        </p>
+
+                        <p>
+                            <i class="bi bi-telephone"></i>
+                            +91 12345 67890
+                        </p>
+
+                        <p>
+                            <i class="bi bi-geo-alt"></i>
+                            Kerala, India
+                        </p>
+
+                    </div>
+
+
+                   
+                    <div class="col-12 col-md-6 col-lg-3 mb-4">
+
+                        <h5>Follow Us</h5>
+
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                        <a href="#" class="social-icon">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+               
+                <div class="row border-top pt-3">
+
+                    <div class="col text-center">
+
+                        <p>
+                            © 2026 ShopNest. All Rights Reserved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- Bootstrap JavaScript: Required for Mobile Navbar Toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
