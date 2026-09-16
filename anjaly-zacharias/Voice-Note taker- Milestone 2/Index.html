@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A simple voice note-taking app powered by the Web Speech API.">
+	<title>EchoNote | Voice Note-Taker</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+	<div class="page-shell">
+		<header class="app-header">
+			<a class="brand" href="#top" aria-label="EchoNote home">
+				<span class="brand-mark" aria-hidden="true">◒</span>
+				<span>EchoNote</span>
+			</a>
+			<div class="header-status" aria-live="polite">
+				<span class="status-dot"></span>
+				<span id="supportStatus">Ready to listen</span>
+			</div>
+		</header>
+
+		<main id="top">
+			<section class="hero-section" aria-labelledby="pageTitle">
+				<div class="hero-copy">
+					<p class="eyebrow">VOICE NOTE-TAKER</p>
+					<h1 id="pageTitle">Catch the thought<br><em>before it fades.</em></h1>
+					<p class="hero-description">Speak naturally. EchoNote turns your ideas into notes you can keep, revisit, and shape later.</p>
+				</div>
+
+				<div class="recorder-panel">
+					<div class="recorder-topline">
+						<span class="panel-label">LIVE CAPTURE</span>
+						<span id="recordingTimer" class="timer">00:00</span>
+					</div>
+					<div class="waveform" id="waveform" aria-hidden="true">
+						<span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+					</div>
+					<p id="recordingHint" class="recording-hint">Press the button and start speaking</p>
+					<button id="recordButton" class="record-button" type="button" aria-pressed="false">
+						<span class="mic-icon" aria-hidden="true">●</span>
+						<span id="recordButtonLabel">Start recording</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="workspace" aria-label="Note workspace">
+				<div class="draft-column">
+					<div class="section-heading">
+						<div>
+							<p class="eyebrow">CURRENT NOTE</p>
+							<h2>Make it yours</h2>
+						</div>
+						<span id="wordCount" class="word-count">0 words</span>
+					</div>
+					<textarea id="noteInput" placeholder="Your words will appear here... You can also type directly." aria-label="Current note text"></textarea>
+					<div class="draft-actions">
+						<button id="clearDraftButton" class="text-button" type="button">Clear draft</button>
+						<button id="saveNoteButton" class="primary-button" type="button">Save note <span aria-hidden="true">↗</span></button>
+					</div>
+				</div>
+
+				<div class="notes-column">
+					<div class="section-heading notes-heading">
+						<div>
+							<p class="eyebrow">YOUR LIBRARY</p>
+							<h2>Saved notes <span id="noteCount" class="count-badge">0</span></h2>
+						</div>
+						<button id="clearAllButton" class="text-button danger-button" type="button">Clear all</button>
+					</div>
+					<div id="notesList" class="notes-list" aria-live="polite"></div>
+					<div id="emptyState" class="empty-state">
+						<span class="empty-icon" aria-hidden="true">✦</span>
+						<h3>Your ideas live here</h3>
+						<p>Start a recording and save your first note.</p>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="app-footer">
+			<span>Private by design</span>
+			<span class="footer-divider"></span>
+			<span>Notes stay in this browser</span>
+		</footer>
+	</div>
+	<div id="toast" class="toast" role="status" aria-live="polite"></div>
+	<script src="Script.js"></script>
+</body>
+</html>
