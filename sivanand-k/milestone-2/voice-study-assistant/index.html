@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voice Study Assistant</title>
+    <meta
+      name="description"
+      content="Voice Study Assistant helps you study topics with voice recognition, quiz practice, and progress tracking."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#homeSection" data-nav="home">
+          <span class="brand-icon">🎓</span>
+          <span>Voice Study Assistant</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="#homeSection" data-nav="home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#studySection" data-nav="study">Study</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#quizSection" data-nav="quiz">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#progressSection" data-nav="progress">Progress</a>
+            </li>
+          </ul>
+
+          <button
+            id="themeToggle"
+            class="btn btn-outline-dark rounded-pill px-3 theme-toggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <span id="themeIcon">🌙</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="homeSection" class="app-section active-section">
+        <div class="container py-5">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-7">
+              <div class="hero-content">
+                <span class="eyebrow">Speak. Learn. Practice.</span>
+                <h1>Learn Smarter with Your Voice</h1>
+                <p class="lead">
+                  Speak your topic, listen to questions, answer naturally, and track your progress.
+                </p>
+
+                <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+                  <button id="homeMicButton" class="mic-button large-mic" type="button" aria-label="Start voice topic recognition">
+                    <span class="mic-icon">🎤</span>
+                  </button>
+                  <button id="startStudyHomeButton" class="btn btn-primary btn-lg rounded-pill px-4" type="button">
+                    <i class="bi bi-mic-fill me-2"></i>
+                    Start Voice Study
+                  </button>
+                </div>
+
+                <p class="example-text mb-3">Try saying: JavaScript</p>
+
+                <div id="homeStatus" class="status-box" aria-live="polite">
+                  Ready to listen
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="dashboard-card glass-card">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h3 class="mb-0">Quick Start</h3>
+                  <span class="badge rounded-pill bg-info-subtle text-info-emphasis">Live</span>
+                </div>
+                <ul class="quick-list list-unstyled mb-0">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Select a topic</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Listen to questions</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Speak your answer</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Review explanations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="studySection" class="app-section">
+        <div class="container py-5">
+          <div class="section-header mb-4">
+            <div>
+              <span class="eyebrow text-uppercase">Study Mode</span>
+              <h2 id="studyTopicHeading">Select a Topic</h2>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+              <span id="studyDifficultyBadge" class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Easy</span>
+            </div>
+          </div>
+
+          <div id="studyTopicSelector" class="row g-4" aria-live="polite"></div>
+
+          <div id="studySessionPanel" class="study-panel hidden">
+            <div class="row g-4">
+              <div class="col-lg-8">
+                <div class="card study-card shadow-sm border-0 h-100">
+                  <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                      <div>
+                        <span class="eyebrow">Question</span>
+                        <h4 id="studyQuestionCounter" class="mb-0">Question 1 of 10</h4>
+                      </div>
+                      <span id="studyDifficultyPill" class="badge rounded-pill bg-success-subtle text-success-emphasis">Easy</span>
+                    </div>
+
+                    <div class="question-block mb-4">
+                      <h3 id="studyQuestionText" class="question-text">Choose a topic to begin.</h3>
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 mb-4">
+                      <button id="listenQuestionButton" class="btn btn-outline-primary rounded-pill" type="button">
+                        <i class="bi bi-volume-up me-2"></i>Listen
+                      </button>
+                      <button id="answerQuestionButton" class="btn btn-outline-success rounded-pill" type="button">
+                        <i class="bi bi-mic-fill me-2"></i>Answer
+                      </button>
+                      <button id="showAnswerButton" class="btn btn-outline-secondary rounded-pill" type="button">
+                        Show Answer
+                      </button>
+                    </div>
+
+                    <div class="mb-3">
+                      <label for="studyAnswerInput" class="form-label fw-semibold">Your Answer</label>
+                      <input
+                        id="studyAnswerInput"
+                        type="text"
+                        class="form-control form-control-lg"
+                        placeholder="Type your answer or speak it"
+                        aria-label="Study answer input"
+                      />
+                    </div>
+
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <button id="submitStudyAnswerButton" class="btn btn-primary rounded-pill px-4" type="button">
+                        Check Answer
+                      </button>
+                      <button id="previousQuestionButton" class="btn btn-light rounded-pill" type="button">
+                        Previous Question
+                      </button>
+                      <button id="nextQuestionButton" class="btn btn-primary rounded-pill" type="button">
+                        Next Question
+                      </button>
+                    </div>
+
+                    <div id="studyFeedback" class="alert-container"></div>
+                    <div id="studyExplanation" class="explanation-box hidden"></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="card shadow-sm border-0 h-100">
+                  <div class="card-body p-4">
+                    <h4 class="mb-3">Session Summary</h4>
+                    <div class="summary-row">
+                      <span>Topic</span>
+                      <strong id="summaryTopic">-</strong>
+                    </div>
+                    <div class="summary-row">
+                      <span>Progress</span>
+                      <strong id="summaryProgress">0 / 0</strong>
+                    </div>
+                    <div class="summary-row">
+                      <span>Correct</span>
+                      <strong id="summaryCorrect">0</strong>
+                    </div>
+                    <div class="summary-row">
+                      <span>Incorrect</span>
+                      <strong id="summaryIncorrect">0</strong>
+                    </div>
+
+                    <div class="mt-4">
+                      <button id="listenExplanationButton" class="btn btn-outline-warning rounded-pill w-100 mb-2" type="button">
+                        <i class="bi bi-volume-up me-2"></i>Listen to Explanation
+                      </button>
+                      <button id="studyHomeButton" class="btn btn-outline-dark rounded-pill w-100" type="button">
+                        Back Home
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="quizSection" class="app-section">
+        <div class="container py-5">
+          <div class="section-header mb-4">
+            <div>
+              <span class="eyebrow text-uppercase">Quiz Mode</span>
+              <h2>Challenge Yourself</h2>
+            </div>
+          </div>
+
+          <div id="quizSetupCard" class="card shadow-sm border-0 quiz-card">
+            <div class="card-body p-4">
+              <div class="row g-3 align-items-end">
+                <div class="col-md-4">
+                  <label for="quizTopicSelect" class="form-label fw-semibold">Topic</label>
+                  <select id="quizTopicSelect" class="form-select form-select-lg" aria-label="Select quiz topic">
+                    <option value="all">All</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="Bootstrap">Bootstrap</option>
+                    <option value="Python">Python</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="quizCountSelect" class="form-label fw-semibold">Number of questions</label>
+                  <select id="quizCountSelect" class="form-select form-select-lg" aria-label="Select number of quiz questions">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="quizDifficultySelect" class="form-label fw-semibold">Difficulty</label>
+                  <select id="quizDifficultySelect" class="form-select form-select-lg" aria-label="Select quiz difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="mixed">Mixed</option>
+                  </select>
+                </div>
+
+                <div class="col-md-2">
+                  <button id="startQuizButton" class="btn btn-primary btn-lg w-100 rounded-pill" type="button">
+                    Start Quiz
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quizSessionPanel" class="hidden mt-4">
+            <div class="card shadow-sm border-0 quiz-card">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+                  <div>
+                    <span class="eyebrow">Quiz</span>
+                    <h4 id="quizTitle" class="mb-0">Quiz: JavaScript</h4>
+                  </div>
+                  <span id="quizCountBadge" class="badge rounded-pill bg-info-subtle text-info-emphasis">Question 1 / 5</span>
+                </div>
+
+                <div class="progress mb-4" role="progressbar" aria-label="Quiz progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                  <div id="quizProgressBar" class="progress-bar" style="width: 0%"></div>
+                </div>
+
+                <h3 id="quizQuestionText" class="question-text">Question text</h3>
+
+                <div class="d-flex flex-wrap gap-2 mt-4 mb-3">
+                  <button id="quizListenButton" class="btn btn-outline-primary rounded-pill" type="button">
+                    <i class="bi bi-volume-up me-2"></i>Listen
+                  </button>
+                  <button id="quizSpeakButton" class="btn btn-outline-success rounded-pill" type="button">
+                    <i class="bi bi-mic-fill me-2"></i>Speak Answer
+                  </button>
+                </div>
+
+                <div class="mb-3">
+                  <label for="quizAnswerInput" class="form-label fw-semibold">Your Answer</label>
+                  <input
+                    id="quizAnswerInput"
+                    type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Type your answer here"
+                    aria-label="Quiz answer input"
+                  />
+                </div>
+
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <button id="submitQuizAnswerButton" class="btn btn-primary rounded-pill px-4" type="button">
+                    Submit Answer
+                  </button>
+                  <button id="quizNextButton" class="btn btn-primary rounded-pill hidden" type="button">
+                    Next Question
+                  </button>
+                </div>
+
+                <div id="quizFeedback" class="alert-container"></div>
+                <div id="quizExplanation" class="explanation-box hidden"></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="quizResultPanel" class="card shadow-sm border-0 hidden mt-4">
+            <div class="card-body p-4 text-center">
+              <div class="display-5 mb-2">🎉</div>
+              <h3>Quiz Complete!</h3>
+              <div class="score-summary">
+                <div class="score-line"><strong>Score:</strong> <span id="quizFinalScore">0 / 0</span></div>
+                <div class="score-line"><strong>Accuracy:</strong> <span id="quizAccuracy">0%</span></div>
+                <div class="score-line"><strong>Correct:</strong> <span id="quizCorrectCount">0</span></div>
+                <div class="score-line"><strong>Incorrect:</strong> <span id="quizIncorrectCount">0</span></div>
+              </div>
+
+              <div class="d-flex flex-wrap justify-content-center gap-2 mt-4">
+                <button id="tryAgainButton" class="btn btn-primary rounded-pill" type="button">Try Again</button>
+                <button id="studyAnotherTopicButton" class="btn btn-outline-primary rounded-pill" type="button">Study Another Topic</button>
+                <button id="backHomeFromQuizButton" class="btn btn-outline-dark rounded-pill" type="button">Back Home</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="progressSection" class="app-section">
+        <div class="container py-5">
+          <div class="section-header mb-4">
+            <div>
+              <span class="eyebrow text-uppercase">Progress</span>
+              <h2>Your Learning Dashboard</h2>
+            </div>
+          </div>
+
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-xl-3">
+              <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="stat-label">Total Questions</div>
+                  <div id="totalQuestionsStat" class="stat-value">0</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="stat-label">Correct Answers</div>
+                  <div id="correctAnswersStat" class="stat-value text-success">0</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="stat-label">Incorrect Answers</div>
+                  <div id="incorrectAnswersStat" class="stat-value text-danger">0</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-xl-3">
+              <div class="stat-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                  <div class="stat-label">Quizzes Completed</div>
+                  <div id="quizzesCompletedStat" class="stat-value text-info">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-7">
+              <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                  <h3 class="mb-4">Topic Progress</h3>
+                  <div id="topicProgressContainer" class="topic-progress-list"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5">
+              <div class="card border-0 shadow-sm h-100">
+                <div class="card-body p-4">
+                  <h3 class="mb-4">Recent Activity</h3>
+                  <ul id="historyList" class="activity-list list-unstyled mb-0"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="alertContainer" class="alert-stack" aria-live="polite" aria-atomic="true"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
