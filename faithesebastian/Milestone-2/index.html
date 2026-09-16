@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily To-Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="app-shell">
+        <section class="todo-card" aria-labelledby="page-title">
+            <div class="intro">
+                <p class="eyebrow">Today’s focus</p>
+                <h1 id="page-title">Make room for what matters.</h1>
+                <p class="subtitle">Say “add buy milk” to add a task. Say “done 1” to mark item 1 complete.</p>
+            </div>
+
+            <form id="todo-form" class="todo-form">
+                <label class="sr-only" for="todo-input">Write a task</label>
+                <input id="todo-input" type="text" placeholder="Write a task..." autocomplete="off" maxlength="120">
+                <button id="voice-button" class="icon-button" type="button" aria-label="Speak a task"
+                    title="Speak a task">🎙</button>
+                <button class="add-button" type="submit">Add task</button>
+            </form>
+            <p id="voice-status" class="voice-status" aria-live="polite"></p>
+
+            <div class="list-heading">
+                <h2>Your tasks</h2>
+                <span id="task-count" class="task-count">0 tasks</span>
+            </div>
+            <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+            <p id="empty-message" class="empty-message">Your list is clear. Add something to begin.</p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
