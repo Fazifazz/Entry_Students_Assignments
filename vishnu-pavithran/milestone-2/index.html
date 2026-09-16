@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Search a curated product catalog by typing or speaking."
+    />
+    <title>Voice Product Search</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <p class="eyebrow">CURATED TECH CATALOG</p>
+        <h1>Find the right <span>signal.</span></h1>
+        <p class="intro">
+          Search the collection with your hands or your voice.
+        </p>
+      </header>
+
+      <section class="search-panel" aria-label="Product search">
+        <div class="search-row">
+          <label class="search-field" for="search-input">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Search products..."
+              autocomplete="off"
+            />
+          </label>
+          <button
+            class="voice-button"
+            id="voice-button"
+            type="button"
+            aria-label="Start voice search"
+          >
+            <span aria-hidden="true">🎤</span>
+            <span class="voice-label">Speak</span>
+          </button>
+          <div class="speech-controls" aria-label="Text-to-speech controls">
+            <button class="speech-button" id="read-search-button" type="button">
+              <span aria-hidden="true">🔊</span>
+              <span>Read Search</span>
+            </button>
+            <button
+              class="stop-speech-button"
+              id="stop-speech-button"
+              type="button"
+            >
+              <span aria-hidden="true">⏹</span>
+              <span>Stop</span>
+            </button>
+          </div>
+        </div>
+        <div class="search-actions">
+          <div class="status-group">
+            <p class="status" id="status" role="status" aria-live="polite">
+              Click the microphone to search
+            </p>
+            <p
+              class="speech-status"
+              id="speech-status"
+              role="status"
+              aria-live="polite"
+            >
+              🔊 Speech Status: Ready
+            </p>
+          </div>
+          <button class="clear-button" id="clear-button" type="button">
+            Clear
+          </button>
+        </div>
+      </section>
+
+      <section class="catalog" aria-labelledby="results-heading">
+        <div class="catalog-heading">
+          <div>
+            <p class="section-kicker">THE COLLECTION</p>
+            <h2 id="results-heading">Explore products</h2>
+          </div>
+          <p class="result-count" id="result-count" aria-live="polite"></p>
+        </div>
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
