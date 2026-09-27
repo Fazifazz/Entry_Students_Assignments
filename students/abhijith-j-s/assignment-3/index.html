@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Night</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="quiz-card">
+    <div class="quiz-header">
+      <h1 class="quiz-title">Quiz Night</h1>
+      <span id="progress"></span>
+    </div>
+
+    <!-- Question and options are injected entirely by script.js -->
+    <div id="question"></div>
+    <div id="options"></div>
+
+    <button id="next-btn">Next Question</button>
+
+    <!-- Results screen, hidden until the quiz ends -->
+    <div id="results" style="display:none;"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
