@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Smart Phone",
+    "category": "Electronics",
+    "price": 19999,
+    "originalPrice": 25000,
+    "rating": 5,
+    "imageUrl": "Images/Smartphone.png"
+  },
+  {
+    "id": 2,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 2999,
+    "originalPrice": 4999,
+    "rating": 4,
+    "imageUrl": "Images/headphone.png"
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 1999,
+    "originalPrice": 2999,
+    "rating": 4,
+    "imageUrl": "Images/bluetooth-speaker.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 3499,
+    "originalPrice": 5999,
+    "rating": 4,
+    "imageUrl": "Images/smart-watch.png"
+  },
+  {
+    "id": 5,
+    "name": "Casual T-Shirt",
+    "category": "Clothing",
+    "price": 899,
+    "originalPrice": 1499,
+    "rating": 4,
+    "imageUrl": "Images/tshirt.png"
+  },
+  {
+    "id": 6,
+    "name": "Classic Cotton Shirt",
+    "category": "Clothing",
+    "price": 1199,
+    "originalPrice": 1999,
+    "rating": 4,
+    "imageUrl": "Images/cotton-greenshirt.png"
+  },
+  {
+    "id": 7,
+    "name": "Running Shoes",
+    "category": "Footwear",
+    "price": 2499,
+    "originalPrice": 3999,
+    "rating": 4,
+    "imageUrl": "Images/running-shoes.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Sports Shoes",
+    "category": "Footwear",
+    "price": 2899,
+    "originalPrice": 4499,
+    "rating": 5,
+    "imageUrl": "Images/sports-shoes.png"
+  },
+  {
+    "id": 9,
+    "name": "Classic Books",
+    "category": "Books",
+    "price": 699,
+    "originalPrice": 999,
+    "rating": 5,
+    "imageUrl": "Images/books.jpg"
+  },
+  {
+    "id": 10,
+    "name": "JavaScript Programming Book",
+    "category": "Books",
+    "price": 899,
+    "originalPrice": 1299,
+    "rating": 5,
+    "imageUrl": "Images/javascript-programming-book.png"
+  },
+  {
+    "id": 11,
+    "name": "Wireless Music Headset",
+    "category": "Electronics",
+    "price": 2299,
+    "originalPrice": 3499,
+    "rating": 4,
+    "imageUrl": "Images/wireless-headset.png"
+  },
+  {
+    "id": 12,
+    "name": "Everyday Running Sneakers",
+    "category": "Footwear",
+    "price": 2199,
+    "originalPrice": 3299,
+    "rating": 4,
+    "imageUrl": "Images/running-sneakers.png"
+  }
+]
