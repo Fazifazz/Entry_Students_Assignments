@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f4efe7">
+    <title>Voice Calculator</title>
+    <style>
+        :root {
+            --ink: #202523;
+            --muted: #68716d;
+            --paper: #fbfaf7;
+            --cream: #f4efe7;
+            --line: #d9ddd7;
+            --green: #236b5a;
+            --green-dark: #174c41;
+            --orange: #e7794d;
+            --shadow: 0 24px 70px rgba(49, 55, 49, 0.13);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 9% 11%, rgba(231, 121, 77, 0.12) 0 7rem, transparent 7.1rem),
+                radial-gradient(circle at 96% 89%, rgba(35, 107, 90, 0.13) 0 10rem, transparent 10.1rem),
+                var(--cream);
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .page {
+            width: min(100% - 32px, 1020px);
+            margin: 0 auto;
+            padding: 34px 0 40px;
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 54px;
+            font-family: "Trebuchet MS", sans-serif;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--green-dark);
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 31px;
+            height: 31px;
+            place-items: center;
+            color: white;
+            background: var(--green);
+            border-radius: 50%;
+            font-size: 1rem;
+        }
+
+        .api-note {
+            color: var(--muted);
+            font-size: 0.75rem;
+            letter-spacing: 0.03em;
+        }
+
+        .intro {
+            max-width: 690px;
+            margin-bottom: 28px;
+        }
+
+        .eyebrow {
+            margin: 0 0 12px;
+            color: var(--orange);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.74rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            max-width: 640px;
+            margin: 0;
+            font-size: clamp(3rem, 8vw, 5.8rem);
+            font-weight: 400;
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+        }
+
+        .intro p {
+            max-width: 520px;
+            margin: 24px 0 0;
+            color: var(--muted);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 1rem;
+            line-height: 1.65;
+        }
+
+        .calculator {
+            display: grid;
+            grid-template-columns: minmax(0, 1.15fr) minmax(270px, 0.85fr);
+            overflow: hidden;
+            background: var(--paper);
+            border: 1px solid rgba(32, 37, 35, 0.08);
+            border-radius: 14px;
+            box-shadow: var(--shadow);
+        }
+
+        .voice-panel,
+        .result-panel {
+            padding: clamp(24px, 5vw, 48px);
+        }
+
+        .voice-panel {
+            border-right: 1px solid var(--line);
+        }
+
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin: 0 0 24px;
+            color: var(--muted);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .section-label::before {
+            width: 8px;
+            height: 8px;
+            content: "";
+            background: var(--orange);
+            border-radius: 50%;
+        }
+
+        .mic-button {
+            position: relative;
+            display: grid;
+            width: 148px;
+            height: 148px;
+            margin: 6px auto 25px;
+            place-items: center;
+            color: white;
+            background: var(--green);
+            border: 0;
+            border-radius: 50%;
+            box-shadow: 0 10px 0 rgba(23, 76, 65, 0.13);
+            cursor: pointer;
+            transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+        }
+
+        .mic-button:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .mic-button:focus-visible {
+            outline: 4px solid rgba(231, 121, 77, 0.35);
+            outline-offset: 5px;
+        }
+
+        .mic-button.is-listening {
+            background: var(--orange);
+            animation: pulse 1.7s infinite;
+        }
+
+        .mic-icon {
+            width: 42px;
+            height: 52px;
+        }
+
+        .mic-icon path,
+        .mic-icon line {
+            fill: none;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-width: 3.2;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 10px 0 rgba(231, 121, 77, 0.13), 0 0 0 0 rgba(231, 121, 77, 0.35);
+            }
+
+            50% {
+                box-shadow: 0 10px 0 rgba(231, 121, 77, 0.13), 0 0 0 18px rgba(231, 121, 77, 0);
+            }
+        }
+
+        .mic-label {
+            margin: 0;
+            color: var(--green-dark);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.94rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .mic-help {
+            margin: 8px auto 0;
+            color: var(--muted);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .command-box {
+            margin-top: 34px;
+        }
+
+        .command-box label {
+            display: block;
+            margin-bottom: 9px;
+            color: var(--muted);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.73rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .command {
+            min-height: 48px;
+            margin: 0;
+            padding: 13px 15px;
+            color: var(--ink);
+            background: #f1f3ef;
+            border-left: 3px solid var(--green);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .command.is-empty {
+            color: #8a938e;
+            font-style: italic;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .typed-command {
+            display: flex;
+            gap: 9px;
+            margin-top: 17px;
+        }
+
+        .keypad-display {
+            min-height: 48px;
+            color: var(--ink);
+            background: white;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            font: 1.1rem "Trebuchet MS", sans-serif;
+            line-height: 48px;
+            padding: 0 13px;
+            text-align: right;
+        }
+
+        .keypad {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .keypad button,
+        .listen-button {
+            min-height: 42px;
+            padding: 8px;
+            color: white;
+            background: var(--green);
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font: 700 0.78rem "Trebuchet MS", sans-serif;
+            white-space: nowrap;
+        }
+
+        .keypad button:hover,
+        .listen-button:hover {
+            background: var(--green-dark);
+        }
+
+        .keypad .operator-button {
+            background: var(--orange);
+        }
+
+        .keypad .operator-button:hover {
+            background: #c85c36;
+        }
+
+        .keypad .clear-button {
+            color: var(--green-dark);
+            background: transparent;
+            border: 1px solid var(--line);
+        }
+
+        .keypad .clear-button:hover {
+            color: white;
+            background: var(--green-dark);
+            border-color: var(--green-dark);
+        }
+
+        .keypad .calculate-button {
+            grid-column: span 3;
+        }
+
+        .keypad button:focus-visible,
+        .listen-button:focus-visible {
+            outline: 3px solid rgba(231, 121, 77, 0.35);
+            outline-offset: 3px;
+        }
+
+        .keypad-help {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font: 0.75rem/1.45 "Trebuchet MS", sans-serif;
+        }
+
+        .result-panel {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 370px;
+            background: var(--green-dark);
+            color: white;
+        }
+
+        .result-panel .section-label {
+            color: rgba(255, 255, 255, 0.68);
+        }
+
+        .result-panel .section-label::before {
+            background: #e6c36a;
+        }
+
+        .result-value {
+            margin: 20px 0 12px;
+            color: #fff;
+            font-size: clamp(3.7rem, 9vw, 6.2rem);
+            font-weight: 400;
+            line-height: 1;
+            overflow-wrap: anywhere;
+        }
+
+        .result-caption {
+            min-height: 26px;
+            margin: 0;
+            color: rgba(255, 255, 255, 0.68);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.83rem;
+            line-height: 1.5;
+        }
+
+        .listen-button {
+            margin-top: 22px;
+        }
+
+        .listen-button:disabled {
+            cursor: not-allowed;
+            opacity: 0.45;
+        }
+
+        .examples {
+            margin: 45px 0 0;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.18);
+            color: rgba(255, 255, 255, 0.7);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.77rem;
+            line-height: 1.75;
+        }
+
+        .status {
+            min-height: 25px;
+            margin: 24px 0 0;
+            color: var(--muted);
+            font-family: "Trebuchet MS", sans-serif;
+            font-size: 0.82rem;
+            line-height: 1.5;
+            text-align: center;
+        }
+
+        .status.error {
+            color: #bd4e38;
+        }
+
+        @media (max-width: 700px) {
+            .page {
+                width: min(100% - 24px, 520px);
+                padding-top: 22px;
+            }
+
+            .topbar {
+                margin-bottom: 40px;
+            }
+
+            .api-note {
+                display: none;
+            }
+
+            .calculator {
+                grid-template-columns: 1fr;
+            }
+
+            .voice-panel {
+                border-right: 0;
+                border-bottom: 1px solid var(--line);
+            }
+
+            .result-panel {
+                min-height: 310px;
+            }
+
+            .examples {
+                margin-top: 34px;
+            }
+
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="page">
+        <header class="topbar">
+            <div class="brand"><span class="brand-mark" aria-hidden="true">+</span> Spoken sums</div>
+            <div class="api-note">Powered by Web Speech API</div>
+        </header>
+
+
+
+        <section class="calculator" aria-label="Voice calculator">
+            <div class="voice-panel">
+                <p class="section-label">Your command</p>
+                <button class="mic-button" id="micButton" type="button" aria-label="Start voice input"
+                    aria-pressed="false">
+                    <svg class="mic-icon" viewBox="0 0 42 52" aria-hidden="true">
+                        <path d="M21 35.5a9 9 0 0 0 9-9V13a9 9 0 1 0-18 0v13.5a9 9 0 0 0 9 9Z"></path>
+                        <path d="M6.5 25.5a14.5 14.5 0 0 0 29 0M21 40v9M14 49h14"></path>
+                    </svg>
+                </button>
+                <p class="mic-label" id="micLabel">Tap to speak</p>
+                <p class="mic-help">Try “add 5 and 3” or “divide 20 by 5”</p>
+
+                <div class="command-box">
+                    <label for="commandText">Recognized command</label>
+                    <p class="command is-empty" id="commandText" aria-live="polite">Your words will appear here.</p>
+                    <div class="keypad-display" id="keypadDisplay" aria-live="polite">0</div>
+                    <div class="keypad" id="keypad" aria-label="Calculator keypad">
+                        <button type="button" data-key="7">7</button>
+                        <button type="button" data-key="8">8</button>
+                        <button type="button" data-key="9">9</button>
+                        <button class="operator-button" type="button" data-key="divide">÷</button>
+                        <button type="button" data-key="4">4</button>
+                        <button type="button" data-key="5">5</button>
+                        <button type="button" data-key="6">6</button>
+                        <button class="operator-button" type="button" data-key="multiply">×</button>
+                        <button type="button" data-key="1">1</button>
+                        <button type="button" data-key="2">2</button>
+                        <button type="button" data-key="3">3</button>
+                        <button class="operator-button" type="button" data-key="subtract">−</button>
+                        <button type="button" data-key="0">0</button>
+                        <button type="button" data-key="decimal">.</button>
+                        <button type="button" data-key="backspace" aria-label="Backspace">⌫</button>
+                        <button class="operator-button" type="button" data-key="add">+</button>
+                        <button class="clear-button" type="button" id="clearButton">Clear</button>
+                        <button class="calculate-button" type="button" data-key="calculate">Calculate</button>
+                    </div>
+                    <p class="keypad-help">Use the keypad to enter two numbers and choose an operation.</p>
+                </div>
+                <p class="status" id="status" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="result-panel">
+                <div>
+                    <p class="section-label">Calculated result</p>
+                    <p class="result-value" id="resultValue" aria-live="polite">—</p>
+                    <p class="result-caption" id="resultCaption">Waiting for a calculation</p>
+                    <button class="listen-button" id="listenButton" type="button" disabled>
+                        Listen to result
+                    </button>
+                </div>
+                <p class="examples">Understands addition, subtraction, multiplication, and division, including natural
+                    phrases like “10 minus 4” and “6 times 7.”</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        (() => {
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            const micButton = document.getElementById('micButton');
+            const micLabel = document.getElementById('micLabel');
+            const commandText = document.getElementById('commandText');
+            const keypad = document.getElementById('keypad');
+            const keypadDisplay = document.getElementById('keypadDisplay');
+            const clearButton = document.getElementById('clearButton');
+            const resultValue = document.getElementById('resultValue');
+            const resultCaption = document.getElementById('resultCaption');
+            const listenButton = document.getElementById('listenButton');
+            const status = document.getElementById('status');
+            const speechSynthesis = window.speechSynthesis;
+            let spokenResult = '';
+            let recognition;
+            let firstNumber = '';
+            let secondNumber = '';
+            let keypadOperation = '';
+
+            const numberWords = {
+                zero: 0, oh: 0, one: 1, two: 2, three: 3, four: 4, five: 5,
+                six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11,
+                twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16,
+                seventeen: 17, eighteen: 18, nineteen: 19, twenty: 20,
+                thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70,
+                eighty: 80, ninety: 90, hundred: 100
+            };
+
+            function numberFromText(value) {
+                const cleaned = value.toLowerCase().replace(/,/g, '').trim();
+                const numeric = Number(cleaned);
+                if (cleaned !== '' && Number.isFinite(numeric)) return numeric;
+
+                const words = cleaned.split(/\s+/);
+                let total = 0;
+                let current = 0;
+                for (const word of words) {
+                    if (word === 'and') continue;
+                    const amount = numberWords[word];
+                    if (amount === undefined) return null;
+                    if (amount === 100) current = (current || 1) * amount;
+                    else current += amount;
+                }
+                return total + current;
+            }
+
+            function parseCommand(command) {
+                const text = command.toLowerCase().replace(/[?.!,]/g, ' ').replace(/\s+/g, ' ').trim();
+                const operation = text.match(/\b(add|plus|sum|subtract|minus|take away|deduct|multiply|times|multiplied by|divide|divided by|over)\b/);
+                if (!operation) return null;
+
+                const keyword = operation[1];
+                const operationType = keyword.startsWith('add') || keyword === 'plus' || keyword === 'sum'
+                    ? 'add'
+                    : keyword.startsWith('subtract') || keyword === 'minus' || keyword === 'take away' || keyword === 'deduct'
+                        ? 'subtract'
+                        : keyword.startsWith('multiply') || keyword === 'times'
+                            ? 'multiply'
+                            : 'divide';
+                const before = text.slice(0, operation.index).replace(/^(what is|calculate|please)\s+/, '').trim();
+                const after = text.slice(operation.index + keyword.length).trim();
+                let firstText;
+                let secondText;
+
+                if (operationType === 'subtract' && /\bfrom\b/.test(after)) {
+                    [secondText, firstText] = after.split(/\bfrom\b/).map(part => part.trim());
+                } else {
+                    const parts = after.split(/\band\b|\bby\b|\bfrom\b/).map(part => part.trim()).filter(Boolean);
+                    firstText = before || parts.shift();
+                    secondText = parts.shift();
+                }
+
+                const first = numberFromText(firstText || '');
+                const second = numberFromText(secondText || '');
+                if (first === null || second === null) return null;
+                if (operationType === 'divide' && second === 0) return { error: 'You cannot divide by zero.' };
+
+                const values = { add: first + second, subtract: first - second, multiply: first * second, divide: first / second };
+                return { first, second, operation: operationType, result: values[operationType] };
+            }
+
+            function formatNumber(value) {
+                return Number.isInteger(value) ? String(value) : String(Number(value.toFixed(8)));
+            }
+
+            function displayCommand(command) {
+                commandText.textContent = command;
+                commandText.classList.remove('is-empty');
+            }
+
+            function calculate(command) {
+                const parsed = parseCommand(command);
+                resultValue.textContent = '—';
+                listenButton.disabled = true;
+                spokenResult = '';
+                if (!parsed) {
+                    resultCaption.textContent = 'Try a phrase such as “add 5 and 3.”';
+                    status.textContent = 'I could not find two numbers and a supported operation in that command.';
+                    status.className = 'status error';
+                    return;
+                }
+                if (parsed.error) {
+                    resultCaption.textContent = parsed.error;
+                    status.textContent = 'Please try another pair of numbers.';
+                    status.className = 'status error';
+                    return;
+                }
+                resultValue.textContent = formatNumber(parsed.result);
+                resultCaption.textContent = `${formatNumber(parsed.first)} ${parsed.operation} ${formatNumber(parsed.second)}`;
+                spokenResult = `The answer is ${formatNumber(parsed.result)}.`;
+                listenButton.disabled = !speechSynthesis;
+                status.textContent = 'Calculation complete.';
+                status.className = 'status';
+            }
+
+            function speakResult() {
+                if (!speechSynthesis || !spokenResult) return;
+                if (speechSynthesis.speaking) {
+                    speechSynthesis.cancel();
+                    listenButton.textContent = 'Listen to result';
+                    listenButton.setAttribute('aria-pressed', 'false');
+                    return;
+                }
+                const utterance = new SpeechSynthesisUtterance(spokenResult);
+                utterance.onstart = () => {
+                    listenButton.textContent = 'Stop listening';
+                    listenButton.setAttribute('aria-pressed', 'true');
+                };
+                utterance.onend = () => {
+                    listenButton.textContent = 'Listen to result';
+                    listenButton.setAttribute('aria-pressed', 'false');
+                };
+                speechSynthesis.speak(utterance);
+            }
+
+            function updateKeypadDisplay() {
+                const operationSymbols = { add: '+', subtract: '−', multiply: '×', divide: '÷' };
+                keypadDisplay.textContent = firstNumber || secondNumber
+                    ? `${firstNumber || '0'} ${operationSymbols[keypadOperation] || ''} ${secondNumber}`.trim()
+                    : '0';
+            }
+
+            function calculateKeypad() {
+                if (!firstNumber || !keypadOperation || !secondNumber) {
+                    status.textContent = 'Choose two numbers and an operation first.';
+                    status.className = 'status error';
+                    return;
+                }
+                const command = `${keypadOperation} ${firstNumber} and ${secondNumber}`;
+                displayCommand(command);
+                calculate(command);
+            }
+
+            keypad.addEventListener('click', event => {
+                const button = event.target.closest('[data-key]');
+                if (!button) return;
+                const key = button.dataset.key;
+
+                if (/^\d$/.test(key)) {
+                    if (keypadOperation) secondNumber += key;
+                    else firstNumber += key;
+                } else if (key === 'decimal') {
+                    if (keypadOperation) {
+                        secondNumber = secondNumber || '0';
+                        if (!secondNumber.includes('.')) secondNumber += '.';
+                    } else {
+                        firstNumber = firstNumber || '0';
+                        if (!firstNumber.includes('.')) firstNumber += '.';
+                    }
+                } else if (key === 'backspace') {
+                    if (keypadOperation) secondNumber = secondNumber.slice(0, -1);
+                    else firstNumber = firstNumber.slice(0, -1);
+                } else if (['add', 'subtract', 'multiply', 'divide'].includes(key)) {
+                    if (firstNumber) keypadOperation = key;
+                } else if (key === 'calculate') {
+                    calculateKeypad();
+                    return;
+                }
+                updateKeypadDisplay();
+            });
+
+            listenButton.addEventListener('click', speakResult);
+
+            clearButton.addEventListener('click', () => {
+                if (recognition && micButton.classList.contains('is-listening')) recognition.stop();
+                if (speechSynthesis) speechSynthesis.cancel();
+                firstNumber = '';
+                secondNumber = '';
+                keypadOperation = '';
+                updateKeypadDisplay();
+                commandText.textContent = 'Your words will appear here.';
+                commandText.classList.add('is-empty');
+                resultValue.textContent = '—';
+                resultCaption.textContent = 'Waiting for a calculation';
+                listenButton.disabled = true;
+                listenButton.textContent = 'Listen to result';
+                listenButton.setAttribute('aria-pressed', 'false');
+                spokenResult = '';
+                status.textContent = '';
+                status.className = 'status';
+                setListening(false);
+            });
+
+            function setListening(listening) {
+                micButton.classList.toggle('is-listening', listening);
+                micButton.setAttribute('aria-pressed', String(listening));
+                micButton.setAttribute('aria-label', listening ? 'Stop voice input' : 'Start voice input');
+                micLabel.textContent = listening ? 'Listening… tap to stop' : 'Tap to speak';
+            }
+
+            if (!SpeechRecognition) {
+                micButton.disabled = true;
+                micButton.style.opacity = '0.55';
+                micLabel.textContent = 'Voice input unavailable';
+                status.textContent = 'Your browser does not support the Web Speech API. Try the latest Chrome or Edge.';
+                status.className = 'status error';
+            } else {
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = true;
+                recognition.lang = 'en-US';
+
+                micButton.addEventListener('click', () => {
+                    if (micButton.classList.contains('is-listening')) recognition.stop();
+                    else {
+                        status.textContent = 'Listening for your calculation…';
+                        status.className = 'status';
+                        try { recognition.start(); } catch (error) { /* Ignore repeated start calls while recognition is settling. */ }
+                    }
+                });
+
+                recognition.onstart = () => setListening(true);
+                recognition.onend = () => setListening(false);
+                recognition.onresult = event => {
+                    const transcript = Array.from(event.results).map(result => result[0].transcript).join('');
+                    displayCommand(transcript);
+                    if (event.results[event.results.length - 1].isFinal) calculate(transcript);
+                    else status.textContent = 'Hearing you…';
+                };
+                recognition.onerror = event => {
+                    setListening(false);
+                    const messages = {
+                        'not-allowed': 'Microphone access was blocked. Allow microphone access and try again.',
+                        'no-speech': 'I did not hear anything. Tap the microphone and try again.',
+                        'audio-capture': 'No microphone was found. Check your device and try again.'
+                    };
+                    status.textContent = messages[event.error] || 'Something went wrong with voice input. Please try again.';
+                    status.className = 'status error';
+                };
+            }
+        })();
+    </script>
+</body>
+
+</html>
