@@ -1,0 +1,133 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: Arial, sans-serif;
+ }
+
+ body {
+     background: #f0f4f8;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 100vh;
+ }
+
+ .quiz-container {
+     background: white;
+     width: 90%;
+     max-width: 600px;
+     padding: 30px;
+     border-radius: 15px;
+     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+ }
+
+ h1 {
+     text-align: center;
+     color: #333;
+     margin-bottom: 20px;
+ }
+
+ #question-number {
+     color: #666;
+     margin-bottom: 10px;
+     font-size: 16px;
+ }
+
+ #question {
+     font-size: 22px;
+     color: #222;
+     margin-bottom: 20px;
+ }
+
+ #options {
+     display: flex;
+     flex-direction: column;
+     gap: 12px;
+ }
+
+ .option-btn {
+     width: 100%;
+     padding: 14px;
+     border: 2px solid #ddd;
+     border-radius: 8px;
+     background: white;
+     text-align: left;
+     font-size: 16px;
+     cursor: pointer;
+     transition: 0.3s;
+ }
+
+ .option-btn:hover {
+     background: #f5f5f5;
+ }
+
+ .correct {
+     background-color: #28a745 !important;
+     color: white;
+     border-color: #28a745;
+ }
+
+ .wrong {
+     background-color: #dc3545 !important;
+     color: white;
+     border-color: #dc3545;
+ }
+
+ #correct-answer {
+     margin-top: 15px;
+     padding: 12px;
+     background: #fff3cd;
+     color: #856404;
+     border-radius: 8px;
+     display: none;
+ }
+
+ .buttons {
+     margin-top: 25px;
+     display: flex;
+     justify-content: center;
+ }
+
+ #next-btn,
+ #restart-btn {
+     padding: 12px 25px;
+     border: none;
+     border-radius: 8px;
+     background: #007bff;
+     color: white;
+     font-size: 16px;
+     cursor: pointer;
+ }
+
+ #next-btn:hover,
+ #restart-btn:hover {
+     background: #0056b3;
+ }
+
+ #next-btn:disabled {
+     background: #aaa;
+     cursor: not-allowed;
+ }
+
+ #result-screen {
+     text-align: center;
+     display: none;
+ }
+
+ #result-screen h2 {
+     color: #333;
+     margin-bottom: 15px;
+ }
+
+ #final-score {
+     font-size: 24px;
+     color: #007bff;
+     margin-bottom: 15px;
+ }
+
+ #feedback {
+     font-size: 18px;
+     color: #555;
+     margin-bottom: 25px;
+ }

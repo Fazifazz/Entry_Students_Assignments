@@ -1,0 +1,724 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>ShopNest — Men, Women, Footwear & Accessories</title>
+    <!-- Bootstrap-link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Top-announcement-bar -->
+    <aside class="announce-bar">
+      <div
+        class="container d-flex justify-content-between align-items-center flex-wrap gap2"
+      >
+        <span
+          ><i class="bi bi-truck"></i> Free shipping on orders over ₹1000</span
+        >
+        <span class="d-none d-md-inline"
+          ><i class="bi bi-tag"></i>Mega Sale — Up to 50% Off</span
+        >
+        <span class="d-none d-lg-inline"
+          ><i class="bi bi-telephone"></i> Support: +91 7510162040</span
+        >
+      </div>
+    </aside>
+    <!-- header -->
+    <header class="site-header">
+      <nav class="navbar container">
+        <!-- Logo + Hamburger -->
+        <div class="navbar-brand">
+          <span class="brand-mark">SN</span>
+
+          <span class="brand-name">
+            Shop<span class="brand-accent">Nest</span>
+          </span>
+
+          <button
+            class="navbar-toggler ms-auto"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+
+        <div class="collapse nav-collapse" id="navbarContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#products">Shop</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#category">Categories</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#newsletter">About</a>
+            </li>
+          </ul>
+
+          <form class="search-form" onsubmit="return false;">
+            <span class="search-icon">
+              <i class="bi bi-search"></i>
+            </span>
+
+            <input
+              class="search-input"
+              type="search"
+              placeholder="Search products..."
+            />
+
+            <button class="search-submit" type="submit">
+              <i class="bi bi-arrow-right"></i>
+            </button>
+          </form>
+
+          <div class="nav-actions">
+            <a href="#" class="action-btn">
+              <i class="bi bi-heart"></i>
+              <span class="action-badge">2</span>
+            </a>
+
+            <a href="#" class="action-btn">
+              <i class="bi bi-person"></i>
+            </a>
+
+            <a href="#" class="action-btn">
+              <i class="bi bi-bag"></i>
+              <span class="action-badge">3</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- hero -->
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <span class="hero-eyebrow"
+              ><span class="hero-eyebrow-dot"></span>New Season Collection ·
+              2025</span
+            >
+
+            <h1 class="hero-title">
+              Discover. Shop. <span class="hero-accent">Smile.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Men, women, footwear, and accessories — curated for every style.
+            </p>
+
+            <div class="hero-cta">
+              <a href="#products" class="btn btn-primary btn-lg">
+                <i class="bi bi-bag-fill"></i> Shop Now
+              </a>
+
+              <a href="#category" class="btn btn-outline btn-lg">
+                <i class="bi bi-tag-fill"></i> View Deals
+              </a>
+            </div>
+
+            <ul class="hero-stats">
+              <li><strong>10K+</strong> Products</li>
+              <li><strong>250K+</strong> Happy Customers</li>
+              <li>
+                <strong>4.9<span class="hero-stat-star">★</span></strong> Avg.
+                Rating
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- features-strip -->
+      <section class="features-strip" aria-label="Why shop with us">
+        <div class="container">
+          <div class="row g-3">
+            <div class="col-6 col-md-3">
+              <div class="feature-pill">
+                <i class="bi bi-truck feature-ic" aria-hidden="true"></i>
+                <div>
+                  <strong>Free Delivery</strong><span>On orders $50+</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="feature-pill">
+                <i
+                  class="bi bi-arrow-counterclockwise feature-ic"
+                  aria-hidden="true"
+                ></i>
+                <div>
+                  <strong>Easy Returns</strong><span>30-day window</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="feature-pill">
+                <i class="bi bi-shield-check feature-ic" aria-hidden="true"></i>
+                <div>
+                  <strong>Secure Pay</strong><span>100% protected</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="feature-pill">
+                <i class="bi bi-headset feature-ic" aria-hidden="true"></i>
+                <div><strong>24/7 Support</strong><span>Always here</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- products -->
+      <section class="section product-section" id="products">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <span class="eyebrow">Top picks for you</span>
+              <h2 class="section-title">Featured Products</h2>
+              <p class="section-sub">
+                Hand-picked favorites across every category
+              </p>
+            </div>
+            <a href="#category" class="section-link"
+              >View all <i class="bi bi-arrow-right" aria-hidden="true"></i
+            ></a>
+          </header>
+          <div class="row g-4">
+            <!-- Card 1 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">-25%</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/jacket-img-1.jpg"
+                    alt="Classic Denim Jacket"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Women</span>
+                  <h3 class="product-title">Classic Denim Jacket</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹1000</span
+                    ><span class="price-old">₹1250</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card 2 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge bg-success">New</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/t-shirt-img-2.jpg"
+                    alt="Classic Cotton T-Shirt"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-primary">Men</span>
+                  <h3 class="product-title">Classic Cotton T-Shirt</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹900</span
+                    ><span class="price-old">₹1300</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-3 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">-30%</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/sneakers-img-3.jpg"
+                    alt="Air Runner Sneakers"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-success">Footwear</span>
+                  <h3 class="product-title">Air Runner Sneakers</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹1600</span
+                    ><span class="price-old">₹2000</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-4 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge bg-primary">Best</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/bag-img-4.jpg"
+                    alt="Leather Crossbody Bag"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-warning">Accessories</span>
+                  <h3 class="product-title">Leather Crossbody Bag</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹2500</span
+                    ><span class="price-old">₹3000</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-5 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">-25%</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img src="./images/pant-img-5.jpg" alt="Slim Fit Chinos" />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-primary">Men</span>
+                  <h3 class="product-title">Slim Fit Chinos</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹2000</span
+                    ><span class="price-old">₹2300</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-6 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">Hot</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/white-sneaker-img-6.jpg"
+                    alt="Classic Canvas Sneakers"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-success">Footwear</span>
+                  <h3 class="product-title">Classic Canvas Sneakers</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹4000</span
+                    ><span class="price-old">₹5500</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-7 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge bg-success">Best</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/watch img-7.jpg"
+                    alt="Minimalist Leather Watch"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-warning">Accessories</span>
+                  <h3 class="product-title">Minimalist Leather Watch</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹2500</span
+                    ><span class="price-old">₹3000</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-8 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">-40%</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/womens-jacket-img-8.jpg"
+                    alt="Chunky Knit Jacket"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat">Women</span>
+                  <h3 class="product-title">Chunky Knit Sweater</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹4000</span
+                    ><span class="price-old">₹6000</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- card-9 -->
+            <article class="col-12 col-md-6 col-lg-4">
+              <div class="product-card">
+                <div class="product-media">
+                  <span class="product-badge">-10%</span>
+                  <button class="product-button">
+                    <i class="bi bi-heart"></i>
+                  </button>
+                  <img
+                    src="./images/shirt-men-img-9.jpg"
+                    alt="White-collar-shirt"
+                  />
+                </div>
+                <div class="product-body">
+                  <span class="product-cat text-primary">Men</span>
+                  <h3 class="product-title">White Collar Shirt</h3>
+                  <div class="product-rating">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <div class="product-price">
+                    <span class="price-new">₹1500</span
+                    ><span class="price-old">₹1800</span>
+                  </div>
+                  <button class="btn-add-cart" type="button">
+                    <i class="bi bi-cart-plus"></i>Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- category -->
+      <section class="section categories-section" id="category">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <span class="eyebrow">Browse by collection</span>
+              <h2 class="section-title">Shop by Category</h2>
+              <p class="section-sub">
+                Explore curated collections across men, women, footwear, and
+                accessories
+              </p>
+            </div>
+            <a href="#products" class="section-link"
+              >All Categories
+              <i class="bi bi-arrow-right" aria-hidden="true"></i
+            ></a>
+          </header>
+          <div class="row g-4">
+            <!-- category-1 -->
+            <article class="col-12 col-sm-6 col-lg-3 cat-card">
+              <a href="#products" class="cat-tile">
+                <div class="cat-img">
+                  <img src="./images/cat-women-1.jpg" alt="women-categories" />
+                </div>
+                <div class="cat-body">
+                  <div>
+                    <h3>Women</h3>
+                    <p>520+ styles</p>
+                  </div>
+                  <span id="cat1" class="cat-arrow"
+                    ><i class="bi bi-arrow-right"></i
+                  ></span>
+                </div>
+              </a>
+            </article>
+            <!-- category-2 -->
+            <article class="col-12 col-sm-6 col-lg-3 cat-card">
+              <a href="#products" class="cat-tile">
+                <div class="cat-img">
+                  <img src="./images/cat-men-img-2.jpg" alt="men-categories" />
+                </div>
+                <div class="cat-body">
+                  <div>
+                    <h3>Men</h3>
+                    <p>400+ styles</p>
+                  </div>
+                  <span id="cat2" class="cat-arrow"
+                    ><i class="bi bi-arrow-right"></i
+                  ></span>
+                </div>
+              </a>
+            </article>
+            <!-- category-3 -->
+            <article class="col-12 col-sm-6 col-lg-3 cat-card">
+              <a href="#products" class="cat-tile">
+                <div class="cat-img">
+                  <img
+                    src="./images/cat-foot-img-3.jpg"
+                    alt="footwear categories"
+                  />
+                </div>
+                <div class="cat-body">
+                  <div>
+                    <h3>Footwear</h3>
+                    <p>180+ styles</p>
+                  </div>
+                  <span id="cat3" class="cat-arrow"
+                    ><i class="bi bi-arrow-right"></i
+                  ></span>
+                </div>
+              </a>
+            </article>
+            <!-- category-4 -->
+            <article class="col-12 col-sm-6 col-lg-3 cat-card">
+              <a href="#products" class="cat-tile">
+                <div class="cat-img">
+                  <img src="./images/cat-acces-img-4.jpg" alt="Accesories" />
+                </div>
+                <div class="cat-body">
+                  <div>
+                    <h3>Accessories</h3>
+                    <p>200+ styles</p>
+                  </div>
+                  <span id="cat4" class="cat-arrow"
+                    ><i class="bi bi-arrow-right"></i
+                  ></span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- newsletter -->
+      <section class="newsletter-section" id="newsletter">
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-text">
+              <span class="eyebrow eyebrow-light">Stay in the loop</span>
+              <h2>Subscribe to our newsletter</h2>
+              <p>
+                Get the latest deals, new arrivals, and exclusive offers —
+                straight to your inbox.
+              </p>
+            </div>
+            <form class="newsletter-form" onsubmit="return false;">
+              <label for="newsletter-email" class="visually-hidden"
+                >Email address</label
+              >
+              <div class="newsletter-input-wrap">
+                <i class="bi bi-envelope"></i>
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  class="newsletter-input"
+                  placeholder="Enter your email address"
+                  required
+                />
+                <button class="btn btn-primary" type="submit">Subscribe</button>
+              </div>
+              <small class="newsletter-note"
+                >No spam. Unsubscribe anytime.</small
+              >
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-4">
+          <!-- About -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="footer-title">About</h4>
+            <p class="footer-about">
+              ShopNest is your online destination for modern clothing, footwear,
+              and accessories.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#category">Categories</a></li>
+              <li><a href="#newsletter">Newsletter</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-6 col-md-6 col-lg-3">
+            <h4 class="footer-title">Contact</h4>
+            <ul class="footer-list footer-contact">
+              <li>
+                <i class="bi bi-geo-alt"></i>
+                Kochi, Kerala
+              </li>
+              <li>
+                <i class="bi bi-telephone"></i>
+                +91 7510162040
+              </li>
+              <li>
+                <i class="bi bi-envelope"></i>
+                hello@shopnest.com
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social Media -->
+          <div class="col-12 col-md-6 col-lg-3">
+            <h4 class="footer-title">Social Media</h4>
+            <p class="footer-tag">
+              Follow us for the latest updates and offers.
+            </p>
+
+            <div class="social-row">
+              <a href="#" class="social-btn" aria-label="Facebook">
+                <i class="bi bi-facebook"></i>
+              </a>
+
+              <a href="#" class="social-btn" aria-label="Instagram">
+                <i class="bi bi-instagram"></i>
+              </a>
+
+              <a href="#" class="social-btn" aria-label="Twitter">
+                <i class="bi bi-twitter-x"></i>
+              </a>
+
+              <a href="#" class="social-btn" aria-label="YouTube">
+                <i class="bi bi-youtube"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 ShopNest. All rights reserved.</p>
+
+          <ul class="footer-legal">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

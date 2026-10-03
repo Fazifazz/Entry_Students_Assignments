@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Voice To-do list</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Voice To-do list</h1>
+
+    <div class="controls">
+      <button id="toggleBtn">Start Listening</button>
+      <span id="status">Idle</span>
+    </div>
+
+    <section>
+      <h2>Task</h2>
+      <ol id="tasks" aria-live="polite"></ol>
+    </section>
+
+    <div class="last">
+      <strong>Last heard:</strong> <span id="last">—</span>
+    </div>
+
+    <p class="hint">Say a task to add it, e.g. "Buy milk". Say "Done Task 1" to mark the first item complete.</p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

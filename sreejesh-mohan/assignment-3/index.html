@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="icon" type="image/x-icon" href="img/fav-icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <img src="img/quiz-app.png" alt="Quiz App Logo" class="header-icon">
+        
+        <div id="start-screen">
+            <h2>Welcome to the HTML & CSS Quiz!</h2>
+            <p>Test your knowledge with 8 questions.</p>
+            <button id="start-btn">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <button id="mid-restart-btn" class="top-left-icon" title="Restart Quiz">↺</button>
+            <div id="question-counter" class="counter"></div>
+            <h2 id="question-text"></h2>
+            <div id="options-container"></div>
+            <button id="next-btn" class="hidden">Next Question</button>
+        </div>
+
+        <div id="result-screen" class="hidden">
+            <h2 id="final-score"></h2>
+            <p id="feedback-message"></p>
+            <button id="restart-btn">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
