@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopNest - Your One-Stop Online Shop</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%E%2F%9F%9B%92%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="logo">ShopNest</h1>
+        <div class="search-wrapper">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search products by name..."
+          />
+        </div>
+        <button id="cart-toggle" class="cart-toggle">
+          <span class="cart-icon">&#128722;</span>
+          <span class="cart-label">Cart</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-label="Welcome to ShopNest">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="hero-eyebrow">Welcome to ShopNest</p>
+          <h2 class="hero-title">Discover. Shop. Smile.</h2>
+          <p class="hero-subtitle">
+            Curated deals across electronics, fashion, footwear, and books —
+            delivered to your doorstep with a 30-day happiness guarantee.
+          </p>
+          <div class="hero-actions">
+            <a href="#products-grid" class="hero-cta">Shop Now</a>
+            <a href="#why-choose-us" class="hero-link">Why ShopNest?</a>
+          </div>
+        </div>
+        <div class="hero-stats" aria-hidden="true">
+          <div class="hero-stat">
+            <span class="hero-stat-value">10K+</span>
+            <span class="hero-stat-label">Happy Customers</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">500+</span>
+            <span class="hero-stat-label">Products</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-value">24/7</span>
+            <span class="hero-stat-label">Support</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <nav class="filters" aria-label="Category filters">
+      <div class="filters-inner" id="category-filters">
+        <!-- Filter buttons rendered by JS -->
+      </div>
+    </nav>
+    <main class="main">
+      <section class="products-section">
+        <h2 class="section-title">Products</h2>
+        <div id="products-grid" class="products-grid"></div>
+        <p id="no-results" class="no-results hidden">No products found.</p>
+      </section>
+      <aside id="cart-panel" class="cart-panel">
+        <div class="cart-panel-header">
+          <h2>Your Cart</h2>
+          <button id="cart-close" class="cart-close">&times;</button>
+        </div>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-footer">
+          <div class="cart-total">
+            <span>Total:</span>
+            <span id="cart-total">$0.00</span>
+          </div>
+          <button id="checkout-btn" class="checkout-btn">Checkout</button>
+        </div>
+      </aside>
+      <section
+        id="why-choose-us"
+        class="why-section"
+        aria-label="Why choose ShopNest"
+      >
+        <div class="why-inner">
+          <header class="why-header">
+            <p class="section-eyebrow">Why Choose Us</p>
+            <h2 class="section-title">Built for shoppers who expect more</h2>
+            <p class="why-lede">
+              Every order is backed by the promises below — no fine print, no
+              surprises.
+            </p>
+          </header>
+          <div class="why-grid">
+            <article class="why-card">
+              <div class="why-icon" aria-hidden="true">&#128666;</div>
+              <h3>Free Shipping</h3>
+              <p>
+                Complimentary delivery on every order over $50 — no promo code
+                needed.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon" aria-hidden="true">&#128274;</div>
+              <h3>Secure Checkout</h3>
+              <p>
+                Your payment details are encrypted end-to-end with
+                industry-standard SSL.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon" aria-hidden="true">&#128260;</div>
+              <h3>30-Day Returns</h3>
+              <p>
+                Changed your mind? Send it back within 30 days for a full
+                refund.
+              </p>
+            </article>
+            <article class="why-card">
+              <div class="why-icon" aria-hidden="true">&#127775;</div>
+              <h3>Quality Guaranteed</h3>
+              <p>
+                Every product is hand-picked and inspected before it ships to
+                you.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <h2 class="footer-logo">ShopNest</h2>
+          <p class="footer-tagline">
+            Your one-stop online shop for everything you love.
+          </p>
+        </div>
+        <nav class="footer-cols">
+          <div class="footer-col">
+            <h3>Shop</h3>
+            <ul>
+              <li><a href="#products-grid">All Products</a></li>
+              <li><a href="#products-grid">Electronics</a></li>
+              <li><a href="#products-grid">Clothing</a></li>
+              <li><a href="#products-grid">Books</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Support</h3>
+            <ul>
+              <li><a href="#why-choose-us">Shipping &amp; Returns</a></li>
+              <li><a href="#why-choose-us">Secure Checkout</a></li>
+              <li><a href="#why-choose-us">Help Center</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Company</h3>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="footer-bottom">
+          <p>&copy; 2026 ShopNest. All rights reserved.</p>
+          <p class="footer-meta">Made with care &mdash; happy shopping!</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="toast" class="toast" role="status"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
