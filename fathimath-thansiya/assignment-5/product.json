@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 1000,
+    "originalPrice": 1200,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Pro",
+    "category": "Electronics",
+    "price": 2000,
+    "originalPrice": 3200,
+    "rating": 4.3,
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 2000,
+    "originalPrice": 3500,
+    "rating": 4.3,
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Laptop Stand",
+    "category": "Electronics",
+    "price": 5000,
+    "originalPrice": 5500,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1575399545768-5f1840c1312d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwc3RhbmR8ZW58MHx8MHx8fDA%3D"
+  },
+  {
+    "id": 5,
+    "name": "Classic Denim Jacket",
+    "category": "Clothing",
+    "price": 2000,
+    "originalPrice": 3200,
+    "rating": 4.1,
+    "imageUrl": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Cotton T-Shirt",
+    "category": "Clothing",
+    "price": 1000,
+    "originalPrice": 1200,
+    "rating": 4.2,
+    "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Slim Fit Jeans",
+    "category": "Clothing",
+    "price": 1500,
+    "originalPrice": 2000,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Hooded Sweatshirt",
+    "category": "Clothing",
+    "price": 3000,
+    "originalPrice": 4000,
+    "rating": 4.2,
+    "imageUrl": "https://images.unsplash.com/photo-1624548140129-74786c5f1279?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGphY2tldHxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 9,
+    "name": "Running Sneakers",
+    "category": "Footwear",
+    "price": 3000,
+    "originalPrice": 3500,
+    "rating": 4.1,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Leather Boots",
+    "category": "Footwear",
+    "price": 12999,
+    "originalPrice": 17999,
+    "rating": 4,
+    "imageUrl": "https://media.istockphoto.com/id/523113015/photo/mens-brown-shoes.webp?a=1&b=1&s=612x612&w=0&k=20&c=H7krXfshd8LYK9O-0q-xFfr8ZT2utvm5aI-P444hzKs="
+  },
+  {
+    "id": 11,
+    "name": "Canvas Slip-ons",
+    "category": "Footwear",
+    "price": 3499,
+    "originalPrice": 4999,
+    "rating": 4.3,
+    "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=400&q=80"
+  },
+  {
+    "id": 12,
+    "name": "The Pragmatic Programmer",
+    "category": "Books",
+    "price": 700,
+    "originalPrice": 1000,
+    "rating": 4.2,
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=80"
+  },
+  {
+    "id": 13,
+    "name": "Clean Code",
+    "category": "Books",
+    "price": 2799,
+    "originalPrice": 4499,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80"
+  },
+  {
+    "id": 14,
+    "name": "JavaScript: The Good Parts",
+    "category": "Books",
+    "price": 1000,
+    "originalPrice": 1200,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&q=80"
+  }
+]
