@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Action",
+    "year": 2010,
+    "rating": 8.8
+  },
+  {
+    "id": 2,
+    "title": "The Hangover",
+    "genre": "Comedy",
+    "year": 2009,
+    "rating": 7.7
+  },
+  {
+    "id": 3,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 9.3
+  },
+  {
+    "id": 4,
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4
+  },
+  {
+    "id": 5,
+    "title": "The Mask",
+    "genre": "Comedy",
+    "year": 1994,
+    "rating": 7.0
+  },
+  {
+    "id": 6,
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 8.8
+  }
+]
