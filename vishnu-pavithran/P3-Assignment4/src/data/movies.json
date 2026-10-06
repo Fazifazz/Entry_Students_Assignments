@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Science Fiction",
+    "year": 2010,
+    "rating": 8.8,
+    "poster": "/src/assets/inception.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Interstellar",
+    "genre": "Adventure",
+    "year": 2014,
+    "rating": 8.7,
+    "poster": "/src/assets/interstellar.jpg"
+  },
+  {
+    "id": 3,
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "year": 2008,
+    "rating": 9.0,
+    "poster": "/src/assets/The_Dark_Knight.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Avatar",
+    "genre": "Fantasy",
+    "year": 2009,
+    "rating": 7.9,
+    "poster": "/src/assets/avatar.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Titanic",
+    "genre": "Romance",
+    "year": 1997,
+    "rating": 7.9,
+    "poster": "/src/assets/titanic.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Matrix",
+    "genre": "Science Fiction",
+    "year": 1999,
+    "rating": 8.7,
+    "poster": "/src/assets/matrix.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Gladiator",
+    "genre": "Action",
+    "year": 2000,
+    "rating": 8.5,
+    "poster": "/src/assets/gladiator.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4,
+    "poster": "/src/assets/endgame.jpg"
+  },
+  {
+    "id": 9,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 9.3,
+    "poster": "/src/assets/shawshank.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Jurassic Park",
+    "genre": "Adventure",
+    "year": 1993,
+    "rating": 8.2,
+    "poster": "/src/assets/jurassic-park.jpg"
+  },
+  {
+    "id": 11,
+    "title": "The Lord of the Rings",
+    "genre": "Fantasy",
+    "year": 2001,
+    "rating": 8.8,
+    "poster": "/src/assets/lord-of-the-rings.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 8.8,
+    "poster": "/src/assets/forrest-gump.jpg"
+  }
+]
