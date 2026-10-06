@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ShopNest - Online Shopping</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+    <header class="top-navbar">
+
+        <div class="container nav-wrapper">
+
+            <!-- Logo -->
+            <a href="#" class="logo" aria-label="ShopNest home">
+                <span class="brand-main">Shop<span>Nest</span></span>
+                <small class="tagline">Explore Plus</small>
+            </a>
+
+            <!-- Search -->
+            <div class="search-box">
+
+                <input id="search-input" type="search" placeholder="Search for products, brands and more"
+                    aria-label="Search products">
+
+                <button class="search-btn" aria-label="Search">
+
+                    <i class="bi bi-search"></i>
+
+                </button>
+
+            </div>
+
+            <!-- Login + Cart -->
+            <div class="nav-actions">
+
+                <!-- Login Button -->
+                <button id="login-open" class="login-btn" aria-label="Login">
+
+                    <i class="bi bi-person"></i>
+
+                    <span>Login</span>
+
+                </button>
+
+                <!-- Cart Button -->
+                <button id="cart-open" class="cart-link" aria-label="Open cart">
+
+                    <i class="bi bi-cart3"></i>
+
+                    <span id="cart-count" class="cart-count" hidden>
+                        0
+                    </span>
+
+                </button>
+
+            </div>
+
+            <!-- Category navigation -->
+            <nav id="category-filters" class="category-menu" aria-label="Shop categories">
+                <button class="filter-btn active" data-category="All">All</button>
+                <button class="filter-btn" data-category="Electronics">Electronics</button>
+                <button class="filter-btn" data-category="Clothing">Clothing</button>
+                <button class="filter-btn" data-category="Footwear">Footwear</button>
+                <button class="filter-btn" data-category="Books">Books</button>
+                <button class="filter-btn" data-category="Accessories">Accessories</button>
+                <button class="filter-btn" data-category="Home">Home</button>
+                <button class="filter-btn menu-link" data-category="Deals">Deals</button>
+                <button class="filter-btn menu-link" data-category="New Arrivals">New Arrivals</button>
+                <button class="filter-btn menu-link" data-category="Offers">Offers</button>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="container hero-inner">
+
+                <div class="hero-content">
+                    <span class="eyebrow">Fresh picks for every lifestyle</span>
+
+                    <h1>Big Shopping Days</h1>
+
+                    <p>
+                        Discover amazing products, exclusive deals,
+                        and unbeatable prices at ShopNest.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#catalog" class="btn-shop">
+                            Shop Now
+                        </a>
+
+                        <a href="#" class="btn-secondary">
+                            Explore Deals
+                        </a>
+                    </div>
+
+                    <ul class="hero-metrics" aria-label="Store highlights">
+                        <li>
+                            <strong>25K+</strong>
+                            <span>Happy shoppers</span>
+                        </li>
+                        <li>
+                            <strong>4.8/5</strong>
+                            <span>Customer rating</span>
+                        </li>
+                        <li>
+                            <strong>Free</strong>
+                            <span>Shipping above ₹999</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-visual" aria-label="Featured offer panel">
+                    <div class="promo-card">
+                        <div class="promo-product">
+                            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80"
+                                alt="Featured product">
+                        </div>
+
+                        <div class="promo-details">
+                            <h2>Sports Shoes</h2>
+                            <div class="promo-price-row">
+                                <span class="promo-price">₹2,199</span>
+                                <span class="promo-old">₹3,999</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Product Catalog -->
+        <section id="catalog" class="catalog">
+
+            <div class="container">
+
+                <h2 class="section-title">
+                    Shop Our Products
+                </h2>
+
+                <p class="section-subtitle">
+                    Find your next favourite product
+                </p>
+
+
+                <!-- Product Grid -->
+                <div id="product-grid" class="product-grid" aria-live="polite">
+
+                    <p class="no-products">
+                        Loading products...
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <dialog id="login-panel" class="login-panel">
+
+        <div class="login-header">
+
+            <h2>
+                <i class="bi bi-person-circle"></i>
+                Login
+            </h2>
+
+            <button id="login-close" class="login-close" aria-label="Close login">
+
+                &times;
+
+            </button>
+
+        </div>
+
+
+        <div class="login-content">
+
+            <form id="login-form">
+
+                <!-- Email -->
+                <label for="login-email">
+                    Email
+                </label>
+
+                <input id="login-email" type="email" placeholder="Enter your email" required>
+
+
+                <!-- Password -->
+                <label for="login-password">
+                    Password
+                </label>
+
+                <input id="login-password" type="password" placeholder="Enter your password" required>
+
+
+                <!-- Login -->
+                <button type="submit" class="login-submit">
+
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p id="login-message" class="login-message">
+            </p>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ================= CART MODAL ================= -->
+
+    <dialog id="cart-panel" class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>
+                <i class="bi bi-cart3"></i>
+                My Cart
+            </h2>
+
+            <button id="cart-close" class="cart-close" aria-label="Close cart">
+
+                &times;
+
+            </button>
+
+        </div>
+
+
+        <div class="cart-content">
+
+            <div id="cart-message" class="cart-message">
+
+                Your cart is empty.
+
+            </div>
+
+
+            <div id="cart-items"></div>
+
+
+            <div id="cart-total-wrap" class="cart-total" hidden>
+
+                Total:
+                <span id="cart-total">
+                    ₹0
+                </span>
+
+            </div>
+
+        </div>
+
+    </dialog>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <a href="#" class="logo footer-logo">
+                    Shop<span>Nest</span>
+                </a>
+                <p>
+                    Your everyday destination for premium products, trending essentials, and unbeatable deals.
+                </p>
+                <div class="social-links" aria-label="Social media links">
+                    <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#catalog">Shop</a></li>
+                    <li><a href="#">Deals</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Shipping</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe for exclusive offers and latest launches.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" aria-label="Email address">
+                    <button type="submit">Join</button>
+                </form>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>© 2026 ShopNest. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

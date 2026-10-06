@@ -1,0 +1,130 @@
+[
+  {
+    "id": "headset-comfort",
+    "name": "Acoustic Comfort Headset",
+    "category": "Electronics",
+    "price": 149,
+    "originalPrice": 179,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&q=80&w=600",
+    "description": "Ergonomic design engineered for long listening and remote sanctuary focus.",
+    "badge": "Save $30"
+  },
+  {
+    "id": "chronograph-watch",
+    "name": "Minimalist Chronograph Watch",
+    "category": "Electronics",
+    "price": 210,
+    "originalPrice": 210,
+    "rating": 5,
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&q=80&w=600",
+    "description": "Pure stainless steel face with organic leather strap for understated elegance.",
+    "badge": "New"
+  },
+  {
+    "id": "cloud-walk-sneakers",
+    "name": "Cloud Walk Sneakers",
+    "category": "Footwear",
+    "price": 98,
+    "originalPrice": 130,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600",
+    "description": "Featherlight recycled textiles tailored for urban transit and everyday stride.",
+    "badge": "Best Seller"
+  },
+  {
+    "id": "ambient-controller",
+    "name": "Nest Ambient Controller",
+    "category": "Electronics",
+    "price": 125,
+    "originalPrice": 125,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&q=80&w=600",
+    "description": "Centralized home climate and lighting control with a responsive matte finish."
+  },
+  {
+    "id": "architectural-spaces",
+    "name": "Architectural Spaces Vol. IV",
+    "category": "Books",
+    "price": 65,
+    "originalPrice": 65,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600",
+    "description": "Curated photo compendium focusing on calm architecture and natural light."
+  },
+  {
+    "id": "merino-lounge-crew",
+    "name": "Merino Wool Lounge Crew",
+    "category": "Clothing",
+    "price": 110,
+    "originalPrice": 110,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&q=80&w=600",
+    "description": "Sustainably sourced yarn structured for supreme everyday relaxation."
+  },
+  {
+    "id": "smart-speaker",
+    "name": "Nest Mini Smart Speaker",
+    "category": "Electronics",
+    "price": 79,
+    "originalPrice": 99,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&q=80&w=600",
+    "description": "Room-filling sound and hands-free help in a compact, considered form.",
+    "badge": "Save $20"
+  },
+  {
+    "id": "everyday-tote",
+    "name": "Everyday Canvas Tote",
+    "category": "Clothing",
+    "price": 38,
+    "originalPrice": 45,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&q=80&w=600",
+    "description": "A durable organic-cotton carryall sized for daily essentials.",
+    "badge": "Save $7"
+  },
+  {
+    "id": "studio-running-shoe",
+    "name": "Studio Running Shoe",
+    "category": "Footwear",
+    "price": 115,
+    "originalPrice": 140,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=600",
+    "description": "Responsive cushioning and breathable knit for training and all-day wear.",
+    "badge": "Save $25"
+  },
+  {
+    "id": "quiet-mornings",
+    "name": "Quiet Mornings: A Ritual Guide",
+    "category": "Books",
+    "price": 28,
+    "originalPrice": 32,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=600",
+    "description": "Gentle prompts and practical rituals for a more mindful start to the day.",
+    "badge": "Save $4"
+  },
+  {
+    "id": "linen-overshirt",
+    "name": "Relaxed Linen Overshirt",
+    "category": "Clothing",
+    "price": 88,
+    "originalPrice": 105,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1598033129183-c4f50c736f10?auto=format&fit=crop&q=80&w=600",
+    "description": "A breathable, easy layer cut from softly textured European linen.",
+    "badge": "Save $17"
+  },
+  {
+    "id": "design-notebook-set",
+    "name": "Design Notes Notebook Set",
+    "category": "Books",
+    "price": 24,
+    "originalPrice": 24,
+    "rating": 4.3,
+    "imageUrl": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?auto=format&fit=crop&q=80&w=600",
+    "description": "Three lay-flat notebooks for sketches, plans, and everyday ideas."
+  }
+]

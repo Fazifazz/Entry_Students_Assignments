@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Aavesham",
+    "genre": "Action",
+    "year": 2024,
+    "rating": 7.8,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/d/d1/Aavesham.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Manjummel Boys",
+    "genre": "Drama",
+    "year": 2024,
+    "rating": 8.2,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/9/99/Manjummel_Boys_poster.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Premalu",
+    "genre": "Comedy",
+    "year": 2024,
+    "rating": 7.8,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/c/c5/Premalu_film_poster.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Drishyam",
+    "genre": "Thriller",
+    "year": 2013,
+    "rating": 8.3,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/9/9e/DrishyamMovie.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Bangalore Days",
+    "genre": "Drama",
+    "year": 2014,
+    "rating": 8.3,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/5/5c/%27Bangalore_Days%27_2014_Malayalam_Film_-_Poster.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Kumbalangi Nights",
+    "genre": "Drama",
+    "year": 2019,
+    "rating": 8.5,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/9/98/Kumbalangi_Nights_poster.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Lucifer",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 7.5,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/c/c2/Lucifer_film_poster.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Ustad Hotel",
+    "genre": "Drama",
+    "year": 2012,
+    "rating": 8.2,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/6/64/Ustad_Hotel_%282012%29_-_Poster.jpg"
+  }
+]
