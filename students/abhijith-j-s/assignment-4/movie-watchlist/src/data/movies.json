@@ -1,0 +1,15 @@
+[
+  { "id": 1, "title": "Edge of Tomorrow Run", "genre": "Action", "year": 2021, "rating": 8.1 },
+  { "id": 2, "title": "Iron Pursuit", "genre": "Action", "year": 2019, "rating": 7.4 },
+  { "id": 3, "title": "Last Stand City", "genre": "Action", "year": 2023, "rating": 7.9 },
+  { "id": 4, "title": "Laugh Factory", "genre": "Comedy", "year": 2020, "rating": 7.2 },
+  { "id": 5, "title": "The Office Heist", "genre": "Comedy", "year": 2018, "rating": 6.8 },
+  { "id": 6, "title": "Wedding Crashers Club", "genre": "Comedy", "year": 2022, "rating": 7.0 },
+  { "id": 7, "title": "Silent Rivers", "genre": "Drama", "year": 2017, "rating": 8.6 },
+  { "id": 8, "title": "A Quiet Verdict", "genre": "Drama", "year": 2024, "rating": 8.3 },
+  { "id": 9, "title": "Broken Harbor", "genre": "Drama", "year": 2016, "rating": 7.7 },
+  { "id": 10, "title": "Midnight Signal", "genre": "Thriller", "year": 2022, "rating": 8.0 },
+  { "id": 11, "title": "The Locked Room", "genre": "Thriller", "year": 2015, "rating": 7.5 },
+  { "id": 12, "title": "Paris in Autumn", "genre": "Romance", "year": 2021, "rating": 7.6 },
+  { "id": 13, "title": "Love Letters Unsent", "genre": "Romance", "year": 2019, "rating": 7.1 }
+]
