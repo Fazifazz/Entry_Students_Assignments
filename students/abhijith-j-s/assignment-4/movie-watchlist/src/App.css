@@ -1,0 +1,153 @@
+:root {
+  --bg: #0d0f17;
+  --surface: #171a26;
+  --surface-2: #1f2333;
+  --text: #e8eaf2;
+  --muted: #8b91a8;
+  --accent: #e50914;
+  --accent-hover: #ff2430;
+  --gold: #f5c518;
+  --green: #1f9d55;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.app { max-width: 1280px; margin: 0 auto; padding: 24px 16px 48px; }
+
+.header { text-align: center; margin-bottom: 28px; }
+.header h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 1px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 28px;
+  align-items: start;
+}
+
+/* Genre filter */
+.genre-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+.chip {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid #2c3148;
+  padding: 8px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.chip:hover { border-color: var(--accent); transform: translateY(-2px); }
+.chip--active { background: var(--accent); border-color: var(--accent); }
+
+/* Movie grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+}
+
+.movie-card {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid #262b40;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+.movie-card__top { display: flex; justify-content: space-between; align-items: center; }
+.badge {
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.rating { color: var(--gold); font-weight: 600; }
+.movie-card__title { font-size: 1.15rem; min-height: 2.8rem; }
+.movie-card__year { color: var(--muted); margin-bottom: 6px; }
+
+/* Buttons */
+.btn {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn:active:not(:disabled) { transform: scale(0.97); }
+.btn--primary { background: var(--accent); }
+.btn--primary:hover { background: var(--accent-hover); }
+.btn--added { background: var(--green); cursor: not-allowed; opacity: 0.85; }
+.btn--danger { background: transparent; border: 1px solid #c0392b; color: #ff6b5e; padding: 6px 12px; }
+.btn--danger:hover { background: #c0392b; color: #fff; }
+
+/* Watchlist */
+.watchlist {
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #262b40;
+  position: sticky;
+  top: 16px;
+}
+.watchlist h2 { margin-bottom: 14px; font-size: 1.2rem; }
+.watchlist__list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.watchlist__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-2);
+  padding: 12px;
+  border-radius: 10px;
+}
+.watchlist__item div { display: flex; flex-direction: column; }
+.muted { color: var(--muted); font-size: 0.85rem; }
+
+/* States */
+.state-box {
+  text-align: center;
+  padding: 60px 20px;
+  background: var(--surface);
+  border-radius: 14px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.state-box--error { color: #ff6b5e; border: 1px solid #c0392b; }
+.spinner {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 14px;
+  border: 4px solid #2c3148;
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .watchlist { position: static; }
+}
+@media (max-width: 480px) {
+  .movie-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .movie-card { padding: 14px; }
+}
