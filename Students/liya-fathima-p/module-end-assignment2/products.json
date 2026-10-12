@@ -1,0 +1,128 @@
+[
+    {
+        "id": 1,
+        "name": "Classic Hoodie",
+        "category": "Clothing",
+        "price": 1499,
+        "originalPrice": 1999,
+        "rating": 4.8,
+        "imageUrl": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 2,
+        "name": "Cotton T-Shirt",
+        "category": "Clothing",
+        "price": 799,
+        "originalPrice": 1199,
+        "rating": 4.4,
+        "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 3,
+        "name": "Slim Fit Jeans",
+        "category": "Clothing",
+        "price": 1799,
+        "originalPrice": 2499,
+        "rating": 4.7,
+        "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 4,
+        "name": "Classic Wrist Watch",
+        "category": "Electronics",
+        "price": 2499,
+        "originalPrice": 3499,
+        "rating": 4.7,
+        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 5,
+        "name": "Wireless Headphones",
+        "category": "Electronics",
+        "price": 2999,
+        "originalPrice": 4499,
+        "rating": 4.6,
+        "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 6,
+        "name": "Smart Watch",
+        "category": "Electronics",
+        "price": 3999,
+        "originalPrice": 5499,
+        "rating": 4.5,
+        "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 7,
+        "name": "Running Sneakers",
+        "category": "Footwear",
+        "price": 2199,
+        "originalPrice": 2999,
+        "rating": 4.8,
+        "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 8,
+        "name": "White Casual Shoes",
+        "category": "Footwear",
+        "price": 1899,
+        "originalPrice": 2599,
+        "rating": 4.5,
+        "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 9,
+        "name": "Leather Boots",
+        "category": "Footwear",
+        "price": 2899,
+        "originalPrice": 3999,
+        "rating": 4.6,
+        "imageUrl": "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 10,
+        "name": "Atomic Habits",
+        "category": "Books",
+        "price": 499,
+        "originalPrice": 699,
+        "rating": 4.9,
+        "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 11,
+        "name": "The Alchemist",
+        "category": "Books",
+        "price": 399,
+        "originalPrice": 599,
+        "rating": 4.7,
+        "imageUrl": "https://images.unsplash.com/photo-1511108690759-009324a90311?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 12,
+        "name": "Clean Code",
+        "category": "Books",
+        "price": 699,
+        "originalPrice": 999,
+        "rating": 4.8,
+        "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 13,
+        "name": "Minimalist Handbag",
+        "category": "Clothing",
+        "price": 1599,
+        "originalPrice": 2299,
+        "rating": 4.3,
+        "imageUrl": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80"
+    },
+    {
+        "id": 14,
+        "name": "Bluetooth Speaker",
+        "category": "Electronics",
+        "price": 1299,
+        "originalPrice": 1799,
+        "rating": 4.4,
+        "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80"
+    }
+]
