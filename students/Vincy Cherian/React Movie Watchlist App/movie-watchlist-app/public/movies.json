@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Bangalore Days",
+    "genre": "Drama",
+    "year": 2014,
+    "rating": 8.0,
+    "poster": "https://www.impawards.com/intl/india/2014/posters/bangalore_days_ver2.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Kumbalangi Nights",
+    "genre": "Drama",
+    "year": 2019,
+    "rating": 8.0,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/9/98/Kumbalangi_Nights_poster.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Sudani from Nigeria",
+    "genre": "Drama",
+    "year": 2018,
+    "rating": 8.0,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/e/ec/Sudani_from_Nigeria_poster.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Ustad Hotel",
+    "genre": "Drama",
+    "year": 2012,
+    "rating": 8.0,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/6/64/Ustad_Hotel_(2012)_-_Poster.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Charlie",
+    "genre": "Romance",
+    "year": 2015,
+    "rating": 8.0,
+    "poster": "https://www.impawards.com/intl/india/2015/posters/charlie_ver2.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Maheshinte Prathikaaram",
+    "genre": "Comedy",
+    "year": 2016,
+    "rating": 8.3,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/3/33/Maheshinte_Prathikaaram.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Home",
+    "genre": "Drama",
+    "year": 2021,
+    "rating": 8.0,
+    "poster": "https://upload.wikimedia.org/wikipedia/en/3/36/Home_(2021_film).jpg"
+  },
+  {
+    "id": 8,
+    "title": "Premam",
+    "genre": "Romance",
+    "year": 2015,
+    "rating": 8.3,
+    "poster": "https://www.impawards.com/intl/india/2015/posters/premam.jpg"
+  },
+  {
+    "id": 9,
+    "title": "Ennu Ninte Moideen",
+    "genre": "Romance",
+    "year": 2015,
+    "rating": 8.0,
+    "poster": "https://www.impawards.com/intl/india/2015/posters/ennu_ninte_moideen_ver10.jpg"
+  },
+  {
+    "id": 10,
+    "title": "Oru Vadakkan Selfie",
+    "genre": "Comedy",
+    "year": 2015,
+    "rating": 7.0,
+    "poster": "https://www.impawards.com/intl/india/2015/posters/oru_vadakkan_selfie.jpg"
+  }
+]

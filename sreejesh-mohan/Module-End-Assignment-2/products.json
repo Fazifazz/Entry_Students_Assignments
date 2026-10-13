@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Noise-Cancelling Headphones",
+    "category": "Electronics",
+    "price": 19999,
+    "originalPrice": 24999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Series 7",
+    "category": "Electronics",
+    "price": 31999,
+    "originalPrice": 34999,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=500&q=80"
+  },
+  {
+    "id": 3,
+    "name": "4K Ultra HD Smart TV",
+    "category": "Electronics",
+    "price": 71999,
+    "originalPrice": 85999,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Men's Classic Cotton T-Shirt",
+    "category": "Clothing",
+    "price": 1599,
+    "originalPrice": 1999,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Women's Denim Jacket",
+    "category": "Clothing",
+    "price": 4799,
+    "originalPrice": 5999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=500&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Unisex Winter Beanie",
+    "category": "Clothing",
+    "price": 1199,
+    "originalPrice": 1499,
+    "rating": 4.3,
+    "imageUrl": "https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=500&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Running Shoes - Speed Pro",
+    "category": "Footwear",
+    "price": 10399,
+    "originalPrice": 12999,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Classic Leather Loafers",
+    "category": "Footwear",
+    "price": 7199,
+    "originalPrice": 8999,
+    "rating": 4.4,
+    "imageUrl": "https://images.unsplash.com/photo-1533867617858-e7b97e060509?w=500&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Women's High Heel Sandals",
+    "category": "Footwear",
+    "price": 5199,
+    "originalPrice": 6999,
+    "rating": 4.2,
+    "imageUrl": "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=500&q=80"
+  },
+  {
+    "id": 10,
+    "name": "JavaScript: The Good Parts",
+    "category": "Books",
+    "price": 2399,
+    "originalPrice": 2999,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1589998059171-988d887df646?w=500&q=80"
+  },
+  {
+    "id": 11,
+    "name": "The Pragmatic Programmer",
+    "category": "Books",
+    "price": 3699,
+    "originalPrice": 4299,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=500&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Atomic Habits",
+    "category": "Books",
+    "price": 1499,
+    "originalPrice": 1899,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?w=500&q=80"
+  }
+]

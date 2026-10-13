@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNest Interactive App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-store"></i> Shop<span>Nest</span>
+            </a>
+            
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search for products...">
+                <i class="fa-solid fa-search search-icon"></i>
+            </div>
+            
+            <div class="cart-icon-container" id="cartToggle">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Premium Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Discover the Future of Tech & Style</h1>
+                <p>Shop the latest premium products with exclusive discounts.</p>
+                <button class="hero-cta" onclick="document.querySelector('.products-section').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+            </div>
+        </section>
+        
+        <div class="container layout">
+            <!-- Category Filters -->
+            <aside class="filters-sidebar">
+                <h2>Categories</h2>
+                <div class="category-buttons" id="categoryButtons">
+                    <button class="filter-btn active" data-category="All">All Products</button>
+                    <button class="filter-btn" data-category="Electronics">Electronics</button>
+                    <button class="filter-btn" data-category="Clothing">Clothing</button>
+                    <button class="filter-btn" data-category="Footwear">Footwear</button>
+                    <button class="filter-btn" data-category="Books">Books</button>
+                </div>
+            </aside>
+
+            <!-- Product Grid -->
+            <section class="products-section">
+                <!-- No Results Message (Hidden by default) -->
+                <div id="noProductsMessage" class="no-results hidden">
+                    <i class="fa-regular fa-face-frown-open"></i>
+                    <h2>No products found</h2>
+                    <p>We couldn't find anything matching your search and filter criteria.</p>
+                    <button id="resetFiltersBtn" class="reset-btn">Reset Filters</button>
+                </div>
+
+                <!-- Grid container for JS rendering -->
+                <div id="productGrid" class="product-grid">
+                    <!-- Products will be injected here via JavaScript -->
+                    <div class="loading-spinner" id="loadingSpinner">
+                        <i class="fa-solid fa-circle-notch fa-spin"></i> Loading...
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Shopping Cart Overlay/Sidebar -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-sidebar" id="cartSidebar">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button class="close-cart" id="closeCart"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            
+            <div class="cart-items" id="cartItemsContainer">
+                <!-- Cart items will be injected here -->
+                <div class="empty-cart-message">
+                    Your cart is empty.
+                </div>
+            </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-price" id="cartTotal">₹0</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ShopNest. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

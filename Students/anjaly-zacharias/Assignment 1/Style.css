@@ -1,0 +1,9 @@
+.text-gold {
+    display: inline-block !important;
+    background: linear-gradient(to bottom, #d4af37 0%, #fff3a8 35%, #aa771c 65%, #6b4d08 100%) !important;
+    -webkit-background-clip: text !important;
+     background-clip: text !important;
+     -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.5)) !important;
+    font-weight: bold;
+}

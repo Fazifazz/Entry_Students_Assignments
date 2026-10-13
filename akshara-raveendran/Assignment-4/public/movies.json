@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "title": "Inception",
+    "genre": "Action",
+    "year": 2010,
+    "rating": 8.8,
+   "description": "A thief enters people's dreams to steal secrets and gets a difficult mission to plant an idea.",
+    "image":"/images/inception.jpg"
+  }
+  ,
+  {
+    "id": 2,
+    "title": "The Hangover",
+    "genre": "Comedy",
+    "year": 2009,
+    "rating": 7.7,
+   "description": "Three friends wake up after a crazy night in Las Vegas and try to find their missing friend.",
+    "image": "/images/hangover.jpg"
+
+  },
+  {
+    "id": 3,
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 9.3,
+    "description": "A man in prison finds friendship and hope while trying to survive difficult times.",
+    "image": "/images/shawshank_redemption.jpg"
+
+  },
+  {
+    "id": 4,
+    "title": "Mad Max: Fury Road",
+    "genre": "Action",
+    "year": 2015,
+    "rating": 8.1,
+    "description": "Max joins Furiosa and a group of people trying to escape through a dangerous desert.",
+    "image": "/images/mad_max.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Superbad",
+    "genre": "Comedy",
+    "year": 2007,
+    "rating": 7.6,
+    "description": "Two high school friends try to have one unforgettable night before they finish school.",
+    "image": "/images/superbad.jpg"
+  },
+  {
+    "id": 6,
+    "title": "The Pursuit of Happyness",
+    "genre": "Drama",
+    "year": 2006,
+    "rating": 8.0,
+    "description": "A father faces many challenges while trying to build a better life for his young son.",
+    "image":  "/images/pursuit_of_happyness.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4,
+    "description": "The Avengers come together for one final mission to fix the damage caused by Thanos.",
+    "image":"/images/avengers_endgame.jpg" 
+},
+  {
+    "id": 8,
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 8.8,
+    "description": "A kind-hearted man lives an extraordinary life while always remembering the woman he loves.",
+    "image": "/images/forrest_gump.jpg"
+  }
+]

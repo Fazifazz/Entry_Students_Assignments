@@ -1,0 +1,142 @@
+[
+  {
+    "id": "tt0111161",
+    "title": "The Shawshank Redemption",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 9.3
+  },
+  {
+    "id": "tt0068646",
+    "title": "The Godfather",
+    "genre": "Drama",
+    "year": 1972,
+    "rating": 9.2
+  },
+  {
+    "id": "tt0468569",
+    "title": "The Dark Knight",
+    "genre": "Action",
+    "year": 2008,
+    "rating": 9.0
+  },
+  {
+    "id": "tt1375666",
+    "title": "Inception",
+    "genre": "Action",
+    "year": 2010,
+    "rating": 8.8
+  },
+  {
+    "id": "tt0816692",
+    "title": "Interstellar",
+    "genre": "Sci-Fi",
+    "year": 2014,
+    "rating": 8.7
+  },
+  {
+    "id": "tt4154796",
+    "title": "Avengers: Endgame",
+    "genre": "Action",
+    "year": 2019,
+    "rating": 8.4
+  },
+  {
+    "id": "tt0133093",
+    "title": "The Matrix",
+    "genre": "Sci-Fi",
+    "year": 1999,
+    "rating": 8.7
+  },
+  {
+    "id": "tt0114369",
+    "title": "Se7en",
+    "genre": "Drama",
+    "year": 1995,
+    "rating": 8.6
+  },
+  {
+    "id": "tt0109830",
+    "title": "Forrest Gump",
+    "genre": "Drama",
+    "year": 1994,
+    "rating": 8.8
+  },
+  {
+    "id": "tt0167260",
+    "title": "The Lord of the Rings: The Return of the King",
+    "genre": "Fantasy",
+    "year": 2003,
+    "rating": 9.0
+  },
+  {
+    "id": "tt0118799",
+    "title": "Life is Beautiful",
+    "genre": "Comedy",
+    "year": 1997,
+    "rating": 8.6
+  },
+  {
+    "id": "tt0088763",
+    "title": "Back to the Future",
+    "genre": "Sci-Fi",
+    "year": 1985,
+    "rating": 8.5
+  },
+  {
+    "id": "tt0108052",
+    "title": "Schindler's List",
+    "genre": "Drama",
+    "year": 1993,
+    "rating": 9.0
+  },
+  {
+    "id": "tt0120737",
+    "title": "The Lord of the Rings: The Fellowship of the Ring",
+    "genre": "Fantasy",
+    "year": 2001,
+    "rating": 8.9
+  },
+  {
+    "id": "tt0317216",
+    "title": "Cars",
+    "genre": "Animation",
+    "year": 2006,
+    "rating": 7.1
+  },
+  {
+    "id": "tt4154756",
+    "title": "Avengers: Infinity War",
+    "genre": "Action",
+    "year": 2018,
+    "rating": 8.4
+  },
+  {
+    "id": "tt0099685",
+    "title": "Goodfellas",
+    "genre": "Drama",
+    "year": 1990,
+    "rating": 8.7
+  },
+  {
+    "id": "tt0047478",
+    "title": "Some Like It Hot",
+    "genre": "Comedy",
+    "year": 1959,
+    "rating": 8.2
+  },
+  {
+    "id": "tt7286450",
+    "title": "Joker",
+    "genre": "Drama",
+    "year": 2019,
+    "rating": 8.4
+  },
+  {
+    "id": "tt2380307",
+    "title": "Coco",
+    "genre": "Animation",
+    "year": 2017,
+    "rating": 8.4
+  }
+]

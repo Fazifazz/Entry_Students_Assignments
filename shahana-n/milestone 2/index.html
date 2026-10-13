@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Voice Calculator</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="calculator-container" id="calculator">
+		<header class="calculator-header">
+			<h1>Voice Calculator</h1>
+			<div class="header-actions">
+				<button
+					class="voice-button"
+					id="voice-button"
+					type="button"
+					aria-label="Start voice input"
+					aria-pressed="false"
+				>
+					<span aria-hidden="true">&#127908;</span>
+					<span>Voice</span>
+				</button>
+				<button
+					class="voice-button speak-button"
+					id="read-aloud-button"
+					type="button"
+					aria-label="Read displayed answer aloud"
+				>
+					<span aria-hidden="true">&#128266;</span>
+					<span>Read</span>
+				</button>
+			</div>
+		</header>
+
+		<section class="calculator-display" aria-label="Calculator display">
+			<output class="display-screen" id="display-screen" for="calculator-buttons" aria-live="polite">0</output>
+			<p class="voice-command" id="voice-command" aria-live="polite">
+				<span class="visually-hidden">Recognized voice command: </span>
+			</p>
+			<p class="status-message" id="status-message" role="status" aria-live="polite">
+				Ready for input
+			</p>
+		</section>
+
+		<section class="calculator-controls" id="calculator-buttons" aria-label="Calculator controls">
+			<button class="calculator-button function-button" id="clear-button" type="button" data-action="clear">Clear</button>
+			<button class="calculator-button function-button" id="delete-button" type="button" data-action="delete" aria-label="Delete last character">Delete</button>
+			<button class="calculator-button operator-button" id="percent-button" type="button" data-value="%" aria-label="Percent">%</button>
+			<button class="calculator-button operator-button" id="divide-button" type="button" data-value="/" aria-label="Divide">&#247;</button>
+
+			<button class="calculator-button number-button" id="seven-button" type="button" data-value="7">7</button>
+			<button class="calculator-button number-button" id="eight-button" type="button" data-value="8">8</button>
+			<button class="calculator-button number-button" id="nine-button" type="button" data-value="9">9</button>
+			<button class="calculator-button operator-button" id="multiply-button" type="button" data-value="*" aria-label="Multiply">&#215;</button>
+
+			<button class="calculator-button number-button" id="four-button" type="button" data-value="4">4</button>
+			<button class="calculator-button number-button" id="five-button" type="button" data-value="5">5</button>
+			<button class="calculator-button number-button" id="six-button" type="button" data-value="6">6</button>
+			<button class="calculator-button operator-button" id="subtract-button" type="button" data-value="-" aria-label="Subtract">-</button>
+
+			<button class="calculator-button number-button" id="one-button" type="button" data-value="1">1</button>
+			<button class="calculator-button number-button" id="two-button" type="button" data-value="2">2</button>
+			<button class="calculator-button number-button" id="three-button" type="button" data-value="3">3</button>
+			<button class="calculator-button operator-button" id="add-button" type="button" data-value="+" aria-label="Add">+</button>
+
+			<button class="calculator-button number-button zero-button" id="zero-button" type="button" data-value="0">0</button>
+			<button class="calculator-button number-button" id="decimal-button" type="button" data-value="." aria-label="Decimal point">.</button>
+			<button class="calculator-button equals-button" id="equals-button" type="button" data-action="calculate" aria-label="Equals">=</button>
+		</section>
+	</main>
+	<script src="script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Voice Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app" role="application" aria-label="Voice calculator">
+      <header class="topbar">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span> Voice Calculator
+        </div>
+        <div class="toggle" role="tablist" aria-label="Mode">
+          <button id="mode-calc" class="active" role="tab" aria-selected="true">
+            Calc
+          </button>
+          <button id="mode-voice" role="tab" aria-selected="false">
+            Voice
+          </button>
+        </div>
+      </header>
+
+      <section class="display" aria-live="polite">
+        <div id="expression" class="expression" aria-label="Expression"></div>
+        <div id="result" class="result" aria-label="Result">0</div>
+      </section>
+
+      <section class="voice-row">
+        <button id="mic" class="mic" aria-label="Start voice input">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="9" y="2" width="6" height="12" rx="3"></rect>
+            <path d="M5 10v2a7 7 0 0 0 14 0v-2"></path>
+            <path d="M12 19v3"></path>
+          </svg>
+          <span id="mic-label">Hold to speak</span>
+        </button>
+        <button
+          id="speak-toggle"
+          class="speak-toggle"
+          aria-pressed="false"
+          aria-label="Toggle speaking results"
+          title="Speak results aloud"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+          </svg>
+        </button>
+      </section>
+
+      <section class="keys" aria-label="Calculator keys">
+        <button class="key fn" data-action="clear">AC</button>
+        <button class="key fn" data-action="sign">±</button>
+        <button class="key fn" data-action="percent">%</button>
+        <button class="key op" data-action="op" data-value="/">÷</button>
+
+        <button class="key" data-action="digit" data-value="7">7</button>
+        <button class="key" data-action="digit" data-value="8">8</button>
+        <button class="key" data-action="digit" data-value="9">9</button>
+        <button class="key op" data-action="op" data-value="*">×</button>
+
+        <button class="key" data-action="digit" data-value="4">4</button>
+        <button class="key" data-action="digit" data-value="5">5</button>
+        <button class="key" data-action="digit" data-value="6">6</button>
+        <button class="key op" data-action="op" data-value="-">−</button>
+
+        <button class="key" data-action="digit" data-value="1">1</button>
+        <button class="key" data-action="digit" data-value="2">2</button>
+        <button class="key" data-action="digit" data-value="3">3</button>
+        <button class="key op" data-action="op" data-value="+">+</button>
+
+        <button class="key wide" data-action="digit" data-value="0">0</button>
+        <button class="key" data-action="dot">.</button>
+        <button class="key equals" data-action="equals">=</button>
+      </section>
+
+      <div id="hint" class="hint">
+        Tip: try "twelve times nine plus five" or "100 divided by 4".
+      </div>
+
+      <section class="history" aria-label="History">
+        <h3>History</h3>
+        <div id="history-list">
+          <div class="history-empty">No calculations yet.</div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>Use mouse, touch, or voice.</span>
+        <button
+          id="clear-history"
+          class="key fn"
+          style="padding: 4px 8px; font-size: 11px; border-radius: 8px"
+        >
+          Clear
+        </button>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

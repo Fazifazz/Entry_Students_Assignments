@@ -1,0 +1,281 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Wireless Headphones",
+    "category": "Electronics",
+    "price": 2999,
+    "originalPrice": 4999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Smart Watch Pro",
+    "category": "Electronics",
+    "price": 3499,
+    "originalPrice": 5999,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 3,
+    "name": "Mirrorless Digital Camera",
+    "category": "Electronics",
+    "price": 39999,
+    "originalPrice": 49999,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 4,
+    "name": "Business Laptop",
+    "category": "Electronics",
+    "price": 57999,
+    "originalPrice": 69999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 5,
+    "name": "Smart Speaker Mini",
+    "category": "Electronics",
+    "price": 2599,
+    "originalPrice": 3999,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 6,
+    "name": "Men's Cotton T-Shirt",
+    "category": "Clothing",
+    "price": 799,
+    "originalPrice": 1499,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 7,
+    "name": "Women's Fashion Dress",
+    "category": "Clothing",
+    "price": 2299,
+    "originalPrice": 3999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 8,
+    "name": "Men's Denim Jeans",
+    "category": "Clothing",
+    "price": 1699,
+    "originalPrice": 2999,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 9,
+    "name": "Premium Hoodie",
+    "category": "Clothing",
+    "price": 2499,
+    "originalPrice": 4299,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 10,
+    "name": "Sports Running Shoes",
+    "category": "Footwear",
+    "price": 2199,
+    "originalPrice": 3999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 11,
+    "name": "Classic Sneakers",
+    "category": "Footwear",
+    "price": 1899,
+    "originalPrice": 3499,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 12,
+    "name": "Leather Formal Shoes",
+    "category": "Footwear",
+    "price": 2999,
+    "originalPrice": 4999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 13,
+    "name": "The Great Adventure",
+    "category": "Books",
+    "price": 399,
+    "originalPrice": 699,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 14,
+    "name": "Business Success Guide",
+    "category": "Books",
+    "price": 449,
+    "originalPrice": 799,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 15,
+    "name": "Modern Leather Backpack",
+    "category": "Accessories",
+    "price": 2599,
+    "originalPrice": 4499,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 16,
+    "name": "Classic Smart Watch",
+    "category": "Accessories",
+    "price": 3199,
+    "originalPrice": 5299,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 17,
+    "name": "Aroma Diffuser Set",
+    "category": "Home",
+    "price": 1799,
+    "originalPrice": 2899,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 18,
+    "name": "Comfort Yoga Mat",
+    "category": "Home",
+    "price": 1299,
+    "originalPrice": 2199,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 19,
+    "name": "Portable Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 1899,
+    "originalPrice": 2999,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 20,
+    "name": "Minimal Casual Shirt",
+    "category": "Clothing",
+    "price": 1199,
+    "originalPrice": 1999,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 21,
+    "name": "Everyday Canvas Sneakers",
+    "category": "Footwear",
+    "price": 1599,
+    "originalPrice": 2799,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1495555961986-6d4c1ecb7be3?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 22,
+    "name": "Creative Thinking Journal",
+    "category": "Books",
+    "price": 499,
+    "originalPrice": 799,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 23,
+    "name": "Everyday Sunglasses",
+    "category": "Accessories",
+    "price": 999,
+    "originalPrice": 1799,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 24,
+    "name": "Ceramic Table Lamp",
+    "category": "Home",
+    "price": 1499,
+    "originalPrice": 2499,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 25,
+    "name": "Weekend Deal Headphones",
+    "category": "Deals",
+    "price": 1499,
+    "originalPrice": 2999,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1484704849700-f032a568e944?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 26,
+    "name": "Flash Sale Travel Bag",
+    "category": "Deals",
+    "price": 1299,
+    "originalPrice": 2499,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 27,
+    "name": "Limited Edition Sneakers",
+    "category": "New Arrivals",
+    "price": 2899,
+    "originalPrice": 3999,
+    "rating": 4.9,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 28,
+    "name": "New Everyday Backpack",
+    "category": "New Arrivals",
+    "price": 2199,
+    "originalPrice": 3299,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 29,
+    "name": "Home Refresh Candle Set",
+    "category": "Offers",
+    "price": 699,
+    "originalPrice": 1199,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1603006905003-be475563bc59?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 30,
+    "name": "Premium Office Organizer",
+    "category": "Offers",
+    "price": 899,
+    "originalPrice": 1499,
+    "rating": 4.5,
+    "imageUrl": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=600&q=80"
+  },
+  {
+    "id": 31,
+    "name": "Rolling Trolley Travel Bag",
+    "category": "Accessories",
+    "price": 2799,
+    "originalPrice": 4499,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?auto=format&fit=crop&w=600&q=80"
+  }
+]

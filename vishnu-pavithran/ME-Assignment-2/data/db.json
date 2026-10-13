@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Headphones",
+      "category": "Electronics",
+      "price": 599,
+      "originalPrice": 899,
+      "rating": 4.5,
+      "reviews": 1288,
+      "imageUrl": "images/electronics.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Classic Cotton T-Shirt",
+      "category": "Clothing",
+      "price": 499,
+      "originalPrice": 799,
+      "rating": 4,
+      "reviews": 4288,
+      "imageUrl": "images/cloth.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Everyday Running Shoes",
+      "category": "Footwear",
+      "price": 1999,
+      "originalPrice": 3999,
+      "rating": 5,
+      "reviews": 548,
+      "imageUrl": "images/footware.jpg"
+    },
+    {
+      "id": 4,
+      "name": "The Creative Mind",
+      "category": "Books",
+      "price": 399,
+      "originalPrice": 499,
+      "rating": 4.5,
+      "reviews": 7985,
+      "imageUrl": "images/books.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Daily Care Set",
+      "category": "Beauty",
+      "price": 799,
+      "originalPrice": 999,
+      "rating": 4,
+      "reviews": 56848,
+      "imageUrl": "images/beauty_care.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Smart Watch",
+      "category": "Accessories",
+      "price": 999,
+      "originalPrice": 1499,
+      "rating": 4.5,
+      "reviews": 1958,
+      "imageUrl": "images/smartwatch.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Bluetooth Speaker",
+      "category": "Electronics",
+      "price": 1299,
+      "originalPrice": 1799,
+      "rating": 4.5,
+      "reviews": 3568,
+      "imageUrl": "images/bl-speaker.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Denim Jacket",
+      "category": "Clothing",
+      "price": 1499,
+      "originalPrice": 2499,
+      "rating": 4,
+      "reviews": 4578,
+      "imageUrl": "images/jacket.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Casual Sneakers",
+      "category": "Footwear",
+      "price": 1599,
+      "originalPrice": 2999,
+      "rating": 4.5,
+      "reviews": 4698,
+      "imageUrl": "images/sneakers.jpg"
+    },
+    {
+      "id": 10,
+      "name": "The Art of Learning",
+      "category": "Books",
+      "price": 449,
+      "originalPrice": 599,
+      "rating": 4.5,
+      "reviews": 3569,
+      "imageUrl": "images/learning-book.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Hydrating Face Cream",
+      "category": "Beauty",
+      "price": 549,
+      "originalPrice": 749,
+      "rating": 4,
+      "reviews": 1145,
+      "imageUrl": "images/face-cream.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Leather Wallet",
+      "category": "Accessories",
+      "price": 699,
+      "originalPrice": 999,
+      "rating": 4.5,
+      "reviews": 1897,
+      "imageUrl": "images/wallet.jpg"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 1999,
+    "originalPrice": 2999,
+    "rating": 4.5,
+    "imageUrl": "https://people.com/thmb/143gVBN-wbwe_JmgYa7xTZpkGzQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/peo-best-headphones-tout-1386cb98272b4b2bb3ed5160ed9a270e.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Running Shoes",
+    "category": "Footwear",
+    "price": 1499,
+    "originalPrice": 1999,
+    "rating": 4.2,
+    "imageUrl": "https://s3.amazonaws.com/www.irunfar.com/wp-content/uploads/2023/07/24133535/Best-Trail-Running-Shoes-Brooks-Cascadia-17.jpg"
+  },
+  {
+    "id": 3,
+    "name": "T-Shirt",
+    "category": "Clothing",
+    "price": 499,
+    "originalPrice": 799,
+    "rating": 4.2,
+    "imageUrl": "https://img.lovepik.com/bg/20240119/Explore-10-Unique-Landscape-Background-T-Shirt-Designs_2781347_wh1200.jpg"
+  },
+  {
+    "id": 4,
+    "name": "JavaScript Book",
+    "category": "Books",
+    "price": 599,
+    "originalPrice": 899,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a"
+  },
+  {
+    "id": 5,
+    "name": "Titan Watch",
+    "category": "Electronics",
+    "price": 1399,
+    "originalPrice": 1999,
+    "rating": 4.8,
+    "imageUrl": "https://wallpaperaccess.com/full/8635497.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kitchen Containers",
+    "category": "Home",
+    "price": 599,
+    "originalPrice": 999,
+    "rating": 4.1,
+    "imageUrl": "https://target.scene7.com/is/image/Target/GUEST_0aadf23d-29fa-4bdb-8210-1fe38e475774"
+  },
+  {
+    "id": 7,
+    "name": "Flower Vase",
+    "category": "Home",
+    "price": 1999,
+    "originalPrice": 2599,
+    "rating": 3.8,
+    "imageUrl": "https://tse1.mm.bing.net/th/id/OIP.BjJCpfXQkIj4Iv4ak4DPdAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 8,
+    "name": "Michael Kors Bag",
+    "category": "Clothing",
+    "price": 2999,
+    "originalPrice": 3999,
+    "rating": 4.9,
+    "imageUrl": "https://digital.michaelkors.com/refreshes/2025/pre-fall/refresh2/EU/desktop/homepage/HP_PROMO_DESKTOP_3.1_UPDATED.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Milton Water Bottle",
+    "category": "Home",
+    "price": 699,
+    "originalPrice": 799,
+    "rating": 4.5,
+    "imageUrl": "https://5.imimg.com/data5/SELLER/Default/2023/12/367848831/HP/QJ/LG/20434543/aqua-750-stainless-steel-water-bottle-set-of-4-750-ml-1000x1000.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Pen Holder",
+    "category": "Home",
+    "price": 199,
+    "originalPrice": 399,
+    "rating": 3.5,
+    "imageUrl": "https://images-cdn.ubuy.co.in/6347dbd63d5314640d057d62-desk-pen-holder-solid-wood-desk.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Mobile Holder",
+    "category": "Electronics",
+    "price": 999,
+    "originalPrice": 1459,
+    "rating": 4.6,
+    "imageUrl": "https://gmundcars.com/wp-content/uploads/2024/07/shockproof_car_phone_mount.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Art Diary",
+    "category": "Books",
+    "price": 499,
+    "originalPrice": 699,
+    "rating": 4.4,
+    "imageUrl": "https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/BO15E0302_born_a3_visual_art_diary_120_page.jpg"
+  }
+]

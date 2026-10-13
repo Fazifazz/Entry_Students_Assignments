@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maison Élara — Luxury Fashion Boutique</title>
+    <meta
+      name="description"
+      content="Maison Élara is a luxury fashion boutique offering curated evening wear, leather goods, footwear and fine jewellery with private styling appointments."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="navbar-elara sticky-top">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between">
+          <a href="#top" class="brand-mark">
+            Élara
+            <span class="brand-sub">Maison de Mode</span>
+          </a>
+
+          <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+          <label for="menu-toggle" class="menu-btn">Menu</label>
+
+          <nav class="nav-elara d-lg-flex align-items-center order-lg-2">
+            <a class="nav-link d-block d-lg-inline-block" href="#collection">Collection</a>
+            <a class="nav-link d-block d-lg-inline-block" href="#atelier">Atelier</a>
+            <a class="nav-link d-block d-lg-inline-block" href="#services">Services</a>
+            <a class="nav-link d-block d-lg-inline-block" href="#journal">Journal</a>
+            <a class="nav-link d-block d-lg-inline-block" href="#contact">Contact</a>
+            <a class="btn-elara ms-lg-4 mt-3 mt-lg-0 d-inline-block" href="#modal-appointment"
+              >Book Appointment</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-inner rise">
+          <p class="eyebrow mb-0">Autumn / Winter 2026</p>
+          <h1>The Quiet<br />Luxury Edit</h1>
+          <p>
+            Hand-selected silhouettes from ateliers in Paris, Milan and Florence. Fifty pieces a
+            season — never more, never repeated.
+          </p>
+          <div class="d-flex flex-wrap gap-3 mt-4">
+            <a class="btn-elara" href="#collection">Explore the Collection</a>
+            <a class="btn-elara btn-elara-ghost" href="#modal-appointment">Private Styling</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="strip">
+      <div class="container">
+        <span>Complimentary Worldwide Shipping</span>
+        <span class="d-none d-md-inline">Made-to-Measure Tailoring</span>
+        <span class="d-none d-lg-inline">30-Day Returns</span>
+        <span class="d-none d-lg-inline">Est. Florence 1978</span>
+      </div>
+    </div>
+
+    <!-- ================= COLLECTION ================= -->
+    <section class="section" id="collection">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-7">
+            <p class="eyebrow mb-0">The Selection</p>
+            <h2 class="section-title">Pieces of the Season</h2>
+            <hr class="rule" />
+          </div>
+          <div class="col-lg-5">
+            <p class="lead-muted mb-0">
+              Each piece is chosen by our head buyer and available in limited quantity. Select a
+              piece to view its full atelier notes.
+            </p>
+          </div>
+        </div>
+
+        <div class="row g-4 g-lg-5">
+          <!-- Product 1 -->
+          <div class="col-md-6 col-lg-3">
+            <article class="product-card">
+              <a href="#modal-dress" class="d-block">
+                <div class="product-media">
+                  <span class="badge-elara">Signature</span>
+                  <img src="./images/product-dress.jpg" alt="Emerald silk evening gown" />
+                  <div class="product-overlay">
+                    <span class="eyebrow" style="color: var(--cream)">View Details</span>
+                  </div>
+                </div>
+                <div class="product-body">
+                  <p class="product-meta mb-1">Evening Wear</p>
+                  <h3 class="product-name">Séraphine Gown</h3>
+                  <p class="product-price mb-0">€2,480</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="col-md-6 col-lg-3">
+            <article class="product-card">
+              <a href="#modal-bag" class="d-block">
+                <div class="product-media">
+                  <span class="badge-elara">Leather</span>
+                  <img src="./images/product-bag.jpg" alt="Cognac leather structured tote bag" />
+                  <div class="product-overlay">
+                    <span class="eyebrow" style="color: var(--cream)">View Details</span>
+                  </div>
+                </div>
+                <div class="product-body">
+                  <p class="product-meta mb-1">Leather Goods</p>
+                  <h3 class="product-name">Marceau Tote</h3>
+                  <p class="product-price mb-0">€1,190</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="col-md-6 col-lg-3">
+            <article class="product-card">
+              <a href="#modal-shoes" class="d-block">
+                <div class="product-media">
+                  <span class="badge-elara">New In</span>
+                  <img src="./images/product-shoes.jpg" alt="Nude patent leather stiletto pumps" />
+                  <div class="product-overlay">
+                    <span class="eyebrow" style="color: var(--cream)">View Details</span>
+                  </div>
+                </div>
+                <div class="product-body">
+                  <p class="product-meta mb-1">Footwear</p>
+                  <h3 class="product-name">Colette Pump</h3>
+                  <p class="product-price mb-0">€720</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="col-md-6 col-lg-3">
+            <article class="product-card">
+              <a href="#modal-jewelry" class="d-block">
+                <div class="product-media">
+                  <span class="badge-elara">18k Gold</span>
+                  <img src="./images/product-jewelry.jpg" alt="Gold pendant necklace and earrings set" />
+                  <div class="product-overlay">
+                    <span class="eyebrow" style="color: var(--cream)">View Details</span>
+                  </div>
+                </div>
+                <div class="product-body">
+                  <p class="product-meta mb-1">Fine Jewellery</p>
+                  <h3 class="product-name">Infinité Set</h3>
+                  <p class="product-price mb-0">€1,650</p>
+                </div>
+              </a>
+            </article>
+          </div>
+        </div>
+
+        <div class="text-center mt-5 pt-3">
+          <a class="btn-elara btn-elara-outline" href="#modal-lookbook">Request the Lookbook</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ATELIER / EDITORIAL ================= -->
+    <section class="editorial" id="atelier">
+      <div class="container-fluid p-0">
+        <div class="row g-0 align-items-stretch">
+          <div class="col-lg-6">
+            <img class="editorial-img" src="./images/hero-boutique.jpg" alt="Interior of the Élara boutique" />
+          </div>
+          <div class="col-lg-6 d-flex align-items-center">
+            <div class="p-4 p-md-5 p-xl-5" style="max-width: 34rem; margin: 0 auto">
+              <p class="eyebrow mb-0">Since 1978</p>
+              <h2 class="section-title">A House Built on Restraint</h2>
+              <hr class="rule" />
+              <p class="lead-muted">
+                Maison Élara began as a single tailoring room above a Florentine leather workshop.
+                Three generations later the philosophy is unchanged: fewer garments, made properly,
+                worn for decades.
+              </p>
+              <p class="lead-muted">
+                Every piece passes through our atelier before it reaches the floor — pressed, fitted
+                and recorded in the house ledger.
+              </p>
+              <div class="row g-4 mt-3">
+                <div class="col-4">
+                  <h3 class="mb-0" style="font-size: 2.25rem">48</h3>
+                  <p class="product-meta mb-0">Years</p>
+                </div>
+                <div class="col-4">
+                  <h3 class="mb-0" style="font-size: 2.25rem">12</h3>
+                  <p class="product-meta mb-0">Ateliers</p>
+                </div>
+                <div class="col-4">
+                  <h3 class="mb-0" style="font-size: 2.25rem">50</h3>
+                  <p class="product-meta mb-0">Pieces / Season</p>
+                </div>
+              </div>
+              <a class="btn-elara btn-elara-outline mt-4" href="#modal-story">Read Our Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section" id="services">
+      <div class="container">
+        <div class="text-center mb-5">
+          <p class="eyebrow mb-0">Client Care</p>
+          <h2 class="section-title">Boutique Services</h2>
+          <hr class="rule rule-center" />
+        </div>
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-6 col-lg-3">
+            <div class="service">
+              <p class="service-no mb-0">01</p>
+              <h3>Private Styling</h3>
+              <p class="lead-muted mb-0">
+                A two-hour appointment with a house stylist, in-boutique or at your residence.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service">
+              <p class="service-no mb-0">02</p>
+              <h3>Made-to-Measure</h3>
+              <p class="lead-muted mb-0">
+                Twelve measurements, three fittings, one garment cut entirely for you.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service">
+              <p class="service-no mb-0">03</p>
+              <h3>Lifetime Repair</h3>
+              <p class="lead-muted mb-0">
+                Complimentary restoration on all leather goods purchased in the house.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="service">
+              <p class="service-no mb-0">04</p>
+              <h3>Global Delivery</h3>
+              <p class="lead-muted mb-0">
+                Insured, carbon-offset shipping to ninety countries within five days.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= QUOTE ================= -->
+    <section class="quote-block section">
+      <div class="container text-center" style="max-width: 46rem">
+        <p class="eyebrow mb-4">Clientele</p>
+        <p class="quote mb-4">
+          “I have bought two coats from Élara in eleven years. I have needed nothing else.”
+        </p>
+        <p class="quote-author mb-0">Isabelle Renard — Paris</p>
+      </div>
+    </section>
+
+    <!-- ================= JOURNAL ================= -->
+    <section class="section" id="journal">
+      <div class="container">
+        <div class="row align-items-end mb-5">
+          <div class="col-lg-8">
+            <p class="eyebrow mb-0">The Journal</p>
+            <h2 class="section-title">Notes from the House</h2>
+            <hr class="rule" />
+          </div>
+        </div>
+        <div class="row g-4 g-lg-5">
+          <div class="col-md-4">
+            <div class="service">
+              <p class="service-no mb-0">Fabric</p>
+              <h3>Reading a Silk Label</h3>
+              <p class="lead-muted mb-0">
+                Momme weight, finish and origin — the three numbers that separate silk from silk.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <p class="service-no mb-0">Care</p>
+              <h3>Storing Leather Well</h3>
+              <p class="lead-muted mb-0">
+                Why a cotton dust bag and a cool shelf outlast every conditioning cream.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="service">
+              <p class="service-no mb-0">Style</p>
+              <h3>The Four-Piece Winter</h3>
+              <p class="lead-muted mb-0">
+                A coat, a knit, a trouser and a boot: the case for a smaller wardrobe.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER / CONTACT ================= -->
+    <section class="section editorial" id="contact">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <p class="eyebrow mb-0">Stay Close</p>
+            <h2 class="section-title">Private Collection Previews</h2>
+            <hr class="rule" />
+            <p class="lead-muted mb-0">
+              Members receive the seasonal lookbook two weeks before release, with first refusal on
+              limited pieces.
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <form action="#contact" method="get">
+              <div class="row g-4">
+                <div class="col-sm-6">
+                  <input class="field-elara" type="text" name="name" placeholder="Full name" required />
+                </div>
+                <div class="col-sm-6">
+                  <input class="field-elara" type="email" name="email" placeholder="Email address" required />
+                </div>
+                <div class="col-12">
+                  <input class="field-elara" type="text" name="city" placeholder="City" />
+                </div>
+                <div class="col-12">
+                  <button class="btn-elara" type="submit">Join the House List</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a href="#top" class="brand-mark" style="color: var(--cream)">
+              Élara
+              <span class="brand-sub">Maison de Mode</span>
+            </a>
+            <p class="mt-4 mb-0" style="max-width: 22rem">
+              Via dei Tornabuoni 14, Florence · 12 Rue Saint-Honoré, Paris
+            </p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4>Shop</h4>
+            <p class="mb-2"><a href="#collection">Evening Wear</a></p>
+            <p class="mb-2"><a href="#collection">Leather Goods</a></p>
+            <p class="mb-2"><a href="#collection">Footwear</a></p>
+            <p class="mb-0"><a href="#collection">Jewellery</a></p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4>House</h4>
+            <p class="mb-2"><a href="#atelier">Our Story</a></p>
+            <p class="mb-2"><a href="#services">Services</a></p>
+            <p class="mb-2"><a href="#journal">Journal</a></p>
+            <p class="mb-0"><a href="#modal-appointment">Appointments</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h4>Boutique Hours</h4>
+            <p class="mb-2">Monday — Friday · 10:00 to 19:00</p>
+            <p class="mb-2">Saturday · 11:00 to 18:00</p>
+            <p class="mb-0">Sunday · By appointment only</p>
+          </div>
+        </div>
+        <div class="footer-bottom d-flex flex-wrap justify-content-between gap-2">
+          <span>© 2026 Maison Élara. All rights reserved.</span>
+          <span>Privacy · Terms · Shipping</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==========================================================
+         CSS-ONLY MODALS — opened via :target, closed via #top link
+         ========================================================== -->
+
+    <!-- Product: Gown -->
+    <div class="modal-elara" id="modal-dress">
+      <a href="#collection" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel">
+        <a href="#collection" class="modal-close" aria-label="Close">&times;</a>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img class="modal-media" src="/images/product-dress.jpg" alt="Emerald silk evening gown" />
+          </div>
+          <div class="col-md-6">
+            <div class="modal-content-pad">
+              <p class="eyebrow mb-0">Evening Wear</p>
+              <h2 style="font-size: 2.5rem" class="mb-1">Séraphine Gown</h2>
+              <p class="product-price">€2,480</p>
+              <hr class="rule" />
+              <p class="lead-muted">
+                Draped emerald silk charmeuse with a hand-gathered waist and full sweeping train.
+                Cut and finished in our Florence atelier over eighteen hours.
+              </p>
+              <div class="size-row">
+                <span class="size-chip">IT 38</span>
+                <span class="size-chip">IT 40</span>
+                <span class="size-chip">IT 42</span>
+                <span class="size-chip">IT 44</span>
+              </div>
+              <ul class="spec-list">
+                <li><span>Fabric</span><span>100% Silk Charmeuse, 22mm</span></li>
+                <li><span>Origin</span><span>Florence, Italy</span></li>
+                <li><span>Lining</span><span>Silk habotai</span></li>
+                <li><span>Care</span><span>Dry clean only</span></li>
+              </ul>
+              <a class="btn-elara mt-4" href="#modal-appointment">Reserve a Fitting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product: Tote -->
+    <div class="modal-elara" id="modal-bag">
+      <a href="#collection" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel">
+        <a href="#collection" class="modal-close" aria-label="Close">&times;</a>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img class="modal-media" src="/images/product-bag.jpg" alt="Cognac leather tote bag" />
+          </div>
+          <div class="col-md-6">
+            <div class="modal-content-pad">
+              <p class="eyebrow mb-0">Leather Goods</p>
+              <h2 style="font-size: 2.5rem" class="mb-1">Marceau Tote</h2>
+              <p class="product-price">€1,190</p>
+              <hr class="rule" />
+              <p class="lead-muted">
+                Structured cognac calfskin with hand-burnished edges and solid brass hardware. Ages
+                to a deeper patina with wear; covered by our lifetime repair service.
+              </p>
+              <div class="size-row">
+                <span class="size-chip">Cognac</span>
+                <span class="size-chip">Noir</span>
+                <span class="size-chip">Sable</span>
+              </div>
+              <ul class="spec-list">
+                <li><span>Material</span><span>Full-grain calfskin</span></li>
+                <li><span>Dimensions</span><span>34 × 28 × 14 cm</span></li>
+                <li><span>Hardware</span><span>Solid brass, gold finish</span></li>
+                <li><span>Interior</span><span>Suede, two pockets</span></li>
+              </ul>
+              <a class="btn-elara mt-4" href="#modal-appointment">Enquire in Boutique</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product: Pump -->
+    <div class="modal-elara" id="modal-shoes">
+      <a href="#collection" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel">
+        <a href="#collection" class="modal-close" aria-label="Close">&times;</a>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img class="modal-media" src="/images/product-shoes.jpg" alt="Nude patent stiletto pumps" />
+          </div>
+          <div class="col-md-6">
+            <div class="modal-content-pad">
+              <p class="eyebrow mb-0">Footwear</p>
+              <h2 style="font-size: 2.5rem" class="mb-1">Colette Pump</h2>
+              <p class="product-price">€720</p>
+              <hr class="rule" />
+              <p class="lead-muted">
+                A 100mm stiletto in nude patent calf, built on our narrow Colette last with a padded
+                leather footbed for all-evening wear.
+              </p>
+              <div class="size-row">
+                <span class="size-chip">36</span>
+                <span class="size-chip">37</span>
+                <span class="size-chip">38</span>
+                <span class="size-chip">39</span>
+                <span class="size-chip">40</span>
+              </div>
+              <ul class="spec-list">
+                <li><span>Heel</span><span>100 mm stiletto</span></li>
+                <li><span>Upper</span><span>Patent calf leather</span></li>
+                <li><span>Sole</span><span>Leather, rubber tip</span></li>
+                <li><span>Made in</span><span>Vigevano, Italy</span></li>
+              </ul>
+              <a class="btn-elara mt-4" href="#modal-appointment">Book a Fitting</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product: Jewellery -->
+    <div class="modal-elara" id="modal-jewelry">
+      <a href="#collection" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel">
+        <a href="#collection" class="modal-close" aria-label="Close">&times;</a>
+        <div class="row g-0">
+          <div class="col-md-6">
+            <img class="modal-media" src="/images/product-jewelry.jpg" alt="Gold necklace and earring set" />
+          </div>
+          <div class="col-md-6">
+            <div class="modal-content-pad">
+              <p class="eyebrow mb-0">Fine Jewellery</p>
+              <h2 style="font-size: 2.5rem" class="mb-1">Infinité Set</h2>
+              <p class="product-price">€1,650</p>
+              <hr class="rule" />
+              <p class="lead-muted">
+                Pendant and drop earrings in 18k yellow gold, each set with a brilliant-cut white
+                sapphire and a pavé shoulder. Presented in a lacquered house box.
+              </p>
+              <div class="size-row">
+                <span class="size-chip">42 cm chain</span>
+                <span class="size-chip">45 cm chain</span>
+              </div>
+              <ul class="spec-list">
+                <li><span>Metal</span><span>18k yellow gold</span></li>
+                <li><span>Stones</span><span>White sapphire, 0.6 ct total</span></li>
+                <li><span>Set</span><span>Pendant + earrings</span></li>
+                <li><span>Engraving</span><span>Complimentary</span></li>
+              </ul>
+              <a class="btn-elara mt-4" href="#modal-appointment">Reserve This Set</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Appointment modal -->
+    <div class="modal-elara" id="modal-appointment">
+      <a href="#top" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel" style="width: min(620px, 100%)">
+        <a href="#top" class="modal-close" aria-label="Close">&times;</a>
+        <div class="modal-content-pad">
+          <p class="eyebrow mb-0">Private Appointment</p>
+          <h2 style="font-size: 2.5rem" class="mb-1">Book with a Stylist</h2>
+          <hr class="rule" />
+          <p class="lead-muted">
+            Two hours, one stylist, and the full collection reserved for you alone. Champagne is
+            served; no obligation to purchase.
+          </p>
+          <form action="#top" method="get">
+            <div class="row g-4 mt-1">
+              <div class="col-sm-6">
+                <input class="field-elara" type="text" name="fullname" placeholder="Full name" required />
+              </div>
+              <div class="col-sm-6">
+                <input class="field-elara" type="email" name="mail" placeholder="Email address" required />
+              </div>
+              <div class="col-sm-6">
+                <input class="field-elara" type="tel" name="phone" placeholder="Telephone" />
+              </div>
+              <div class="col-sm-6">
+                <input class="field-elara" type="date" name="date" />
+              </div>
+              <div class="col-12">
+                <select class="field-elara" name="boutique">
+                  <option>Florence — Via dei Tornabuoni</option>
+                  <option>Paris — Rue Saint-Honoré</option>
+                  <option>At my residence</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <textarea class="field-elara" name="notes" rows="2" placeholder="Occasion or notes"></textarea>
+              </div>
+              <div class="col-12 d-flex flex-wrap gap-3">
+                <button class="btn-elara" type="submit">Confirm Request</button>
+                <a class="btn-elara btn-elara-outline" href="#top">Cancel</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lookbook modal -->
+    <div class="modal-elara" id="modal-lookbook">
+      <a href="#collection" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel" style="width: min(560px, 100%)">
+        <a href="#collection" class="modal-close" aria-label="Close">&times;</a>
+        <div class="modal-content-pad text-center">
+          <p class="eyebrow mb-0">A/W 2026</p>
+          <h2 style="font-size: 2.5rem" class="mb-1">Request the Lookbook</h2>
+          <hr class="rule rule-center" />
+          <p class="lead-muted mx-auto">
+            Fifty-two pages, printed on uncoated stock and posted to your address. Digital edition
+            sent immediately.
+          </p>
+          <form action="#collection" method="get" class="mt-4">
+            <div class="row g-4">
+              <div class="col-12">
+                <input class="field-elara" type="email" name="lookbook" placeholder="Email address" required />
+              </div>
+              <div class="col-12">
+                <input class="field-elara" type="text" name="address" placeholder="Postal address (optional)" />
+              </div>
+              <div class="col-12">
+                <button class="btn-elara" type="submit">Send the Lookbook</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Story modal -->
+    <div class="modal-elara" id="modal-story">
+      <a href="#atelier" class="modal-backdrop-link" aria-label="Close"></a>
+      <div class="modal-panel" style="width: min(700px, 100%)">
+        <a href="#atelier" class="modal-close" aria-label="Close">&times;</a>
+        <div class="modal-content-pad">
+          <p class="eyebrow mb-0">Est. 1978</p>
+          <h2 style="font-size: 2.5rem" class="mb-1">The House Story</h2>
+          <hr class="rule" />
+          <p class="lead-muted">
+            Élara Vitale opened a single tailoring room above a leather workshop on Via dei
+            Tornabuoni in the autumn of 1978. She kept one rule pinned to the wall: nothing leaves
+            the room unless it can be worn in twenty years.
+          </p>
+          <p class="lead-muted">
+            Her daughter added the Paris boutique in 1996 and the made-to-measure programme in 2004.
+            The tailoring room still exists — three floors up, six people, the same ledger.
+          </p>
+          <p class="lead-muted mb-0">
+            We release fifty pieces a season. When they are gone, they are not remade.
+          </p>
+          <a class="btn-elara mt-4" href="#atelier">Close</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

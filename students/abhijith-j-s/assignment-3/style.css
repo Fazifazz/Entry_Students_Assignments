@@ -1,0 +1,135 @@
+:root {
+  --navy: #10182B;
+  --navy-light: #1B2540;
+  --gold: #E8B94D;
+  --gold-dim: #a9873c;
+  --green: #3FA96A;
+  --red: #D6543D;
+  --paper: #F4EFE3;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  font-family: "Georgia", "Iowan Old Style", serif;
+  color: var(--paper);
+  padding: 24px;
+}
+
+.quiz-card {
+  width: 100%;
+  max-width: 560px;
+  background: var(--navy-light);
+  border: 1px solid rgba(232, 185, 77, 0.25);
+  border-radius: 4px;
+  padding: 40px 36px;
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 28px;
+  border-bottom: 1px solid rgba(232, 185, 77, 0.25);
+  padding-bottom: 16px;
+}
+
+.quiz-title {
+  font-size: 1.4rem;
+  margin: 0;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+
+#progress {
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  color: var(--paper);
+  opacity: 0.7;
+}
+
+#question {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+#options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-btn {
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: left;
+  padding: 14px 18px;
+  border-radius: 3px;
+  border: 1px solid rgba(244, 239, 227, 0.3);
+  background: transparent;
+  color: var(--paper);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.option-btn:hover:not(:disabled) {
+  border-color: var(--gold);
+  background: rgba(232, 185, 77, 0.08);
+}
+
+.option-btn:disabled {
+  cursor: not-allowed;
+}
+
+.option-btn.correct {
+  background: rgba(63, 169, 106, 0.2);
+  border-color: var(--green);
+  color: var(--paper);
+}
+
+.option-btn.wrong {
+  background: rgba(214, 84, 61, 0.2);
+  border-color: var(--red);
+  color: var(--paper);
+}
+
+#next-btn, #restart-btn {
+  display: none;
+  margin-top: 28px;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 3px;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--navy);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#next-btn:hover, #restart-btn:hover {
+  background: var(--gold-dim);
+  border-color: var(--gold-dim);
+}
+
+#results {
+  text-align: center;
+}
+
+#results h2 {
+  color: var(--gold);
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+#results p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}

@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  background-image: url('https://images.alphacoders.com/141/1412625.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-size: 3rem;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #ffffff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+main {
+  display: flex;
+  gap: 40px;
+}
+
+.movies-section {
+  flex: 2;
+}
+
+/* Glassmorphism Watchlist Section */
+.watchlist-section {
+  flex: 1;
+  background: rgba(20, 20, 30, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  height: fit-content;
+  color: #ffffff;
+}
+
+.filters {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn, .active-filter {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.active-filter {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(245, 87, 108, 0.4);
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* Glassmorphism Movie Card */
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #ffffff;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.movie-poster {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 5px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.movie-card p {
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.movie-card p strong {
+  color: #ffffff;
+}
+
+.btn-primary, .btn-disabled, .btn-danger {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: auto;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: #48bb78;
+  color: white;
+  box-shadow: 0 4px 10px rgba(72, 187, 120, 0.4);
+}
+
+.btn-primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 15px rgba(72, 187, 120, 0.6);
+}
+
+.btn-disabled {
+  background: rgba(255, 255, 255, 0.15);
+  color: #9ca3af;
+  cursor: not-allowed;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #ff0844 0%, #ffb199 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 8, 68, 0.4);
+}
+
+.btn-danger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 8, 68, 0.6);
+}
+
+.watchlist-empty {
+  color: #cbd5e0;
+  font-style: italic;
+  font-size: 15px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.watchlist h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.watchlist-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.watchlist-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.watchlist-card:hover {
+  transform: translateX(4px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.watchlist-card h4 {
+  font-size: 15px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.watchlist-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.watchlist-poster {
+  width: 45px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.spinner {
+  font-size: 18px;
+  color: #ffffff;
+  text-align: center;
+  padding: 40px;
+}
+
+.no-movies {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 25px;
+  border-radius: 8px;
+  display: inline-block;
+  backdrop-filter: blur(5px);
+}
