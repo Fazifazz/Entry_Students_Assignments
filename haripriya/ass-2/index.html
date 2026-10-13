@@ -27,6 +27,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Seaweed+Script&display=swap"
         rel="stylesheet">
+
+
 </head>
 
 <body>
@@ -154,9 +156,10 @@
                         <a class="nav-link active" aria-current="page" href="#">Contact</a>
                     </li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><i
+                <form class="d-flex" id="search-form" role="search">
+                    <input class="form-control" id="product-search" type="search" placeholder="Search products"
+                        aria-label="Search products">
+                    <button class="btn btn-outline-success" type="submit" aria-label="Search"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
 
@@ -166,7 +169,8 @@
                         </a></li>
 
                     <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <li><a href="#cart" aria-label="Shopping cart"><i class="fa-solid fa-cart-shopping"></i> <span
+                                id="header-cart-count" class="cart-count-badge">0</span></a></li>
                 </ul>
             </div>
         </div>
@@ -349,299 +353,37 @@
     </section>
 
     <!-- featured products -->
-    <section class="category-section mt-5 pt-3">
+    <section class="category-section mt-5 pt-3" id="products">
         <h2 class="text-center bold mb-4">Featured Products</h2>
         <div class="container">
-            <div class="row pb-4">
-
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/headphone.webp" alt="Headphone">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">SONY WH-CH520/BZ IN Bluetooth Headset</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(26k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹4,499</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹15999</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>85% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/puma.jpg" alt="Shoe">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">PUMA Pounce Lite Res Running Shoes For Men </p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(20k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹4,999</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹10999</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>85% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/jacket.png" alt="Jacket">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">gustave Women Solid Hiking and Trekking Jacket</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(50k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹1,899</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹2599</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>15% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/ikigai-original.png" alt="ikigai">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">Ikigai - The Japanese Secret to a Long and Happy Life with
-                                    3
-                                    Disc </p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(10k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹280</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹599</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>53% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+            <div class="product-filters d-flex flex-wrap justify-content-center gap-2 mb-4" role="group"
+                aria-label="Filter products by category">
+                <button class="btn btn-outline-secondary active" type="button" data-category="All"
+                    aria-pressed="true">All</button>
+                <button class="btn btn-outline-secondary" type="button" data-category="Electronics"
+                    aria-pressed="false">Electronics</button>
+                <button class="btn btn-outline-secondary" type="button" data-category="Clothing"
+                    aria-pressed="false">Clothing</button>
+                <button class="btn btn-outline-secondary" type="button" data-category="Footwear"
+                    aria-pressed="false">Footwear</button>
+                <button class="btn btn-outline-secondary" type="button" data-category="Books"
+                    aria-pressed="false">Books</button>
             </div>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/iphone.png" alt="Fastrack Watch">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">Apple iPhone 17 (Mist Blue, 256 GB)</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(20k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹80,900</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹80,900</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>2% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/pride-and-prejudice-original.webp" alt="Fastrack Watch">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">Pride and Prejudice</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(20k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹130</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹230</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>49% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/macbook.webp" alt="Fastrack Watch">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">MacBook Air M5 13-inch Starlight 512GB</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(20k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹149,900</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹169,900</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>10% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-12 col-sm-6 col-md-3">
-                    <a href="#" class="text-decoration-none">
-                        <div class="ft-outer p-3">
-                            <img src="images/hoodies.jpg" alt="Fastrack Watch">
-                            <div class="ft-details">
-                                <p class="mb-2 item-name">Hoodie</p>
-                                <div class="d-flex gap-2">
-                                    <span>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                        <i class="fa-solid fa-star"></i>
-                                    </span>
-                                    <span class="text-muted">(20k+)</span>
-                                </div>
-                                <div class="price-details d-flex gap-2 mt-2">
-                                    <div class="price">
-                                        <p class="mb-2">₹1,499</p>
-                                    </div>
-                                    <div class="og-price text-muted ">
-                                        <s>₹1999</s>
-                                    </div>
-                                    <div class="discount text-success fw-medium">
-                                        <span>10% off</span>
-                                    </div>
-                                </div>
-                                <div class="cart-cta">
-                                    <button class="fw-medium"><i class="fa-solid fa-cart-shopping"></i> Add to
-                                        Cart</button>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <p id="product-status" class="text-center" role="status" aria-live="polite">Loading products...</p>
+            <div id="product-grid" class="row g-3"></div>
         </div>
-        </div>
+    </section>
 
+    <section class="container cart-section my-5" id="cart">
+        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+            <h2 class="mb-0">Your Cart</h2>
+            <span><span id="cart-count">0</span> items</span>
+        </div>
+        <div id="cart-items"></div>
+        <div class="cart-total d-flex justify-content-between align-items-center mt-3 pt-3">
+            <strong>Total</strong>
+            <strong id="cart-total">₹0</strong>
+        </div>
     </section>
 
     <!-- newsletter section -->
@@ -733,5 +475,8 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 </body>
+
+
+<script src="script.js"></script>
 
 </html>

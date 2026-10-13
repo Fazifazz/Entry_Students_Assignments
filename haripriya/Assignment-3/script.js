@@ -94,9 +94,10 @@ function getStockMessage1(stockStatus) {
 // summary to the browser console using console.log.
 
 console.log("Product Price Summary:");
-console.log(calculateDiscountedPrice(basePrice, discountPercent));
-console.log(calculateTax(basePrice, taxRate));
-console.log(calculateFinalPrice(discountPercent, taxRate));
-console.log(isFreeShipping(calculateFinalPrice(discountPercent, taxRate)));
-console.log(getStockMessage(stockStatus));
+console.log(`product name: ${name}`);
+console.log(`discounted price: ${calculateDiscountedPrice(basePrice, discountPercent)}`);
+console.log(`tax amount: ${calculateTax(basePrice, taxRate)}`);
+console.log(`final price: ${calculateFinalPrice(discountPercent, taxRate)}`);
+console.log(`shipping: ${isFreeShipping(calculateFinalPrice(discountPercent, taxRate))}`);
+console.log(`stock status: ${getStockMessage(stockStatus)}`);
 

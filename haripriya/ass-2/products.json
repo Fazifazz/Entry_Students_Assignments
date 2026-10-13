@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Sony WH-CH520 Bluetooth Headphones",
+        "category": "Electronics",
+        "price": 4499,
+        "originalPrice": 5999,
+        "rating": 4.6,
+        "imageUrl": "images/headphone.webp"
+    },
+    {
+        "id": 2,
+        "name": "Apple iPhone 17 Mist Blue 256 GB",
+        "category": "Electronics",
+        "price": 80900,
+        "originalPrice": 89900,
+        "rating": 4.8,
+        "imageUrl": "images/iphone.png"
+    },
+    {
+        "id": 3,
+        "name": "MacBook Air 13-inch 512 GB",
+        "category": "Electronics",
+        "price": 149900,
+        "originalPrice": 169900,
+        "rating": 4.9,
+        "imageUrl": "images/macbook.webp"
+    },
+    {
+        "id": 4,
+        "name": "Fastrack Reflex Smart Watch",
+        "category": "Electronics",
+        "price": 2499,
+        "originalPrice": 3999,
+        "rating": 4.3,
+        "imageUrl": "images/fastrack.webp"
+    },
+    {
+        "id": 5,
+        "name": "Women's Hiking Trekking Jacket",
+        "category": "Clothing",
+        "price": 1899,
+        "originalPrice": 2599,
+        "rating": 4.4,
+        "imageUrl": "images/jacket.png"
+    },
+    {
+        "id": 6,
+        "name": "Classic Everyday Hoodie",
+        "category": "Clothing",
+        "price": 1499,
+        "originalPrice": 1999,
+        "rating": 4.2,
+        "imageUrl": "images/hoodies.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Cotton Casual T-Shirt",
+        "category": "Clothing",
+        "price": 799,
+        "originalPrice": 1199,
+        "rating": 4.1,
+        "imageUrl": "images/cloths.png"
+    },
+    {
+        "id": 8,
+        "name": "Polo Assn. Men's Casual Shirt",
+        "category": "Clothing",
+        "price": 2199,
+        "originalPrice": 3299,
+        "rating": 4.5,
+        "imageUrl": "images/4-5-years-uksht1050-u-s-polo-assn-original-imagxz9zjykzcnaz.webp"
+    },
+    {
+        "id": 9,
+        "name": "Puma Pounce Lite Running Shoes",
+        "category": "Footwear",
+        "price": 4999,
+        "originalPrice": 6999,
+        "rating": 4.5,
+        "imageUrl": "images/puma.jpg"
+    },
+    {
+        "id": 10,
+        "name": "Puma Everyday Training Sneakers",
+        "category": "Footwear",
+        "price": 3599,
+        "originalPrice": 4999,
+        "rating": 4.3,
+        "imageUrl": "images/puma.webp"
+    },
+    {
+        "id": 11,
+        "name": "Comfort Walking Shoes",
+        "category": "Footwear",
+        "price": 2799,
+        "originalPrice": 3999,
+        "rating": 4.2,
+        "imageUrl": "images/footware.png"
+    },
+    {
+        "id": 12,
+        "name": "Canvas Slip-On Shoes",
+        "category": "Footwear",
+        "price": 1999,
+        "originalPrice": 2999,
+        "rating": 4.0,
+        "imageUrl": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 13,
+        "name": "Ikigai: The Japanese Secret to a Long and Happy Life",
+        "category": "Books",
+        "price": 280,
+        "originalPrice": 599,
+        "rating": 4.7,
+        "imageUrl": "images/ikigai-original.png"
+    },
+    {
+        "id": 14,
+        "name": "Pride and Prejudice",
+        "category": "Books",
+        "price": 130,
+        "originalPrice": 230,
+        "rating": 4.8,
+        "imageUrl": "images/pride-and-prejudice-original.webp"
+    },
+    {
+        "id": 15,
+        "name": "The Art of Thinking Clearly",
+        "category": "Books",
+        "price": 399,
+        "originalPrice": 599,
+        "rating": 4.4,
+        "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+        "id": 16,
+        "name": "The Little Book of Calm",
+        "category": "Books",
+        "price": 320,
+        "originalPrice": 450,
+        "rating": 4.2,
+        "imageUrl": "images/books.png"
+    }
+]
