@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice Calculator</title>
+  <style>
+    :root { --ink: #20252b; --muted: #747b82; --paper: #f7f4ed; --card: #fffdf8; --line: #ded8cc; --accent: #e85d3f; --teal: #2a8c87; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; color: var(--ink); font-family: Georgia, 'Times New Roman', serif; background: radial-gradient(circle at 10% 10%, #f6c4b6 0, transparent 27%), radial-gradient(circle at 90% 85%, #bde0d9 0, transparent 30%), var(--paper); }
+    main { width: min(980px, calc(100% - 32px)); margin: auto; padding: 45px 0 55px; }
+    header { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 28px; }
+    .eyebrow, .label { color: #b83d28; font: 700 .73rem Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow { margin: 0 0 8px; } h1 { margin: 0; font-size: clamp(3rem, 8vw, 5.5rem); line-height: .86; letter-spacing: -.06em; }
+    .tagline { max-width: 210px; margin: 0 0 5px; color: var(--muted); font: .95rem/1.45 Arial, sans-serif; }
+    .grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 20px; }
+    .panel { border: 1px solid var(--line); background: rgba(255, 253, 248, .9); box-shadow: 0 22px 55px rgba(67, 53, 37, .12); }
+    .main-panel { min-height: 565px; padding: clamp(25px, 5vw, 55px); display: flex; flex-direction: column; justify-content: space-between; }
+    .mic-area { text-align: center; }
+    #mic-button { width: 178px; aspect-ratio: 1; border: 0; border-radius: 50%; color: #fff; background: var(--accent); cursor: pointer; box-shadow: 0 14px 0 #c64a32, 0 25px 35px #e85d3f4d; }
+    #mic-button:hover { background: #ef694b; transform: translateY(-2px); } #mic-button:disabled { cursor: not-allowed; opacity: .55; filter: grayscale(1); box-shadow: none; }
+    #mic-button.listening { animation: pulse 1.3s infinite; } .mic-icon { display: block; font: 3.6rem/1 Arial, sans-serif; } #mic-label { display: block; margin-top: 8px; font: 700 .85rem Arial, sans-serif; }
+    @keyframes pulse { 50% { box-shadow: 0 14px 0 #c64a32, 0 0 0 18px #e85d3f1f, 0 0 0 36px #e85d3f0f; } }
+    .transcript { min-height: 90px; margin: 42px 0 24px; padding: 18px; border-left: 4px solid var(--teal); background: #f0f7f4; font-size: 1.15rem; line-height: 1.5; }
+    .label { display: block; margin-bottom: 9px; color: var(--teal); font-size: .7rem; } #interim-text { color: #92979c; } #final-text { color: var(--ink); }
+    .result { min-height: 125px; padding-top: 19px; border-top: 1px solid var(--line); } #result-display { margin: 0; color: #b83d28; font-size: clamp(2.7rem, 8vw, 4.8rem); line-height: 1; word-break: break-word; } #message { min-height: 23px; margin: 12px 0 0; color: var(--muted); font: .9rem/1.4 Arial, sans-serif; }
+    .controls { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 20px; color: var(--muted); font: .84rem Arial, sans-serif; } .toggle { display: flex; align-items: center; gap: 7px; } .toggle input { accent-color: var(--teal); }
+    aside { display: flex; flex-direction: column; gap: 20px; } .side { padding: 25px; } h2 { margin: 0 0 18px; font-size: 1.35rem; } ul { margin: 0; padding: 0; list-style: none; } .examples { display: grid; gap: 11px; } .examples li { padding-bottom: 11px; border-bottom: 1px dashed var(--line); color: #4a514f; font-size: 1.03rem; } .examples li:last-child { border-bottom: 0; } .examples li::before { content: '“'; margin-right: 5px; color: var(--accent); font-size: 1.3rem; }
+    #history-list { display: grid; gap: 9px; } #history-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font: .8rem/1.35 Arial, sans-serif; } #history-list span, .empty { color: var(--muted); } #history-list strong { color: #b83d28; font-size: 1rem; }
+    @media (max-width: 720px) { main { padding-top: 30px; } header { display: block; } .tagline { margin-top: 18px; } .grid { grid-template-columns: 1fr; } .main-panel { min-height: auto; } #mic-button { width: 150px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header><div><p class="eyebrow">Hands-free arithmetic</p><h1>Voice<br>Calculator</h1></div><p class="tagline">Speak a calculation. Hear the answer.</p></header>
+    <div class="grid">
+      <section class="panel main-panel" aria-label="Calculator">
+        <div class="mic-area"><button id="mic-button" type="button" aria-label="Start listening"><span class="mic-icon" aria-hidden="true">♩</span><span id="mic-label">Start Listening</span></button></div>
+        <div class="transcript" aria-live="polite"><span class="label">Live transcript</span><span id="final-text"></span><span id="interim-text"></span></div>
+        <div class="result"><span class="label">Result</span><p id="result-display">--</p><p id="message">Ready when you are.</p><div class="controls"><span id="status">Microphone idle</span><label class="toggle"><input id="mute-toggle" type="checkbox"> Mute spoken answer</label></div></div>
+      </section>
+      <aside><section class="panel side"><h2>Try saying...</h2><ul class="examples"><li>add 5 and 3</li><li>subtract 3 from 10</li><li>what is 7 percent of 200</li><li>square root of 16</li><li>2 to the power of 8</li></ul></section><section class="panel side"><h2>Recent answers</h2><ul id="history-list"><li class="empty">Your last five calculations will appear here.</li></ul></section></aside>
+    </div>
+  </main>
+  <script>
+    'use strict';
+    let recognition;
+    let listening = false;
+    const history = [];
+    const number = '(-?\\d+(?:\\.\\d+)?)';
+    const $ = id => document.getElementById(id);
+
+    // Convert number words from zero through one hundred before matching rules.
+    function wordsToNumbers(text) {
+      const units = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19 };
+      const tens = { twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+      const words = text.split(' '); const result = []; let index = 0;
+      while (index < words.length) { const word = words[index];
+        if (units[word] !== undefined) result.push(String(units[word]));
+        else if (tens[word] !== undefined) { let value = tens[word]; if (units[words[index + 1]] !== undefined) { value += units[words[index + 1]]; index += 1; } result.push(String(value)); }
+        else if (word === 'hundred' && result.length && /^\d+$/.test(result[result.length - 1])) result[result.length - 1] = String(Number(result[result.length - 1]) * 100);
+        else result.push(word);
+        index += 1;
+      }
+      return result.join(' ');
+    }
+
+    function normaliseTranscript(transcript) {
+      let text = transcript.toLowerCase().replace(/[^a-z0-9.\s-]/g, ' ');
+      text = wordsToNumbers(text).replace(/\b(please|can you|could you|would you|calculate|tell me|what is|a|an)\b/g, ' ');
+      return text.replace(/\s+/g, ' ').trim();
+    }
+
+    // Ordered rules: the first regex match determines the operation and operands.
+    function parseCommand(transcript) {
+      const text = normaliseTranscript(transcript);
+      const rules = [
+        { regex: new RegExp('subtract\\s+' + number + '\\s+from\\s+' + number), operation: 'subtract', compute: (a, b) => Number(b) - Number(a) },
+        { regex: new RegExp(number + '\\s+minus\\s+' + number), operation: 'subtract', compute: (a, b) => Number(a) - Number(b) },
+        { regex: new RegExp('difference\\s+between\\s+' + number + '\\s+and\\s+' + number), operation: 'subtract', compute: (a, b) => Number(a) - Number(b) },
+        { regex: new RegExp('(?:add|sum\\s+of)\\s+' + number + '\\s+(?:and|plus)\\s+' + number), operation: 'add', compute: (a, b) => Number(a) + Number(b) },
+        { regex: new RegExp(number + '\\s+plus\\s+' + number), operation: 'add', compute: (a, b) => Number(a) + Number(b) },
+        { regex: new RegExp('multiply\\s+' + number + '\\s+by\\s+' + number), operation: 'multiply', compute: (a, b) => Number(a) * Number(b) },
+        { regex: new RegExp(number + '\\s+times\\s+' + number), operation: 'multiply', compute: (a, b) => Number(a) * Number(b) },
+        { regex: new RegExp('product\\s+of\\s+' + number + '\\s+and\\s+' + number), operation: 'multiply', compute: (a, b) => Number(a) * Number(b) },
+        { regex: new RegExp('divide\\s+' + number + '\\s+by\\s+' + number), operation: 'divide', compute: (a, b) => Number(a) / Number(b) },
+        { regex: new RegExp(number + '\\s+divided\\s+by\\s+' + number), operation: 'divide', compute: (a, b) => Number(a) / Number(b) },
+        { regex: new RegExp(number + '\\s+percent\\s+of\\s+' + number), operation: 'percent', compute: (a, b) => Number(a) * Number(b) / 100 },
+        { regex: new RegExp('square\\s+root\\s+of\\s+' + number), operation: 'square root', compute: a => Math.sqrt(Number(a)) },
+        { regex: new RegExp(number + '\\s+squared'), operation: 'squared', compute: a => Number(a) ** 2 },
+        { regex: new RegExp(number + '\\s+to\\s+the\\s+power\\s+of\\s+' + number), operation: 'power', compute: (a, b) => Number(a) ** Number(b) }
+      ];
+      for (const rule of rules) { const match = text.match(rule.regex); if (match) return { ...rule, values: match.slice(1) }; }
+      return null;
+    }
+
+    function calculate(command) {
+      if (command.operation === 'divide' && Number(command.values[1]) === 0) throw new Error('You cannot divide by zero.');
+      const value = command.compute(...command.values);
+      if (!Number.isFinite(value)) throw new Error('That calculation does not have a finite answer.');
+      return Number.isInteger(value) ? String(value) : String(Number(value.toFixed(8)));
+    }
+
+    function speak(text) { if (!$('mute-toggle').checked && 'speechSynthesis' in window) { speechSynthesis.cancel(); speechSynthesis.speak(new SpeechSynthesisUtterance(text)); } }
+
+    function renderResult(command, value, transcript) {
+      $('result-display').textContent = value; $('message').textContent = 'Calculation complete.';
+      history.unshift({ transcript, value }); history.splice(5);
+      $('history-list').innerHTML = history.map(item => '<li><span>' + item.transcript + '</span><strong>' + item.value + '</strong></li>').join('');
+      speak(transcript + ' equals ' + value);
+    }
+
+    // Recognition lifecycle: onstart begins the pulse, onresult renders interim/final text,
+    // onerror explains failures, and onend always returns the button to idle.
+    function initRecognition() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SpeechRecognition) { $('mic-button').disabled = true; $('status').textContent = 'Speech recognition unavailable'; $('message').textContent = 'This feature needs Chrome or Edge with Speech Recognition support.'; return; }
+      recognition = new SpeechRecognition(); recognition.lang = 'en-US'; recognition.continuous = false; recognition.interimResults = true;
+      recognition.onstart = () => { listening = true; $('mic-button').classList.add('listening'); $('mic-label').textContent = 'Listening...'; $('status').textContent = 'Listening for a calculation'; };
+      recognition.onresult = event => { let interim = ''; let final = ''; for (let index = event.resultIndex; index < event.results.length; index += 1) { const text = event.results[index][0].transcript; if (event.results[index].isFinal) final += text; else interim += text; } $('final-text').textContent = final; $('interim-text').textContent = interim; if (final) { const command = parseCommand(final); if (!command) { $('message').textContent = "Sorry, I didn't catch a calculation. Try saying 'add 5 and 3'."; return; } try { renderResult(command, calculate(command), final); } catch (error) { $('result-display').textContent = '--'; $('message').textContent = error.message; } } };
+      recognition.onerror = event => { const messages = { 'not-allowed': 'Microphone permission was denied. Please allow microphone access and try again.', 'no-speech': 'No speech detected. Try speaking a little closer to your microphone.' }; $('message').textContent = messages[event.error] || 'Something went wrong with voice input. Please try again.'; };
+      recognition.onend = () => { listening = false; $('mic-button').classList.remove('listening'); $('mic-label').textContent = 'Start Listening'; $('status').textContent = 'Microphone idle'; };
+      $('mic-button').addEventListener('click', () => { if (listening) recognition.stop(); else { $('final-text').textContent = ''; $('interim-text').textContent = ''; recognition.start(); } });
+    }
+    initRecognition();
+  </script>
+</body>
+</html>
